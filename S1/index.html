@@ -1,0 +1,1067 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Instalaciones y gestión de Ubuntu y Windows.">
+      
+      
+        <meta name="author" content="Dariel Piñón">
+      
+      
+      
+        <link rel="prev" href="../projecto1/">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.0">
+    
+    
+      
+        <title>Sprint 1 - Dariel 0369</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.9f615399.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.649f08f9.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#sprint-1-instalacion-configuracion-inicial-y-programas-basicos" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="Dariel 0369" class="md-header__button md-logo" aria-label="Dariel 0369" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Dariel 0369
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Sprint 1
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Dariel 0369" class="md-nav__button md-logo" aria-label="Dariel 0369" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Dariel 0369
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ubuntu
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Ubuntu
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../projecto1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Sprint 1
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Sprint 1
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#enunciado" class="md-nav__link">
+    Enunciado
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivos" class="md-nav__link">
+    Objetivos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#virtualizacion" class="md-nav__link">
+    Virtualización
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instalacion-de-ubuntu" class="md-nav__link">
+    Instalación de Ubuntu
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#licencias" class="md-nav__link">
+    Licencias
+  </a>
+  
+    <nav class="md-nav" aria-label="Licencias">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#licencia-de-ubuntu" class="md-nav__link">
+    Licencia de Ubuntu
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#licencia-github" class="md-nav__link">
+    Licencia GitHub
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#puntos-de-restauracion" class="md-nav__link">
+    Puntos de restauración
+  </a>
+  
+    <nav class="md-nav" aria-label="Puntos de restauración">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#timeshift" class="md-nav__link">
+    Timeshift
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-basica-de-red" class="md-nav__link">
+    Configuración básica de red
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuración básica de red">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interfaz-grafica" class="md-nav__link">
+    Interfaz gráfica
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#terminal" class="md-nav__link">
+    Terminal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clonezilla" class="md-nav__link">
+    Clonezilla
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instalacion-de-programas" class="md-nav__link">
+    Instalación de programas
+  </a>
+  
+    <nav class="md-nav" aria-label="Instalación de programas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entorno-grafico" class="md-nav__link">
+    Entorno gráfico
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apt-install" class="md-nav__link">
+    apt install
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aptitude" class="md-nav__link">
+    aptitude
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dpkg" class="md-nav__link">
+    dpkg
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anadir-repesitorios" class="md-nav__link">
+    Añadir repesitorios
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestores-de-arranque" class="md-nav__link">
+    Gestores de arranque
+  </a>
+  
+    <nav class="md-nav" aria-label="Gestores de arranque">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#grub2" class="md-nav__link">
+    Grub2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mbr-y-gpt" class="md-nav__link">
+    MBR y GPT
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recuperacion-gestor-de-arranque" class="md-nav__link">
+    Recuperación gestor de arranque
+  </a>
+  
+    <nav class="md-nav" aria-label="Recuperación gestor de arranque">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#boot-repair" class="md-nav__link">
+    Boot-Repair
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supergrub-2" class="md-nav__link">
+    SuperGrub 2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#enunciado" class="md-nav__link">
+    Enunciado
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivos" class="md-nav__link">
+    Objetivos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#virtualizacion" class="md-nav__link">
+    Virtualización
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instalacion-de-ubuntu" class="md-nav__link">
+    Instalación de Ubuntu
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#licencias" class="md-nav__link">
+    Licencias
+  </a>
+  
+    <nav class="md-nav" aria-label="Licencias">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#licencia-de-ubuntu" class="md-nav__link">
+    Licencia de Ubuntu
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#licencia-github" class="md-nav__link">
+    Licencia GitHub
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#puntos-de-restauracion" class="md-nav__link">
+    Puntos de restauración
+  </a>
+  
+    <nav class="md-nav" aria-label="Puntos de restauración">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#timeshift" class="md-nav__link">
+    Timeshift
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-basica-de-red" class="md-nav__link">
+    Configuración básica de red
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuración básica de red">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interfaz-grafica" class="md-nav__link">
+    Interfaz gráfica
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#terminal" class="md-nav__link">
+    Terminal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clonezilla" class="md-nav__link">
+    Clonezilla
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instalacion-de-programas" class="md-nav__link">
+    Instalación de programas
+  </a>
+  
+    <nav class="md-nav" aria-label="Instalación de programas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entorno-grafico" class="md-nav__link">
+    Entorno gráfico
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apt-install" class="md-nav__link">
+    apt install
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aptitude" class="md-nav__link">
+    aptitude
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dpkg" class="md-nav__link">
+    dpkg
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anadir-repesitorios" class="md-nav__link">
+    Añadir repesitorios
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestores-de-arranque" class="md-nav__link">
+    Gestores de arranque
+  </a>
+  
+    <nav class="md-nav" aria-label="Gestores de arranque">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#grub2" class="md-nav__link">
+    Grub2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mbr-y-gpt" class="md-nav__link">
+    MBR y GPT
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recuperacion-gestor-de-arranque" class="md-nav__link">
+    Recuperación gestor de arranque
+  </a>
+  
+    <nav class="md-nav" aria-label="Recuperación gestor de arranque">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#boot-repair" class="md-nav__link">
+    Boot-Repair
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supergrub-2" class="md-nav__link">
+    SuperGrub 2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="sprint-1-instalacion-configuracion-inicial-y-programas-basicos"><strong>Sprint 1: Instalación, configuración inicial y programas básicos.</strong></h1>
+<h2 id="enunciado"><strong>Enunciado</strong></h2>
+<p>Comença amb la instal·lació d'Ubuntu Linux en un entorn de màquina virtual, assegurant-te que el
+sistema operatiu es configura correctament per a un ús general. Aquesta configuració inclourà l'ús i la
+personalització de gestors d'arrencada, l'assignació i la gestió de llicències, i la configuració de punts
+de restauració del sistema per assegurar la recuperació davant qualsevol error o problema.
+Després de la instal·lació inicial, procedeix amb la instal·lació i configuració del programari de base
+necessari, incloent-hi eines de gestió, seguretat, i aplicacions essencials per a un entorn de treball
+productiu. Això també inclourà la instal·lació i configuració de programari de virtualització per habilitar
+la creació de màquines virtuals addicionals, així com la configuració de còpies de seguretat
+automàtiques.
+Realitza proves exhaustives per verificar que tots els components funcionen com s'esperava, incloent
+la comprovació del correcte funcionament dels gestors d'arrencada, la recuperació del sistema des
+dels punts de restauració creats, i la instal·lació i execució d'aplicacions.
+Documenta detalladament cada pas del procés d’instal·lació, incloent les opcions de configuració
+inicial seleccionades, el programari instal·lat i configurat, i qualsevol ajustament realitzat durant la
+configuració. A més, inclou captures de pantalla per il·lustrar el procés i notes específiques sobre la
+configuració del sistema, els gestors d'arrencada, l'assignació de llicències, la virtualització, els punts
+de restauració del sistema, i la instal·lació d'aplicacions. </p>
+<h2 id="objetivos"><strong>Objetivos</strong></h2>
+<ul>
+<li>Comprendre i identificar els components funcionals clau del sistema operatiu Ubuntu</li>
+<li>Realitzar la instal·lació i configuració inicial d’Ubuntu</li>
+<li>Realitzar la verificació i configuració dels protocols de xarxa</li>
+<li>Utilitzar màquines virtuals per a la configuració i simulació d'entorns diversos</li>
+<li>Implementar i gestionar punts de restauració del sistema utilitzant eines com Timeshift</li>
+<li>Configurar gestors d'arrencada (GRUB) i optimitzar l'ordre d'arrencada del sistema</li>
+<li>Explorar i gestionar opcions de llicenciament de programari i utilitzar eines de virtualització</li>
+<li>Instal·lar, configurar, verificar, i desinstal·lar aplicacions </li>
+</ul>
+<h2 id="virtualizacion"><strong>Virtualización</strong></h2>
+<p>Para hacer los ejercicios utilizaré una máquina virtual con VirtualBox.
+A continuación mostraré los pasos que he seguido para crear la máquina virtual.</p>
+<p><img alt="a" src="../imagenes/sprint1/inst_vb_ubu/vbox1.png" />
+<img alt="a" src="../imagenes/sprint1/inst_vb_ubu/vbox2.png" />
+<img alt="a" src="../imagenes/sprint1/inst_vb_ubu/vbox3.png" /></p>
+<p>Para este paso, una vez creada la máquina virtual, he entrado en parámetros y en el apartado "Xarxa", y he cambiado el adaptador1 a Xarxa NAT</p>
+<p><img alt="a" src="../imagenes/sprint1/inst_vb_ubu/vbox4.png" /></p>
+<h2 id="instalacion-de-ubuntu"><strong>Instalación de Ubuntu</strong></h2>
+<p>Al empezar la instalción de Ubuntu saldrá unas cuantas pantallas donde es todo darle a siguiente</p>
+<p><img alt="a" src="../imagenes/sprint1/inst_vb_ubu/InsUbu1.png" /></p>
+<p>En esta pantalla que es la octava, selecciono la instalación manual para poder hacer las particiones a mi gusto.</p>
+<p><img alt="a" src="../imagenes/sprint1/inst_vb_ubu/InsUbu2.png" /></p>
+<p>Aqui sale un único disco en el cual comienzo a hacer particiones. 
+La primera para SWAP, a la cual le asigno 5000MB.</p>
+<p><img alt="a" src="../imagenes/sprint1/inst_vb_ubu/InsUbu3.png" /></p>
+<p>Tambien crearemos dos particiones más, donde una será para la "/home" y otra para "/". </p>
+<p><img alt="a" src="../imagenes/sprint1/inst_vb_ubu/InsUbu4.png" />
+<img alt="a" src="../imagenes/sprint1/inst_vb_ubu/InsUbu5.png" /></p>
+<p>Una vez creadas las particiones se ve asi.</p>
+<p><img alt="a" src="../imagenes/sprint1/inst_vb_ubu/InsUbu6.png" /></p>
+<p>Ahora ya solo queda crear un usuario y revisar las elecciones que hemos hecho. Ya tenemos Ubuntu instalado.</p>
+<p><img alt="a" src="../imagenes/sprint1/inst_vb_ubu/InsUbu7.png" />
+<img alt="a" src="../imagenes/sprint1/inst_vb_ubu/InsUbu8.png" /></p>
+<h2 id="licencias"><strong>Licencias</strong></h2>
+<h3 id="licencia-de-ubuntu"><strong>Licencia de Ubuntu</strong></h3>
+<p>Ubuntu se distribuye bajo la licencia GPL (Licencia publica general), es un tipo de licencia donde:</p>
+<ul>
+<li>Eres libre de utilizar el software para cualquier propósito.</li>
+<li>Eres libre de modificar el software para adaptarlo a tus necesidades.</li>
+<li>Eres libre de compartir el software.</li>
+<li>Eres libre de comparit las mejores que aportes.</li>
+</ul>
+<h3 id="licencia-github"><strong>Licencia GitHub</strong></h3>
+<p>GitHub te ofrece la posibilidad de utilizar la licencia que consideres mas adecuada a tu proyecto, en mi caso es GNU General Public License v3.0, que es la misma licencia que utiliza Ubuntu.</p>
+<p>Esta versión de la GLP ofrece una protección para los usuarios contra tres amenazas recientes:</p>
+<ul>
+<li><strong>La tivoización</strong>: algunas empresas han creado distintos tipos de dispositivos que funcionan con software bajo la licencia GPL, y después han manipulado el dispositivo de forma que ellos pueden cambiar el software que lo hace funcionar, pero los usuarios no. Si un dispositivo puede ejecutar un software arbitrariamente, es necesario considerarlo como un ordenador para uso general, y su propietario debería poder controlar lo que hace. Cuando un dispositivo impide ser controlado, decimos que es el resultado de una tivoización.</li>
+<li><strong>Las leyes que prohíben el software libre</strong>: ciertas leyes, como la Digital Millennium Copyright Act en Estados Unidos o la Copyright Directive de la Unión Europea, han convertido en delito el hecho de escribir o distribuir programas que pueden saltarse las restricciones establecidas por la DRM (Digital Restrictions Management; véase más abajo). Estas leyes no deberían interferir con los derechos que le confiere la GPL.</li>
+<li><strong>Acuerdos de patentes discriminatorios</strong>: Microsoft ha empezado recientemente a decir que no denunciaría a los usuarios de software libre por infracciones de patente, siempre y cuando obtengan el programa de un distribuidor que está pagando a Microsoft por ese privilegio. Últimamente, Microsoft está intentando cobrar derechos de autor por el uso de software libre, lo que interfiere con la libertad de los usuarios. Ninguna empresa debería poder hacer esto.</li>
+</ul>
+<p><img alt="licencia" src="../imagenes/sprint1/gplv3.png" />
+Esta información la he sacado de la página oficial de GNU (https://www.gnu.org/licenses/quick-guide-gplv3.html)</p>
+<h2 id="puntos-de-restauracion"><strong>Puntos de restauración</strong></h2>
+<p>Anteriormente, en windows, habia una aplicación que venia con el sistema operativo llamada <strong>System Restore</strong>, dicha aplicación no realizaba cópias de seguridad de archivos ni los restaruaba, era solo para el sistema, actualmente en Windows 11 ya hay una opción en el panel de control para crear puntos de restauración para unidades.</p>
+<p>Esto es lo que voy a hacer en Ubuntu instalando una aplicación llamada <strong>timeshift</strong>.</p>
+<h3 id="timeshift"><strong>Timeshift</strong></h3>
+<p>Lo primero es instalarla, usando el terminal usamos la sintaxis "sudo apt install timeshift", aun que previamente va siempre bien asegurarse que el sistema se encuentra completamente actualizado, eso se puede hacer con la sintaxis "sudo apt update &amp;&amp; upgrade -y"</p>
+<p>Antes de abrir la aplicación voy a crear una carpeta.</p>
+<p><img alt="a" src="../imagenes/sprint1/restauracion/timeshift2.png" /></p>
+<p>Ahora voy a mirar en que partición esta almacenado el directorio "/home".</p>
+<p><img alt="a" src="../imagenes/sprint1/restauracion/timeshift4.png" /></p>
+<p>Ahora ya puedo abrir la aplicación y crear un punto de restauración.</p>
+<p>Al abrirla lo primero que sale es un asistente de configuración que te pregunta que ficheros quieres incluir.
+Yo selecciono que quiero todos los ficheros.</p>
+<p><img alt="a" src="../imagenes/sprint1/restauracion/timeshift3.png" /></p>
+<p>Presiono siguiente y me pregunta que partición quiero salvaguardar.
+En este caso "/home" está montado en "sda2", como se puede comprobar en la segunda captura.</p>
+<p><img alt="a" src="../imagenes/sprint1/restauracion/timeshift5.png" /></p>
+<p>Presiono siguiente y ahora te pregunta cada cuánto quieres generar otro punto de restauración, aqui cada uno a conveniencia pone cada cuanto tiempo lo quiere.</p>
+<p><img alt="a" src="../imagenes/sprint1/restauracion/timeshift6.png" /></p>
+<p>Este ya ha sido el último paso. Ahora voy a comprobar que funciona borrando la carpeta creada previamente y usando el punto de restauración.</p>
+<p><img alt="a" src="../imagenes/sprint1/restauracion/timeshift7.png" /></p>
+<p>Vuelvo a abrir la aplicación <strong>timeshift</strong> y me sale el punto de restauración que creé. Lo abro y le doy a todo siguiente.</p>
+<p><img alt="a" src="../imagenes/sprint1/restauracion/timeshift8.png" /></p>
+<p><img alt="a" src="../imagenes/sprint1/restauracion/timeshift9.png" /></p>
+<p>Aquí puede que se te reinicie el ordenador, y ya está hecha la restauración, voy a comprobarlo haciendo un "ls" donde estaba la carpeta.</p>
+<p><img alt="a" src="../imagenes/sprint1/restauracion/timeshift10.png" /></p>
+<p>Funciona.</p>
+<h2 id="configuracion-basica-de-red"><strong>Configuración básica de red</strong></h2>
+<p>En Ubuntu 24 podemos configurar la red vía interfaz gráfica o por terminal.</p>
+<h3 id="interfaz-grafica"><strong>Interfaz gráfica</strong></h3>
+<p>Entrando en <strong>parámetros</strong> del sistema las dos primeras opciones son <strong>wifi</strong> y <strong>red</strong>, ya en dependecia si estamos conectados por wifi o cable entraremos en una de las dos.</p>
+<p><img alt="a" src="../imagenes/sprint1/red/redg1.png" /></p>
+<p>Indiferentemente de cual sea el caso hay que entrar en <strong>opciones de red</strong>.</p>
+<p><img alt="a" src="../imagenes/sprint1/red/redg2.png" /></p>
+<p><img alt="a" src="../imagenes/sprint1/red/redg3.png" /></p>
+<p>Dentro del apartado <strong>ipv4</strong> selecciono manual ya que me interesa poner una ip estática. Introduzco la ip que quiero, su máscara y puerta de enlace, además tambien pongo un servidor dns manualmente.</p>
+<p><img alt="a" src="../imagenes/sprint1/red/redg.4png" /></p>
+<h3 id="terminal"><strong>Terminal</strong></h3>
+<p>Para configurar la red por el terminal he seguido estos comandos y configurado estos ficheros manualmente.</p>
+<p><img alt="a" src="../imagenes/sprint1/red/red1.png" /></p>
+<p>Este archivo nos aparece con dhcp4 en "yes" por defecto,</p>
+<p><img alt="a" src="../imagenes/sprint1/red/red2.png" /></p>
+<p>Para poner una ip estática se cambia el "yes" por un no y se rellena el archivos con la siguiente información.</p>
+<p><img alt="a" src="../imagenes/sprint1/red/red3.png" /></p>
+<p>Para guardar el archivo se usa <strong>CTRL + O</strong> y después para salir <strong>CTRL + X</strong>.</p>
+<p>Por último para aplicar los cambios se usa este comando.</p>
+<p><img alt="a" src="../imagenes/sprint1/red/red4.png" /></p>
+<h3 id="clonezilla"><strong>Clonezilla</strong></h3>
+<p>Sobre clonezilla entraremos en profundidad en el sprint 2 pero se usa a nivel de gestor de sistemas, donde hay que hacer puntos de restauración para muchos equipos e ir uno a uno es una tarea que nos ocuparía mucho tiempo pudiendo utilizar está herramienta.</p>
+<p>Clonezilla Server se utiliza para clonar simultáneamente varios equipos a través de una red, es decir, en remoto. También se puede utilizar para implementar sistemas operativos en varios equipos mediante la creación de imágenes de uno solo.</p>
+<h2 id="instalacion-de-programas"><strong>Instalación de programas</strong></h2>
+<p>En este apartado instalaremos aplicaciones en Ubuntu usando diferentes formas. </p>
+<h3 id="entorno-grafico"><strong>Entorno gráfico</strong></h3>
+<p>Actualmente, Ubuntu ofrece la instalación de programas mediante su App Center. ES tan fácil como buscar la aplicación y descargarla mediante clicks.</p>
+<p><img alt="a" src="../imagenes/sprint1/inst_programas/programas1.png" /></p>
+<h3 id="apt-install"><strong>apt install</strong></h3>
+<p><strong>Apt install</strong> es parte del conjunto de comandos de APT (Advanced Package Tool), que es el sistema de gestión de paquetes predeterminado en Ubuntu y Debian. Este comando se usa para instalar paquetes de software desde los repositorios oficiales o desde otras fuentes configuradas.</p>
+<p>Funcionamiento de apt install:
+Instalación de paquetes: Cuando ejecutas sudo apt install nombre_paquete, APT se conecta a los repositorios configurados, descarga el paquete, junto con las dependencias necesarias, y lo instala en el sistema.</p>
+<p><img alt="a" src="../imagenes/sprint1/inst_programas/programas2.png" /></p>
+<p>Ahora después de instalarlo, en la misma consola escribo "pacman" para comprobar que se ha instalado correctamente y puedo jugar.</p>
+<p><img alt="a" src="../imagenes/sprint1/inst_programas/programas3.png" /></p>
+<p>Ahora voy a borrarlo.</p>
+<p><img alt="a" src="../imagenes/sprint1/inst_programas/programas4.png" /></p>
+<p><img alt="a" src="../imagenes/sprint1/inst_programas/programas5.png" /></p>
+<h3 id="aptitude"><strong>aptitude</strong></h3>
+<p><strong>Aptitude</strong> es otra herramienta de gestión de paquetes en Debian y Ubuntu que ofrece más funcionalidades que apt. Es más avanzado y ofrece tanto una interfaz de texto interactiva como un conjunto de comandos de línea similar a apt.</p>
+<p>Funcionamiento de aptitude:
+Interfaz gráfica en la terminal: Puedes lanzar una interfaz interactiva en la terminal donde puedes navegar, buscar, instalar, eliminar o actualizar paquetes con un sistema de menús.</p>
+<p><img alt="a" src="../imagenes/sprint1/inst_programas/programas6.png" /></p>
+<p><img alt="a" src="../imagenes/sprint1/inst_programas/programas7.png" /></p>
+<p><img alt="a" src="../imagenes/sprint1/inst_programas/programas8.png" /></p>
+<h3 id="dpkg"><strong>dpkg</strong></h3>
+<p><strong>Dpkg</strong> se utiliza principalmente para instalar, eliminar y gestionar paquetes .deb de manera directa.</p>
+<p>Conceptos básicos sobre dpkg:
+Paquetes .deb: Los paquetes que dpkg maneja tienen la extensión .deb, que es el formato estándar de los paquetes de software en sistemas basados en Debian, como Ubuntu.</p>
+<p>Instalación manual: A diferencia de apt, que se encarga de descargar los paquetes y resolver las dependencias automáticamente, dpkg se usa principalmente para instalar paquetes locales que ya has descargado en tu equipo.</p>
+<p><img alt="a" src="../imagenes/sprint1/inst_programas/programas9.png" /></p>
+<p><img alt="a" src="../imagenes/sprint1/inst_programas/programas10.png" /></p>
+<p><img alt="a" src="../imagenes/sprint1/inst_programas/programas11.png" /></p>
+<h3 id="anadir-repesitorios"><strong>Añadir repesitorios</strong></h3>
+<p>Añadir repositorios en Ubuntu permite acceder a software que no está en los repositorios oficiales, como versiones más recientes o programas propietarios (por ejemplo, Google Chrome o controladores de hardware). También facilita actualizaciones automáticas. Los repositorios son fuentes seguras y verificadas que permiten instalar y actualizar software de forma sencilla.</p>
+<p><img alt="a" src="../imagenes/sprint1/inst_programas/programas12.png" /></p>
+<p><img alt="a" src="../imagenes/sprint1/inst_programas/programas13.png" /></p>
+<p><img alt="a" src="../imagenes/sprint1/inst_programas/programas14.png" /></p>
+<h2 id="gestores-de-arranque"><strong>Gestores de arranque</strong></h2>
+<p>Un gestor de arranque es aquel software cuya función es ayudar al hardware y al firmware a cargar un sistema operativo, incluyendo la elección del mismo si hubieran varios.</p>
+<h3 id="grub2"><strong>Grub2</strong></h3>
+<p>Grub2 es el gestor de arranque de la mayoria de distribuciones de Linux ya que es un gestor de arranque famoso por su flexibilidad y compatibilidad.</p>
+<p>Esta flexibilidad permite al usuario realizar configuraciones avanzadas como hacer un dual boot o restaurar sistemas si el kernel no carga correctamente entre otras cosas.</p>
+<h3 id="mbr-y-gpt"><strong>MBR y GPT</strong></h3>
+<ul>
+<li><strong>MBR:</strong> es más antiguo, limitado a discos de hasta 2 TB y a un máximo de 4 particiones primarias.</li>
+<li><strong>GPT:</strong> es más moderno, soporta discos grandes, muchas particiones, mayor fiabilidad y está diseñado para trabajar con sistemas UEFI.</li>
+</ul>
+<h2 id="recuperacion-gestor-de-arranque"><strong>Recuperación gestor de arranque</strong></h2>
+<p>Con estas dos herramientas de recuperación del gestor de arranque, para simular un fallo, borraremos el directorio grub de /boot. </p>
+<h3 id="boot-repair"><strong>Boot-Repair</strong></h3>
+<p><img alt="a" src="../imagenes/sprint1/restgrub/restgrub1.png" /></p>
+<p><img alt="a" src="../imagenes/sprint1/restgrub/restgrub2.png" /></p>
+<p>Con esta captura se demuestra que el gestor de arranque falla.</p>
+<p>Ahora mediante una iso haciendo como si fuera un liveUSB, ponemos el boot-repair en la máquina virtual y empezamos la recuperación.</p>
+<p><img alt="a" src="../imagenes/sprint1/restgrub/restgrub3.png" /></p>
+<p>En este caso no he querido probar de utilizar la ultima versión, asi que le doy a no.</p>
+<p><img alt="a" src="../imagenes/sprint1/restgrub/restgrub4.png" /></p>
+<p>En esta pantalla he seleccionado la opción recomendada.</p>
+<p><img alt="a" src="../imagenes/sprint1/restgrub/restgrub5.png" /></p>
+<p>Aqui hago click en si.</p>
+<p><img alt="a" src="../imagenes/sprint1/restgrub/restgrub6.png" /></p>
+<p><img alt="a" src="../imagenes/sprint1/restgrub/restgrub7.png" /></p>
+<p>Al terminar muestra un archivo .txt con información de lo que ha hecho boot-repair.</p>
+<p><img alt="a" src="../imagenes/sprint1/restgrub/restgrub8.png" /></p>
+<p>Esta captura muestra como ha funcionado correctamente.</p>
+<p><img alt="a" src="../imagenes/sprint1/restgrub/restgrub9.png" /></p>
+<h3 id="supergrub-2"><strong>SuperGrub 2</strong></h3>
+<p><img alt="a" src="../imagenes/sprint1/restgrub/restgrub10.png" /></p>
+<p><img alt="a" src="../imagenes/sprint1/restgrub/restgrub11.png" /></p>
+<p>Vuelvo a repetir la simulación de fallo borrando el directorio grub y vuelvo a repetir el proceso de antes pero ahora con la iso de supergrub.</p>
+<p><img alt="a" src="../imagenes/sprint1/restgrub/restgrub12.png" /></p>
+<p>Entro en la opcion de detectar y mostrar los metodos de boot.</p>
+<p><img alt="a" src="../imagenes/sprint1/restgrub/restgrub13.png" /></p>
+<p>Busco la opción de linux y le doy al enter para que empiece la recuperación.</p>
+<p><img alt="a" src="../imagenes/sprint1/restgrub/restgrub14.png" /></p>
+<p>Al terminar cierro el pc y extraigo la iso que simula el liveUSB, el sistema operativo vuelve a cargar correctamente.</p>
+<p><img alt="a" src="../imagenes/sprint1/restgrub/restgrub9.png" /></p>
+<p>Con SuperGrub2, al terminal hay que poner unos comandos en la terminal para que se aplique la restauración, sino al reiniciar vuelve a petarse.</p>
+<p><img alt="a" src="../imagenes/sprint1/restgrub/restgrub15.png" /></p>
+<p><img alt="a" src="../imagenes/sprint1/restgrub/restgrub16.png" /></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2024 Dariel Piñón
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.4e0fa4ba.min.js"></script>
+      
+    
+  </body>
+</html>
