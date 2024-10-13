@@ -1,0 +1,23 @@
+site_name: Dariel 0369
+site_description: Instalaciones y gestión de Ubuntu y Windows.
+site_author: Dariel Piñón
+site_url:
+
+extra_css:
+  - stylesheets/extra.css
+
+theme:
+  name: "material"
+  language: es
+  palette:
+    - scheme: slate
+
+nav:
+- Introducción: index.md
+- Ubuntu: 
+  - Introducción: projecto1.md
+  - Sprint 1: S1.md
+
+copyright: |
+  &copy; 2024 Dariel Piñón
+  
