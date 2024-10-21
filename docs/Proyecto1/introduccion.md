@@ -1,6 +1,4 @@
-# __Projecte 1: Implementació i Gestió d’un Sistema Ubuntu Linux amb Tecnologia ABP__
-
-## __INTRODUCCIÓN__
+# __INTRODUCCIÓN__
 
 La **Implementación y Gestión de un Sistema Ubuntu Linux** es una asignatura clave en el desarrollo de habilidades esenciales para la administración de sistemas y la optimización de entornos de software basados en Linux. Este sitio servirá como repositorio y documentación de todas las tareas, prácticas y estudios realizados durante el curso académico.
 

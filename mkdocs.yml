@@ -1,22 +1,29 @@
-site_name: Dariel 0369
+site_name: Dariel Piñón 0369
 site_description: Instalaciones y gestión de Ubuntu y Windows.
 site_author: Dariel Piñón
-site_url:
+site_url: https://daarieel.github.io/0369/
 
 extra_css:
   - stylesheets/extra.css
+
+nav:
+  - Home: index.md
+  - Proyecto 1; Sistema Ubuntu Linux: 
+      - Introducción: Proyecto1/introduccion.md
+      - Sprint 1:
+          - Instalación Máquina Virtual y Ubuntu: Proyecto1/Sprint1/instalacion.md
+          - Configuración Básica de Red: Proyecto1/Sprint1/conf_red.md 
+          - Instalación de Programas: Proyecto1/Sprint1/inst_programas.md 
+          - Puntos de Restauración: Proyecto1/Sprint1/puntos_restauracion.md
+          - Gestores de Arranque: Proyecto1/Sprint1/gestores_arranque.md
+          - Recuperación del Gestor de Arranque: Proyecto1/Sprint1/rec_gest_arranque.md
+          - Licencias: Proyecto1/Sprint1/licencias.md
 
 theme:
   name: "material"
   language: es
   palette:
-    - scheme: slate
-
-nav:
-- Introducción: index.md
-- Ubuntu: 
-  - Introducción: projecto1.md
-  - Sprint 1: S1.md
+    - scheme: slate  
 
 copyright: |
   &copy; 2024 Dariel Piñón
