@@ -59,10 +59,13 @@ Instalación manual: A diferencia de apt, que se encarga de descargar los paquet
 
 Añadir repositorios en Ubuntu permite acceder a software que no está en los repositorios oficiales, como versiones más recientes o programas propietarios (por ejemplo, Google Chrome o controladores de hardware). También facilita actualizaciones automáticas. Los repositorios son fuentes seguras y verificadas que permiten instalar y actualizar software de forma sencilla.
 
+Se utiliza el comando wget para descargar la clave de firma GPG de Google y guardarla en el directorio de claves del sistema (/usr/share/keyrings/google.gpg). Esta clave es necesaria para verificar la autenticidad de los paquetes descargados desde el repositorio de Google.
 ![a](./imagenes/inst_programas/programas12.png)
-
+---
+Se añade el repositorio de Google Chrome al sistema mediante echo y sudo tee. Esto crea un archivo de configuración en /etc/apt/sources.list.d/google-chrome.list que permite a apt obtener paquetes desde el repositorio de Google Chrome, asegurándose de que se usen las firmas GPG descargadas previamente.
 ![a](./imagenes/inst_programas/programas13.png)
-
+---
+Se ejecuta sudo apt update para actualizar la lista de paquetes disponibles, ahora incluyendo el repositorio de Google Chrome añadido. Esto permite que el sistema reconozca y acceda a las versiones más recientes de los paquetes de Google Chrome.
 ![a](./imagenes/inst_programas/programas14.png)
 
 ### __Pinning Packet__
