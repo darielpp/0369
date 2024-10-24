@@ -2,6 +2,10 @@
 
 Bienvenido a la documentación sobre la **Implantación de Sistemas Operativos**. En este proyecto, exploraremos la implementación y gestión de dos sistemas operativos: **Ubuntu Linux** y **Windows**. Cada sistema se abordará a través de una serie de sprints, permitiendo un aprendizaje progresivo y estructurado.
 
+<div>
+    <img src="./fondo.webp" alt="Sistemas Operativos" width="300">
+</div>
+
 ## Proyectos
 
 ### Proyecto 1: Implementación y Gestión de un Sistema Ubuntu Linux con Tecnología ABP
