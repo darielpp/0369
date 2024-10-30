@@ -677,9 +677,14 @@ Paquetes .deb: Los paquetes que dpkg maneja tienen la extensión .deb, que es el
 <p><img alt="a" src="../imagenes/inst_programas/programas11.png" /></p>
 <h3 id="anadir-repositorios"><strong>Añadir repositorios</strong></h3>
 <p>Añadir repositorios en Ubuntu permite acceder a software que no está en los repositorios oficiales, como versiones más recientes o programas propietarios (por ejemplo, Google Chrome o controladores de hardware). También facilita actualizaciones automáticas. Los repositorios son fuentes seguras y verificadas que permiten instalar y actualizar software de forma sencilla.</p>
-<p><img alt="a" src="../imagenes/inst_programas/programas12.png" /></p>
-<p><img alt="a" src="../imagenes/inst_programas/programas13.png" /></p>
-<p><img alt="a" src="../imagenes/inst_programas/programas14.png" /></p>
+<p>Se utiliza el comando wget para descargar la clave de firma GPG de Google y guardarla en el directorio de claves del sistema (/usr/share/keyrings/google.gpg). Esta clave es necesaria para verificar la autenticidad de los paquetes descargados desde el repositorio de Google.
+<img alt="a" src="../imagenes/inst_programas/programas12.png" /></p>
+<hr />
+<p>Se añade el repositorio de Google Chrome al sistema mediante echo y sudo tee. Esto crea un archivo de configuración en /etc/apt/sources.list.d/google-chrome.list que permite a apt obtener paquetes desde el repositorio de Google Chrome, asegurándose de que se usen las firmas GPG descargadas previamente.
+<img alt="a" src="../imagenes/inst_programas/programas13.png" /></p>
+<hr />
+<p>Se ejecuta sudo apt update para actualizar la lista de paquetes disponibles, ahora incluyendo el repositorio de Google Chrome añadido. Esto permite que el sistema reconozca y acceda a las versiones más recientes de los paquetes de Google Chrome.
+<img alt="a" src="../imagenes/inst_programas/programas14.png" /></p>
 <h3 id="pinning-packet"><strong>Pinning Packet</strong></h3>
 <p>El pinning de paquetes en sistemas Debian/Ubuntu te permite decidir de qué repositorio quieres instalar un paquete y qué versión prefieres. Esto es útil si necesitas una versión específica y no quieres que se actualice automáticamente desde otros repositorios. Básicamente, es una forma de tener más control sobre qué software y actualizaciones instalas en tu sistema.</p>
 <p>Muestra la ejecución del comando apt-cache policy smplayer, que permite ver la versión disponible y la instalada de SMPlayer en el sistema. No hay ninguna versión instalada, y la candidata es la 23.12.0.
