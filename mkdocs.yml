@@ -18,6 +18,8 @@ nav:
           - Gestores de Arranque: Proyecto1/Sprint1/gestores_arranque.md
           - Recuperación del Gestor de Arranque: Proyecto1/Sprint1/rec_gest_arranque.md
           - Licencias: Proyecto1/Sprint1/licencias.md
+      - Sprint 2:
+          - Gestión de Usuarios y Grupos: Proyecto1/Sprint2/gest_usu.md
 
 theme:
   name: "material"
