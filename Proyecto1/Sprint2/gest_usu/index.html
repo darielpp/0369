@@ -18,6 +18,8 @@
         <link rel="prev" href="../../Sprint1/licencias/">
       
       
+        <link rel="next" href="../gest_permisos/">
+      
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.0">
@@ -755,6 +757,40 @@
     Personalización de useradd
   </a>
   
+    <nav class="md-nav" aria-label="Personalización de useradd">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#etcdefaultuseradd" class="md-nav__link">
+    /etc/default/useradd
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etclogindefs" class="md-nav__link">
+    etc/login.defs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etcskel" class="md-nav__link">
+    /etc/skel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#profile-bashrc-bash_logout" class="md-nav__link">
+    .profile .bashrc .bash_logout
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -766,6 +802,26 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gest_permisos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gestión de Permisos
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1010,6 +1066,40 @@
   <a href="#personalizacion-de-useradd" class="md-nav__link">
     Personalización de useradd
   </a>
+  
+    <nav class="md-nav" aria-label="Personalización de useradd">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#etcdefaultuseradd" class="md-nav__link">
+    /etc/default/useradd
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etclogindefs" class="md-nav__link">
+    etc/login.defs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etcskel" class="md-nav__link">
+    /etc/skel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#profile-bashrc-bash_logout" class="md-nav__link">
+    .profile .bashrc .bash_logout
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1304,12 +1394,70 @@ Con la comanda exit ya dejarias de formar parte del grupo y volverias al que ten
 <p><img alt="gpasswd" src="../imagenes/grupos/gpasswd-R.png" /></p>
 <hr />
 <h3 id="personalizacion-de-useradd"><strong>Personalización de useradd</strong></h3>
-<p>Para la personalizacíon de este comando, están implicados 4 ficheros.</p>
+<p>Para la personalizacíon de este comando, están implicados varios ficheros.</p>
+<h4 id="etcdefaultuseradd"><strong>/etc/default/useradd</strong></h4>
+<p>Este archivo define valores predeterminados específicos que se aplican al comando useradd. Se utiliza para establecer configuraciones iniciales que afectan a cada nuevo usuario creado.</p>
+<p><img alt="/etc/default/useradd" src="../imagenes/useradd/useradd1.png" /></p>
+<p>En este fichero se encuentra esta configuración por defecto:</p>
 <ul>
-<li><strong>/etc/default/useradd:</strong> </li>
-<li><strong>/etc/login.defs:</strong></li>
-<li><strong>/etc/skel/:</strong></li>
+<li><strong>SHELL:</strong> Shell por defecto para los usuarios (/bin/sh).</li>
+<li><strong>GROUP:</strong> ID del grupo predeterminado (100, normalmente el grupo users).</li>
+<li><strong>HOME:</strong> Directorio base para los usuarios (/home).</li>
+<li><strong>INACTIVE:</strong> Días tras expirar la contraseña antes de deshabilitar la cuenta (-1 = nunca).</li>
+<li><strong>EXPIRE:</strong> Fecha de expiración de la cuenta (vacío = sin expiración).</li>
+<li><strong>SKEL:</strong> Directorio de plantilla cuyos archivos se copian al crear el usuario (/etc/skel).</li>
+<li><strong>CREATE_MAIL_SPOOL:</strong> Si se crea un buzón de correo al crear el usuario (no).</li>
 </ul>
+<p>Para editar el fichero utilizo:</p>
+<pre><code>nano /etc/default/useradd
+</code></pre>
+<p><img alt="/etc/default/useradd" src="../imagenes/useradd/useradd2.png" /></p>
+<p>En este caso he cambiado el SHELL de "sh" a "bash" y además, las cuentas caducarán en una fecha concreta, un poco después de que el curso haya acabado.</p>
+<hr />
+<h4 id="etclogindefs"><strong>etc/login.defs</strong></h4>
+<p>El archivo /etc/login.defs contiene configuraciones relacionadas con la administración de usuarios, contraseñas y políticas de seguridad en el sistema.</p>
+<p>Parámetros mas comunes que se suelen configurar:</p>
+<ul>
+<li><strong>Políticas de contraseñas</strong></li>
+<li><strong>Políticas de cuentas de usuario</strong></li>
+<li><strong>Configuración de seguridad</strong></li>
+<li><strong>Configuración de expiración de cuentas</strong></li>
+<li><strong>Configuración de límites de uso del sistema</strong></li>
+<li><strong>Configuración del buzón de correo</strong></li>
+</ul>
+<p>Por defecto viene esta politica en ubuntu con las contraseñas.</p>
+<p><img alt="/etc/login.defs" src="../imagenes/login.defs/login_defs1.png" /></p>
+<hr />
+<p>Voy a poner que la contraseña dure 1 mes y que avise al usuario cuando falte 1 día de que caduque para que vaya pensando una nueva.</p>
+<p><img alt="/etc/login.defs" src="../imagenes/login.defs/login_defs2.png" /></p>
+<hr />
+<h4 id="etcskel"><strong>/etc/skel</strong></h4>
+<p>Para que cada nuevo usuario creado tenga carpetas específicas en su directorio personal (/home/usuario), puedes utilizar el directorio /etc/skel. Este directorio actúa como una plantilla: todos los archivos y carpetas que pongas en /etc/skel se copiarán automáticamente al directorio personal de cada nuevo usuario que crees con useradd</p>
+<p>Para esto nos ubicamos en el fichero, una vez alli podemos crear lo que necesitemos para los nuevos usuarios, yo voy a crear un texto de bienvenida.</p>
+<p><img alt="etc/skel" src="../imagenes/etc_skel/etc_skel1.png" /></p>
+<hr />
+<p>Igualmente voy a iniciar sesión en el usuario que he creado para comprobar que se genera el fichero.</p>
+<p><img alt="etc/skel" src="../imagenes/etc_skel/etc_skel2.png" /></p>
+<hr />
+<h4 id="profile-bashrc-bash_logout"><strong>.profile .bashrc .bash_logout</strong></h4>
+<p>Los archivos .profile, .bashrc y .bash_logout <strong>son scripts ocultos</strong> que se encuentran en el directorio personal de cada usuario ($HOME) y controlan aspectos del entorno de su shell:</p>
+<ul>
+<li><strong>.profile</strong>: Configura variables de entorno y se ejecuta al iniciar sesión.</li>
+<li><strong>.bashrc</strong>: Define alias, funciones y personalizaciones para shells interactivos.</li>
+<li><strong>.bash_logout</strong>: Ejecuta tareas al cerrar sesión.
+Estos archivos se copian automáticamente al crear un nuevo usuario desde el contenido del directorio /etc/skel. Si los modificas en /etc/skel, los cambios afectarán solo a los <strong>usuarios que se creen después de la modificación</strong>.</li>
+</ul>
+<p>En los usuarios ya existentes, los archivos están en sus respectivos directorios home (por ejemplo, /home/usuario) y se pueden modificar individualmente sin afectar a otros usuarios. Esto permite personalizar la configuración del shell de cada usuario según sus necesidades.</p>
+<p>Ejemplo de <strong>.profile</strong>:
+<img alt=".profile" src="../imagenes/ficheros_ocultos/ocutlo1.png" /></p>
+<hr />
+<p>Ejemplo de <strong>.baschrc</strong>:
+<img alt=".baschrc" src="../imagenes/ficheros_ocultos/ocutlo2.png" /></p>
+<p>Me he inventado un alias para que al ejecutar <code>ll</code>, haga directamente un <code>ls -la</code>.</p>
+<p><img alt=".baschrc" src="../imagenes/ficheros_ocultos/ocutlo3.png" /></p>
+<hr />
+<p>Ejemplo de <strong>bash_logout</strong>:
+<img alt=".basch_logout" src="../imagenes/ficheros_ocultos/ocutlo4.png" /></p>
 
 
 

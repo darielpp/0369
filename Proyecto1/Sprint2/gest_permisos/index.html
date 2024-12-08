@@ -15,6 +15,8 @@
         <link rel="canonical" href="https://daarieel.github.io/0369/Proyecto1/Sprint2/gest_permisos/">
       
       
+        <link rel="prev" href="../gest_usu/">
+      
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -22,7 +24,7 @@
     
     
       
-        <title>Gest permisos - Dariel Piñón 0369</title>
+        <title>Gestión de Permisos - Dariel Piñón 0369</title>
       
     
     
@@ -78,6 +80,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#gestion-de-procesos" class="md-skip">
+          Saltar a contenido
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -110,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Gest permisos
+              Gestión de Permisos
             
           </span>
         </div>
@@ -228,17 +235,19 @@
       
   
   
+    
+  
   
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
@@ -251,7 +260,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Proyecto 1; Sistema Ubuntu Linux
@@ -464,17 +473,19 @@
                 
   
   
+    
+  
   
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
         
           <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
             
@@ -487,7 +498,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
             Sprint 2
@@ -509,6 +520,121 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Gestión de Permisos
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Gestión de Permisos
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#permisos-normales" class="md-nav__link">
+    Permisos "Normales"
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#permisos-especiales" class="md-nav__link">
+    Permisos Especiales
+  </a>
+  
+    <nav class="md-nav" aria-label="Permisos Especiales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setuid-seut-user-id" class="md-nav__link">
+    Setuid (Seut User ID)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setgid-set-group-id" class="md-nav__link">
+    Setgid (Set Group ID)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sticky-bit" class="md-nav__link">
+    Sticky Bit
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#umask" class="md-nav__link">
+    UMASK
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acls" class="md-nav__link">
+    ACLs
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -546,6 +672,71 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#permisos-normales" class="md-nav__link">
+    Permisos "Normales"
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#permisos-especiales" class="md-nav__link">
+    Permisos Especiales
+  </a>
+  
+    <nav class="md-nav" aria-label="Permisos Especiales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setuid-seut-user-id" class="md-nav__link">
+    Setuid (Seut User ID)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setgid-set-group-id" class="md-nav__link">
+    Setgid (Set Group ID)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sticky-bit" class="md-nav__link">
+    Sticky Bit
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#umask" class="md-nav__link">
+    UMASK
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acls" class="md-nav__link">
+    ACLs
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -560,9 +751,101 @@
                   
 
 
-  <h1>Gest permisos</h1>
-
-
+<h1 id="gestion-de-procesos"><strong>Gestión de Procesos</strong></h1>
+<h2 id="permisos-normales"><strong>Permisos "Normales"</strong></h2>
+<p>Me refiero a persmisos normales, a los permisos de lectura, escritura y ejecución de archivos y carpetas.
+Existen tres comandos relacionados con la gestíon de estos permisos:</p>
+<ul>
+<li><strong>chwon [-R]:</strong> Cambia el propietario de la carpeta/archivo.</li>
+</ul>
+<pre><code>chown [opciones] propietario[:grupo] archivo
+</code></pre>
+<ul>
+<li><strong>chgrp [-R]:</strong> Cambia el grupo propietario.</li>
+</ul>
+<pre><code>chgrp [opciones] grupo archivo
+</code></pre>
+<ul>
+<li><strong>chmod [-R]:</strong> Cambia las opciones de lectura, escritura y ejecución.</li>
+</ul>
+<pre><code>chmod [opciones] modo archivo
+</code></pre>
+<p>Con "chmod" hay que entender su estructura, donde los permisos se simbolizan con numeros.</p>
+<p>Este es su equivalencia:</p>
+<p><img alt="Permisos_ficheros_carpetas" src="../imagenes/gest_permisos/gest_permisos3.png" /></p>
+<p>Este es un ejemplo de como vienen los permisos de fabrica cuando un usuario crea un fichero y una carpeta:</p>
+<p><img alt="Permisos_ficheros_carpetas" src="../imagenes/gest_permisos/gest_permisos1.png" /></p>
+<p>La "R" significa lectura, "W" sifnifica escritura y "X" significa ejecución. Si en vez de una de las letras hay un - significa que no esta habilitado dicho permiso.</p>
+<hr />
+<p><img alt="Permisos_ficheros_carpetas" src="../imagenes/gest_permisos/gest_permisos2.png" /></p>
+<ul>
+<li>En un sistema basado en Unix/Linux, los permisos comienzan con un carácter que identifica el tipo de archivo, es lo que hay <strong>señalado en rojo</strong>, en este caso una "D" de directorio.</li>
+<li>De color <strong>azul</strong> está marcado el bloque de <strong>permisos del usuario</strong>.</li>
+<li>De color <strong>verde</strong> está marcado el bloque de <strong>permisos del grupo</strong>.</li>
+<li>De color <strong>amarillo</strong> está marcado el bloque de <strong>permisos del resto de ususarios</strong>.</li>
+</ul>
+<hr />
+<p>Para demostrar el funcionamiento de los permisos voy a crear 3 usuarios y un grupo nuevo, donde voy a ir ajustando los permisos para hacer que unos usuarios en concreto tengan acceso a los ficheros.</p>
+<p>Creación de los nuevos usuarios:
+<img alt="Creacion_nuevos_usuarios" src="../imagenes/gest_permisos/gest_permisos4.png" /></p>
+<hr />
+<p>Creación del grupo nuevo:
+<img alt="Creacion_nuevos_usuarios" src="../imagenes/gest_permisos/gest_permisos5.png" /></p>
+<hr />
+<p><img alt="Creacion_nuevos_usuarios" src="../imagenes/gest_permisos/gest_permisos11.png" />
+Al crear una carpeta, por defectos viene con los permisos que se pueden ver en la captura. En números sería "755" lo que significa permiso total para el propietario mas para su grupo y el resto, permisos de lectura y ejecución.</p>
+<hr />
+<p>Creación de la carpeta compartida:
+<img alt="Creacion_nuevos_usuarios" src="../imagenes/gest_permisos/gest_permisos6.png" />
+En esta captura se puede ver como utilizo el comando <code>chmod -R 770 compartido</code>, "770" asigna permisos de lectura, escritura y ejecución a el dueño del fichero y sus grupos, mientras que al resto de usuario no pueden entrar al fichero para nada.</p>
+<hr />
+<p>Demostración de la carpeta compartida:
+<img alt="Carperta_compartida" src="../imagenes/gest_permisos/gest_permisos7.png" />
+En esta captura he iniciado sesión en la cuenta de "Leo", la cual pertenece al grupo de "Tortugas" y puedo acceder a la carpeta creada anteriormente.</p>
+<hr />
+<p><img alt="Carperta_compartida" src="../imagenes/gest_permisos/gest_permisos8.png" />
+En esta captura, por lo contrario, he iniciado sesión en la cuenta de "Dona", que no pertenece al grupo de "Tortugas" y no puedo acceder a la carpeta.</p>
+<hr />
+<p><img alt="Carperta_compartida" src="../imagenes/gest_permisos/gest_permisos9.png" />
+En esta captura, utilizo el comando <code>chown -R dona /tmp/compartido/</code> para cambiar el propietario de la carpeta y los archivos que hubieran dentro.</p>
+<hr />
+<p><img alt="Carperta_compartida" src="../imagenes/gest_permisos/gest_permisos10.png" />
+La cuenta de "Dona" ahora al ser propietario, tiene permisos de lectura, escritura y ejecución.</p>
+<hr />
+<h2 id="permisos-especiales"><strong>Permisos Especiales</strong></h2>
+<p>En Ubuntu (y sistemas basados en Linux en general), además de los permisos estándar (lectura, escritura y ejecución), existen permisos especiales que ofrecen funcionalidades adicionales para archivos y directorios. Estos son:</p>
+<ul>
+<li><strong>Setuid:</strong> Ejecuta un programa con los permisos del propietario.</li>
+<li><strong>Setgid:</strong> Herencia de grupo en directorios o ejecución con permisos del grupo.</li>
+<li><strong>Sticky Bit:</strong> Restricción para borrar o renombrar archivos en un directorio compartido.</li>
+</ul>
+<h3 id="setuid-seut-user-id"><strong>Setuid (Seut User ID)</strong></h3>
+<p>Este permiso funciona con los programas ejectutables (scripts), donde que un programa se ejecute siempre con los privilegios del propietario.</p>
+<pre><code>chmod u+s archivo
+</code></pre>
+<hr />
+<h3 id="setgid-set-group-id"><strong>Setgid (Set Group ID)</strong></h3>
+<p>Este permiso especial funciona igual que  el setuid pero con el grupo propietario, también funciona con directorios.</p>
+<pre><code>chmod g+s archivo_o_directorio
+</code></pre>
+<hr />
+<h3 id="sticky-bit"><strong>Sticky Bit</strong></h3>
+<p>Este permiso especial evita que los usuarios elimen o renombres arichvos dentro de un directorio que nos les pertenezca, es decir, si se activa este permiso especial provoca que solo el usuario propietario pueda eliminar o renombrar el archivo, mientras que el resto podrán seguir leyendolo o ejecutandolo.</p>
+<pre><code>chmod +t directorio
+</code></pre>
+<p><strong>Ejemplo de uso de los permisos especiales:</strong>
+He probado de usar el setuid y setgid pero no funcionan bien, almenos en ubuntu 24.</p>
+<p><img alt="Permisos_especiales" src="../imagenes/gest_permisos/gest_permisos12.png" />
+El procedimiento es el correcto, al ejecutar el programa debería salir "root" ya que el usuario propietario es root pero no.</p>
+<hr />
+<p><img alt="Permisos_especiales" src="../imagenes/gest_permisos/gest_permisos13.png" />
+Para demostrar el uso de Sticky Bit, he creado una carpeta y le he asigando permisos de lectura, escritura y ejecución para todos los usuarios. Con estos permisos un usuario podria borrar cualquier fichero pero al usar el comando <code>chmod +t pruebasticky</code> ya no debería.</p>
+<hr />
+<p><img alt="Permisos_especiales" src="../imagenes/gest_permisos/gest_permisos14.png" />
+He iniciado sesión con otro usuario y he intentado borrar el archivo, efectivamente no tengo permisos para ello si no es la cuenta propietaria.</p>
+<hr />
+<h2 id="umask"><strong>UMASK</strong></h2>
+<h2 id="acls"><strong>ACLs</strong></h2>
 
 
 
