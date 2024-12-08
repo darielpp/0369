@@ -330,8 +330,88 @@ gpasswd -R (nombre_grupo)
 ---
 ### __Personalización de useradd__
 
-Para la personalizacíon de este comando, están implicados 4 ficheros.
+Para la personalizacíon de este comando, están implicados varios ficheros.
 
-* __/etc/default/useradd:__ 
-* __/etc/login.defs:__
-* __/etc/skel/:__
+#### __/etc/default/useradd__
+Este archivo define valores predeterminados específicos que se aplican al comando useradd. Se utiliza para establecer configuraciones iniciales que afectan a cada nuevo usuario creado.
+
+![/etc/default/useradd](./imagenes/useradd/useradd1.png)
+
+En este fichero se encuentra esta configuración por defecto:
+
+* __SHELL:__ Shell por defecto para los usuarios (/bin/sh).
+* __GROUP:__ ID del grupo predeterminado (100, normalmente el grupo users).
+* __HOME:__ Directorio base para los usuarios (/home).
+* __INACTIVE:__ Días tras expirar la contraseña antes de deshabilitar la cuenta (-1 = nunca).
+* __EXPIRE:__ Fecha de expiración de la cuenta (vacío = sin expiración).
+* __SKEL:__ Directorio de plantilla cuyos archivos se copian al crear el usuario (/etc/skel).
+* __CREATE_MAIL_SPOOL:__ Si se crea un buzón de correo al crear el usuario (no).
+
+Para editar el fichero utilizo:
+```
+nano /etc/default/useradd
+```
+![/etc/default/useradd](./imagenes/useradd/useradd2.png)
+
+En este caso he cambiado el SHELL de "sh" a "bash" y además, las cuentas caducarán en una fecha concreta, un poco después de que el curso haya acabado.
+
+---
+#### __etc/login.defs__
+El archivo /etc/login.defs contiene configuraciones relacionadas con la administración de usuarios, contraseñas y políticas de seguridad en el sistema.
+
+Parámetros mas comunes que se suelen configurar:
+
+* __Políticas de contraseñas__
+* __Políticas de cuentas de usuario__
+* __Configuración de seguridad__
+* __Configuración de expiración de cuentas__
+* __Configuración de límites de uso del sistema__
+* __Configuración del buzón de correo__
+
+Por defecto viene esta politica en ubuntu con las contraseñas.
+
+![/etc/login.defs](./imagenes/login.defs/login_defs1.png)
+
+---
+Voy a poner que la contraseña dure 1 mes y que avise al usuario cuando falte 1 día de que caduque para que vaya pensando una nueva.
+
+![/etc/login.defs](./imagenes/login.defs/login_defs2.png)
+
+---
+#### __/etc/skel__
+Para que cada nuevo usuario creado tenga carpetas específicas en su directorio personal (/home/usuario), puedes utilizar el directorio /etc/skel. Este directorio actúa como una plantilla: todos los archivos y carpetas que pongas en /etc/skel se copiarán automáticamente al directorio personal de cada nuevo usuario que crees con useradd
+
+Para esto nos ubicamos en el fichero, una vez alli podemos crear lo que necesitemos para los nuevos usuarios, yo voy a crear un texto de bienvenida.
+
+![etc/skel](./imagenes/etc_skel/etc_skel1.png)
+
+---
+Igualmente voy a iniciar sesión en el usuario que he creado para comprobar que se genera el fichero.
+
+![etc/skel](./imagenes/etc_skel/etc_skel2.png)
+
+---
+#### __.profile .bashrc .bash_logout__
+Los archivos .profile, .bashrc y .bash_logout __son scripts ocultos__ que se encuentran en el directorio personal de cada usuario ($HOME) y controlan aspectos del entorno de su shell:
+
+* __.profile__: Configura variables de entorno y se ejecuta al iniciar sesión.
+* __.bashrc__: Define alias, funciones y personalizaciones para shells interactivos.
+* __.bash_logout__: Ejecuta tareas al cerrar sesión.
+Estos archivos se copian automáticamente al crear un nuevo usuario desde el contenido del directorio /etc/skel. Si los modificas en /etc/skel, los cambios afectarán solo a los __usuarios que se creen después de la modificación__.
+
+En los usuarios ya existentes, los archivos están en sus respectivos directorios home (por ejemplo, /home/usuario) y se pueden modificar individualmente sin afectar a otros usuarios. Esto permite personalizar la configuración del shell de cada usuario según sus necesidades.
+
+Ejemplo de __.profile__:
+![.profile](./imagenes/ficheros_ocultos/ocutlo1.png)
+
+---
+Ejemplo de __.baschrc__:
+![.baschrc](./imagenes/ficheros_ocultos/ocutlo2.png)
+
+Me he inventado un alias para que al ejecutar `ll`, haga directamente un `ls -la`.
+
+![.baschrc](./imagenes/ficheros_ocultos/ocutlo3.png)
+
+---
+Ejemplo de __bash_logout__:
+![.basch_logout](./imagenes/ficheros_ocultos/ocutlo4.png)

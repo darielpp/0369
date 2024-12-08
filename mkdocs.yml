@@ -20,7 +20,7 @@ nav:
           - Licencias: Proyecto1/Sprint1/licencias.md
       - Sprint 2:
           - Gestión de Usuarios y Grupos: Proyecto1/Sprint2/gest_usu.md
-
+          - Gestión de Permisos: Proyecto1/Sprint2/gest_permisos.md
 theme:
   name: "material"
   language: es
