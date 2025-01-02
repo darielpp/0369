@@ -117,7 +117,155 @@ He iniciado sesión con otro usuario y he intentado borrar el archivo, efectivam
 
 ---
 ## __UMASK__
+El comando umask sirve para cambiar los permisos predeterminados de un usuario a la hora de crear archivos y directorios. También se puede modificar el archivo /etc/login.defs para que a todos los usuarios que creemos en adelante tengan unos permisos predeterminados personalizados.
+
+### __Cálculo del Umask__
+
+El valor de umask se utiliza para determinar los permisos predeterminados de los archivos y directorios recién creados. Para calcular el umask, se debe restar el valor de umask de los permisos máximos posibles.
+
+Los permisos máximos posibles son:
+- Archivos: `666` (lectura y escritura para todos)
+- Directorios: `777` (lectura, escritura y ejecución para todos)
+
+Para calcular los permisos resultantes, se resta el valor de umask de los permisos máximos posibles. Por ejemplo, si el umask es `022`:
+- Permisos de archivos: `666 - 022 = 644`
+- Permisos de directorios: `777 - 022 = 755`
+
+Esto significa que los archivos tendrán permisos de lectura y escritura para el propietario, y solo lectura para el grupo y otros. Los directorios tendrán permisos de lectura, escritura y ejecución para el propietario, y solo lectura y ejecución para el grupo y otros.
+
+### __Comprobar y cambiar máscara__
+
+Para comprobar la máscara de creación de archivos y directorios, se puede utilizar el comando `umask` sin argumentos. Esto mostrará la máscara actual en formato octal.
+```
+umask
+```
+![umask](./imagenes/umask/umask1.png)
+
+---
+Para cambiar la máscara de creación, se puede utilizar el comando `umask` seguido de la nueva máscara en formato octal. Por ejemplo, para establecer una máscara de `033`, se puede utilizar el siguiente comando:
+```
+umask 033
+```
+Esto establecerá los permisos predeterminados de los archivos a `744` y de los directorios a `744`.
+
+![umask](./imagenes/umask/umask2.png)
 
 
+---
+### __Modificar Umask en login.defs__
+Para modificar el umask en el archivo `/etc/login.defs`, se debe editar dicho archivo con privilegios de superusuario. Se puede utilizar un editor de texto como `nano` o `vim`. A continuación se muestra cómo hacerlo:
 
-## __ACLs__
+Abre el archivo `/etc/login.defs` con un editor de texto:   
+``` 
+sudo nano /etc/login.defs
+```
+![umask](./imagenes/umask/umask4.png)
+
+---
+Busca la línea que contiene `UMASK`. Si no existe, puedes agregarla. Modifica o agrega la línea para establecer el umask deseado. 
+![umask](./imagenes/umask/umask3.png)
+
+---
+Por ejemplo, para establecer un umask de `033`, agrega o modifica la siguiente línea:
+
+![umask](./imagenes/umask/umask5.png)
+
+---
+Guarda los cambios y cierra el editor.
+
+A partir de ahora, los nuevos usuarios creados tendrán el umask especificado en el archivo `/etc/login.defs`.
+Para combrobarlo voy a crear un usario, iniciar sesión y utilizar el comando umask.
+![umask](./imagenes/umask/umask6.png)
+
+![umask](./imagenes/umask/umask7.png)
+
+---
+
+## __Listas de Control de Acceso (ACLs)__
+
+Las Listas de Control de Acceso (ACLs) proporcionan un método más flexible para asignar permisos a archivos y directorios en sistemas Unix/Linux. Permiten especificar permisos para usuarios y grupos adicionales más allá de los permisos tradicionales.
+
+### __Habilitar ACLs__
+
+Para utilizar ACLs, el sistema de archivos debe montarse con soporte para ACLs. Esto se puede verificar y habilitar con los siguientes comandos:
+
+1. Verificar si el sistema de archivos soporta ACLs:
+    ```
+    mount | grep acl
+    ```
+
+2. Si no está habilitado, monta el sistema de archivos con soporte para ACLs:
+    ```
+    sudo mount -o remount,acl /ruta/al/sistema/de/archivos
+    ```
+
+### __Comandos Básicos de ACLs__
+
+__setfacl:__ Establece ACLs en archivos y directorios.
+```
+setfacl -m u:usuario:permisos archivo
+setfacl -m g:grupo:permisos archivo
+```
+![acls](./imagenes/acls/acl1.png)
+
+---
+__getfacl:__ Muestra las ACLs de archivos y directorios.
+```
+getfacl archivo
+```
+![acls](./imagenes/acls/acl2.png)
+
+---
+__setfacl -x:__ Elimina una ACL específica.
+```
+setfacl -x u:usuario archivo
+```
+![acls](./imagenes/acls/acl3.png)
+
+---
+__setfacl -b:__ Elimina todas las ACLs de un archivo o directorio.
+```
+setfacl -b archivo
+```
+
+---
+### __Ejemplos de Uso de ACLs__
+
+1. __Asignar permisos a un usuario específico:__
+    ```
+    setfacl -m u:juan:rwx archivo.txt
+    ```
+
+2. __Asignar permisos a un grupo específico:__
+    ```
+    setfacl -m g:desarrolladores:rx proyecto/
+    ```
+
+3. __Ver las ACLs de un archivo o directorio:__
+    ```
+    getfacl archivo.txt
+    ```
+
+4. __Eliminar una ACL específica:__
+    ```
+    setfacl -x u:juan archivo.txt
+    ```
+
+---
+### __ACLs Predeterminadas__
+
+Las ACLs predeterminadas se pueden establecer en directorios para que los archivos y subdirectorios creados hereden estas ACLs.
+
+1. __Establecer una ACL predeterminada:__
+    ```
+    setfacl -d -m u:juan:rwx directorio/
+    ```
+
+2. __Ver las ACLs predeterminadas:__
+    ```
+    getfacl directorio/
+    ```
+
+Las ACLs proporcionan un control granular sobre los permisos, permitiendo una administración más detallada y específica de los accesos en sistemas Unix/Linux.
+
+---

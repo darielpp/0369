@@ -21,6 +21,10 @@ nav:
       - Sprint 2:
           - Gestión de Usuarios y Grupos: Proyecto1/Sprint2/gest_usu.md
           - Gestión de Permisos: Proyecto1/Sprint2/gest_permisos.md
+          - Sistema de Ficheros y Particiones: Proyecto1/Sprint2/sis_ficheros_particiones.md
+          - Compartir Ficheros en Red: Proyecto1/Sprint2/comp_red.md
+          - Cuotas de Disco: Proyecto1/Sprint2/disco.md
+          - Gestión de Procesos: Proyecto1/Sprint2/gest_procesos.md
 theme:
   name: "material"
   language: es
