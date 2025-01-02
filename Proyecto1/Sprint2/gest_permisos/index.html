@@ -18,6 +18,8 @@
         <link rel="prev" href="../gest_usu/">
       
       
+        <link rel="next" href="../sis_ficheros_particiones/">
+      
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.0">
@@ -622,12 +624,73 @@
     UMASK
   </a>
   
+    <nav class="md-nav" aria-label="UMASK">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#calculo-del-umask" class="md-nav__link">
+    Cálculo del Umask
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comprobar-y-cambiar-mascara" class="md-nav__link">
+    Comprobar y cambiar máscara
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modificar-umask-en-logindefs" class="md-nav__link">
+    Modificar Umask en login.defs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#acls" class="md-nav__link">
-    ACLs
+  <a href="#listas-de-control-de-acceso-acls" class="md-nav__link">
+    Listas de Control de Acceso (ACLs)
   </a>
+  
+    <nav class="md-nav" aria-label="Listas de Control de Acceso (ACLs)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#habilitar-acls" class="md-nav__link">
+    Habilitar ACLs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comandos-basicos-de-acls" class="md-nav__link">
+    Comandos Básicos de ACLs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos-de-uso-de-acls" class="md-nav__link">
+    Ejemplos de Uso de ACLs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acls-predeterminadas" class="md-nav__link">
+    ACLs Predeterminadas
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -635,6 +698,86 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sis_ficheros_particiones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sistema de Ficheros y Particiones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../comp_red/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compartir Ficheros en Red
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../disco/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cuotas de Disco
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gest_procesos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gestión de Procesos
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -727,12 +870,73 @@
     UMASK
   </a>
   
+    <nav class="md-nav" aria-label="UMASK">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#calculo-del-umask" class="md-nav__link">
+    Cálculo del Umask
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comprobar-y-cambiar-mascara" class="md-nav__link">
+    Comprobar y cambiar máscara
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modificar-umask-en-logindefs" class="md-nav__link">
+    Modificar Umask en login.defs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#acls" class="md-nav__link">
-    ACLs
+  <a href="#listas-de-control-de-acceso-acls" class="md-nav__link">
+    Listas de Control de Acceso (ACLs)
   </a>
+  
+    <nav class="md-nav" aria-label="Listas de Control de Acceso (ACLs)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#habilitar-acls" class="md-nav__link">
+    Habilitar ACLs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comandos-basicos-de-acls" class="md-nav__link">
+    Comandos Básicos de ACLs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos-de-uso-de-acls" class="md-nav__link">
+    Ejemplos de Uso de ACLs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acls-predeterminadas" class="md-nav__link">
+    ACLs Predeterminadas
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -845,7 +1049,116 @@ Para demostrar el uso de Sticky Bit, he creado una carpeta y le he asigando perm
 He iniciado sesión con otro usuario y he intentado borrar el archivo, efectivamente no tengo permisos para ello si no es la cuenta propietaria.</p>
 <hr />
 <h2 id="umask"><strong>UMASK</strong></h2>
-<h2 id="acls"><strong>ACLs</strong></h2>
+<p>El comando umask sirve para cambiar los permisos predeterminados de un usuario a la hora de crear archivos y directorios. También se puede modificar el archivo /etc/login.defs para que a todos los usuarios que creemos en adelante tengan unos permisos predeterminados personalizados.</p>
+<h3 id="calculo-del-umask"><strong>Cálculo del Umask</strong></h3>
+<p>El valor de umask se utiliza para determinar los permisos predeterminados de los archivos y directorios recién creados. Para calcular el umask, se debe restar el valor de umask de los permisos máximos posibles.</p>
+<p>Los permisos máximos posibles son:
+- Archivos: <code>666</code> (lectura y escritura para todos)
+- Directorios: <code>777</code> (lectura, escritura y ejecución para todos)</p>
+<p>Para calcular los permisos resultantes, se resta el valor de umask de los permisos máximos posibles. Por ejemplo, si el umask es <code>022</code>:
+- Permisos de archivos: <code>666 - 022 = 644</code>
+- Permisos de directorios: <code>777 - 022 = 755</code></p>
+<p>Esto significa que los archivos tendrán permisos de lectura y escritura para el propietario, y solo lectura para el grupo y otros. Los directorios tendrán permisos de lectura, escritura y ejecución para el propietario, y solo lectura y ejecución para el grupo y otros.</p>
+<h3 id="comprobar-y-cambiar-mascara"><strong>Comprobar y cambiar máscara</strong></h3>
+<p>Para comprobar la máscara de creación de archivos y directorios, se puede utilizar el comando <code>umask</code> sin argumentos. Esto mostrará la máscara actual en formato octal.</p>
+<pre><code>umask
+</code></pre>
+<p><img alt="umask" src="../imagenes/umask/umask1.png" /></p>
+<hr />
+<p>Para cambiar la máscara de creación, se puede utilizar el comando <code>umask</code> seguido de la nueva máscara en formato octal. Por ejemplo, para establecer una máscara de <code>033</code>, se puede utilizar el siguiente comando:</p>
+<pre><code>umask 033
+</code></pre>
+<p>Esto establecerá los permisos predeterminados de los archivos a <code>744</code> y de los directorios a <code>744</code>.</p>
+<p><img alt="umask" src="../imagenes/umask/umask2.png" /></p>
+<hr />
+<h3 id="modificar-umask-en-logindefs"><strong>Modificar Umask en login.defs</strong></h3>
+<p>Para modificar el umask en el archivo <code>/etc/login.defs</code>, se debe editar dicho archivo con privilegios de superusuario. Se puede utilizar un editor de texto como <code>nano</code> o <code>vim</code>. A continuación se muestra cómo hacerlo:</p>
+<p>Abre el archivo <code>/etc/login.defs</code> con un editor de texto:   </p>
+<pre><code>sudo nano /etc/login.defs
+</code></pre>
+<p><img alt="umask" src="../imagenes/umask/umask4.png" /></p>
+<hr />
+<p>Busca la línea que contiene <code>UMASK</code>. Si no existe, puedes agregarla. Modifica o agrega la línea para establecer el umask deseado. 
+<img alt="umask" src="../imagenes/umask/umask3.png" /></p>
+<hr />
+<p>Por ejemplo, para establecer un umask de <code>033</code>, agrega o modifica la siguiente línea:</p>
+<p><img alt="umask" src="../imagenes/umask/umask5.png" /></p>
+<hr />
+<p>Guarda los cambios y cierra el editor.</p>
+<p>A partir de ahora, los nuevos usuarios creados tendrán el umask especificado en el archivo <code>/etc/login.defs</code>.
+Para combrobarlo voy a crear un usario, iniciar sesión y utilizar el comando umask.
+<img alt="umask" src="../imagenes/umask/umask6.png" /></p>
+<p><img alt="umask" src="../imagenes/umask/umask7.png" /></p>
+<hr />
+<h2 id="listas-de-control-de-acceso-acls"><strong>Listas de Control de Acceso (ACLs)</strong></h2>
+<p>Las Listas de Control de Acceso (ACLs) proporcionan un método más flexible para asignar permisos a archivos y directorios en sistemas Unix/Linux. Permiten especificar permisos para usuarios y grupos adicionales más allá de los permisos tradicionales.</p>
+<h3 id="habilitar-acls"><strong>Habilitar ACLs</strong></h3>
+<p>Para utilizar ACLs, el sistema de archivos debe montarse con soporte para ACLs. Esto se puede verificar y habilitar con los siguientes comandos:</p>
+<ol>
+<li>
+<p>Verificar si el sistema de archivos soporta ACLs:
+    <code>mount | grep acl</code></p>
+</li>
+<li>
+<p>Si no está habilitado, monta el sistema de archivos con soporte para ACLs:
+    <code>sudo mount -o remount,acl /ruta/al/sistema/de/archivos</code></p>
+</li>
+</ol>
+<h3 id="comandos-basicos-de-acls"><strong>Comandos Básicos de ACLs</strong></h3>
+<p><strong>setfacl:</strong> Establece ACLs en archivos y directorios.</p>
+<pre><code>setfacl -m u:usuario:permisos archivo
+setfacl -m g:grupo:permisos archivo
+</code></pre>
+<p><img alt="acls" src="../imagenes/acls/acl1.png" /></p>
+<hr />
+<p><strong>getfacl:</strong> Muestra las ACLs de archivos y directorios.</p>
+<pre><code>getfacl archivo
+</code></pre>
+<p><img alt="acls" src="../imagenes/acls/acl2.png" /></p>
+<hr />
+<p><strong>setfacl -x:</strong> Elimina una ACL específica.</p>
+<pre><code>setfacl -x u:usuario archivo
+</code></pre>
+<p><img alt="acls" src="../imagenes/acls/acl3.png" /></p>
+<hr />
+<p><strong>setfacl -b:</strong> Elimina todas las ACLs de un archivo o directorio.</p>
+<pre><code>setfacl -b archivo
+</code></pre>
+<hr />
+<h3 id="ejemplos-de-uso-de-acls"><strong>Ejemplos de Uso de ACLs</strong></h3>
+<ol>
+<li>
+<p><strong>Asignar permisos a un usuario específico:</strong>
+    <code>setfacl -m u:juan:rwx archivo.txt</code></p>
+</li>
+<li>
+<p><strong>Asignar permisos a un grupo específico:</strong>
+    <code>setfacl -m g:desarrolladores:rx proyecto/</code></p>
+</li>
+<li>
+<p><strong>Ver las ACLs de un archivo o directorio:</strong>
+    <code>getfacl archivo.txt</code></p>
+</li>
+<li>
+<p><strong>Eliminar una ACL específica:</strong>
+    <code>setfacl -x u:juan archivo.txt</code></p>
+</li>
+</ol>
+<hr />
+<h3 id="acls-predeterminadas"><strong>ACLs Predeterminadas</strong></h3>
+<p>Las ACLs predeterminadas se pueden establecer en directorios para que los archivos y subdirectorios creados hereden estas ACLs.</p>
+<ol>
+<li>
+<p><strong>Establecer una ACL predeterminada:</strong>
+    <code>setfacl -d -m u:juan:rwx directorio/</code></p>
+</li>
+<li>
+<p><strong>Ver las ACLs predeterminadas:</strong>
+    <code>getfacl directorio/</code></p>
+</li>
+</ol>
+<p>Las ACLs proporcionan un control granular sobre los permisos, permitiendo una administración más detallada y específica de los accesos en sistemas Unix/Linux.</p>
+<hr />
 
 
 

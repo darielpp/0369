@@ -2,77 +2,82 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://daarieel.github.io/0369/</loc>
-         <lastmod>2024-12-08</lastmod>
+         <lastmod>2025-01-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://daarieel.github.io/0369/Proyecto1/introduccion/</loc>
-         <lastmod>2024-12-08</lastmod>
+         <lastmod>2025-01-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://daarieel.github.io/0369/Proyecto1/Sprint1/conf_red/</loc>
-         <lastmod>2024-12-08</lastmod>
+         <lastmod>2025-01-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://daarieel.github.io/0369/Proyecto1/Sprint1/gestores_arranque/</loc>
-         <lastmod>2024-12-08</lastmod>
+         <lastmod>2025-01-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://daarieel.github.io/0369/Proyecto1/Sprint1/inst_programas/</loc>
-         <lastmod>2024-12-08</lastmod>
+         <lastmod>2025-01-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://daarieel.github.io/0369/Proyecto1/Sprint1/instalacion/</loc>
-         <lastmod>2024-12-08</lastmod>
+         <lastmod>2025-01-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://daarieel.github.io/0369/Proyecto1/Sprint1/licencias/</loc>
-         <lastmod>2024-12-08</lastmod>
+         <lastmod>2025-01-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://daarieel.github.io/0369/Proyecto1/Sprint1/puntos_restauracion/</loc>
-         <lastmod>2024-12-08</lastmod>
+         <lastmod>2025-01-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://daarieel.github.io/0369/Proyecto1/Sprint1/rec_gest_arranque/</loc>
-         <lastmod>2024-12-08</lastmod>
+         <lastmod>2025-01-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://daarieel.github.io/0369/Proyecto1/Sprint2/comp_red/</loc>
+         <lastmod>2025-01-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://daarieel.github.io/0369/Proyecto1/Sprint2/copies_seguretat_auto/</loc>
-         <lastmod>2024-12-08</lastmod>
+         <lastmod>2025-01-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://daarieel.github.io/0369/Proyecto1/Sprint2/disco/</loc>
-         <lastmod>2024-12-08</lastmod>
+         <lastmod>2025-01-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://daarieel.github.io/0369/Proyecto1/Sprint2/gest_permisos/</loc>
-         <lastmod>2024-12-08</lastmod>
+         <lastmod>2025-01-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://daarieel.github.io/0369/Proyecto1/Sprint2/gest_procesos/</loc>
-         <lastmod>2024-12-08</lastmod>
+         <lastmod>2025-01-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://daarieel.github.io/0369/Proyecto1/Sprint2/gest_usu/</loc>
-         <lastmod>2024-12-08</lastmod>
+         <lastmod>2025-01-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://daarieel.github.io/0369/Proyecto1/Sprint2/sis_ficheros_particiones/</loc>
-         <lastmod>2024-12-08</lastmod>
+         <lastmod>2025-01-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
