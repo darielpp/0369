@@ -26,6 +26,7 @@ nav:
           - Cuotas de Disco: Proyecto1/Sprint2/disco.md
           - Gestión de Procesos: Proyecto1/Sprint2/gest_procesos.md
           - Copias de Seguridad: Proyecto1/Sprint2/copies_seguretat_auto.md
+          - Automatización de Tareas: Proyecto1/Sprint2/auto_tareas.md
 theme:
   name: "material"
   language: es
