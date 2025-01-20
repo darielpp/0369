@@ -15,6 +15,10 @@
         <link rel="canonical" href="https://daarieel.github.io/0369/Proyecto1/Sprint2/sis_ficheros_particiones/">
       
       
+        <link rel="prev" href="../gest_permisos/">
+      
+      
+        <link rel="next" href="../comp_red/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -22,7 +26,7 @@
     
     
       
-        <title>Sis ficheros particiones - Dariel Piñón 0369</title>
+        <title>Sistema de Ficheros y Particiones - Dariel Piñón 0369</title>
       
     
     
@@ -78,6 +82,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#sistemas-de-ficheros-y-particiones-en-linux-ubuntu" class="md-skip">
+          Saltar a contenido
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -110,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Sis ficheros particiones
+              Sistema de Ficheros y Particiones
             
           </span>
         </div>
@@ -228,17 +237,19 @@
       
   
   
+    
+  
   
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
@@ -251,7 +262,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Proyecto 1; Sistema Ubuntu Linux
@@ -464,17 +475,19 @@
                 
   
   
+    
+  
   
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
         
           <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
             
@@ -487,7 +500,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
             Sprint 2
@@ -534,6 +547,269 @@
 
               
             
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Sistema de Ficheros y Particiones
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Sistema de Ficheros y Particiones
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#estructura-fisica" class="md-nav__link">
+    Estructura Física
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructura-logica" class="md-nav__link">
+    Estructura Lógica
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructura-de-la-informacion" class="md-nav__link">
+    Estructura de la Información
+  </a>
+  
+    <nav class="md-nav" aria-label="Estructura de la Información">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sector-y-bloque" class="md-nav__link">
+    Sector y Bloque
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fragmentacion" class="md-nav__link">
+    Fragmentación
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comandos-involucrados" class="md-nav__link">
+    Comandos involucrados
+  </a>
+  
+    <nav class="md-nav" aria-label="Comandos involucrados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comando-fdisk-l" class="md-nav__link">
+    Comando fdisk -l
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comando-tune2fs-l" class="md-nav__link">
+    Comando tune2fs -l
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comando-df-t" class="md-nav__link">
+    Comando df -T
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comando-du-sh" class="md-nav__link">
+    Comando du -sh
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comando-e4defrag-c-y-e4defrag" class="md-nav__link">
+    Comando e4defrag -c y e4defrag
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-una-particion-y-por-que-hay-que-montarla-en-ubuntu-linux" class="md-nav__link">
+    ¿Qué es una partición y por qué hay que montarla en Ubuntu Linux?
+  </a>
+  
+    <nav class="md-nav" aria-label="¿Qué es una partición y por qué hay que montarla en Ubuntu Linux?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#particionar-un-disco" class="md-nav__link">
+    Particionar un Disco
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#montar-una-particion" class="md-nav__link">
+    Montar una Partición
+  </a>
+  
+    <nav class="md-nav" aria-label="Montar una Partición">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#montaje-temporal-de-una-particion" class="md-nav__link">
+    Montaje Temporal de una Partición
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#montaje-definitivo-de-una-particion" class="md-nav__link">
+    Montaje Definitivo de una Partición
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipos-de-formateos-en-linux" class="md-nav__link">
+    Tipos de Formateos en Linux
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../comp_red/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compartir Ficheros en Red
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../disco/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cuotas de Disco
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gest_procesos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gestión de Procesos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -566,6 +842,159 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#estructura-fisica" class="md-nav__link">
+    Estructura Física
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructura-logica" class="md-nav__link">
+    Estructura Lógica
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructura-de-la-informacion" class="md-nav__link">
+    Estructura de la Información
+  </a>
+  
+    <nav class="md-nav" aria-label="Estructura de la Información">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sector-y-bloque" class="md-nav__link">
+    Sector y Bloque
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fragmentacion" class="md-nav__link">
+    Fragmentación
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comandos-involucrados" class="md-nav__link">
+    Comandos involucrados
+  </a>
+  
+    <nav class="md-nav" aria-label="Comandos involucrados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comando-fdisk-l" class="md-nav__link">
+    Comando fdisk -l
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comando-tune2fs-l" class="md-nav__link">
+    Comando tune2fs -l
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comando-df-t" class="md-nav__link">
+    Comando df -T
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comando-du-sh" class="md-nav__link">
+    Comando du -sh
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comando-e4defrag-c-y-e4defrag" class="md-nav__link">
+    Comando e4defrag -c y e4defrag
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-una-particion-y-por-que-hay-que-montarla-en-ubuntu-linux" class="md-nav__link">
+    ¿Qué es una partición y por qué hay que montarla en Ubuntu Linux?
+  </a>
+  
+    <nav class="md-nav" aria-label="¿Qué es una partición y por qué hay que montarla en Ubuntu Linux?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#particionar-un-disco" class="md-nav__link">
+    Particionar un Disco
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#montar-una-particion" class="md-nav__link">
+    Montar una Partición
+  </a>
+  
+    <nav class="md-nav" aria-label="Montar una Partición">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#montaje-temporal-de-una-particion" class="md-nav__link">
+    Montaje Temporal de una Partición
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#montaje-definitivo-de-una-particion" class="md-nav__link">
+    Montaje Definitivo de una Partición
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipos-de-formateos-en-linux" class="md-nav__link">
+    Tipos de Formateos en Linux
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -580,9 +1009,247 @@
                   
 
 
-  <h1>Sis ficheros particiones</h1>
-
-
+<h1 id="sistemas-de-ficheros-y-particiones-en-linux-ubuntu"><strong>Sistemas de Ficheros y Particiones en Linux (Ubuntu)</strong></h1>
+<h2 id="estructura-fisica"><strong>Estructura Física</strong></h2>
+<p>En Ubuntu, los sistemas de ficheros y particiones se basan en dos tipos de estructuras físicas:</p>
+<ul>
+<li><strong>Discos Sólidos (SSD)</strong>: Utilizan memoria flash para almacenar datos, ofreciendo mayor velocidad y durabilidad.</li>
+<li><strong>Discos Mecánicos (HDD)</strong>: Utilizan platos giratorios y cabezales de lectura/escritura, siendo más económicos pero más lentos.</li>
+</ul>
+<hr />
+<h2 id="estructura-logica"><strong>Estructura Lógica</strong></h2>
+<p>La estructura lógica de los discos se organiza mediante tablas de particiones, siendo las más comunes:</p>
+<ul>
+<li><strong>MBR (Master Boot Record)</strong>: Soporta discos de hasta 2 TB y un máximo de 4 particiones primarias. Es una tecnología más antigua.</li>
+<li><strong>GPT (GUID Partition Table)</strong>: Soporta discos de mayor tamaño y un número casi ilimitado de particiones. Es más moderno y robusto.</li>
+</ul>
+<hr />
+<h2 id="estructura-de-la-informacion"><strong>Estructura de la Información</strong></h2>
+<h3 id="sector-y-bloque"><strong>Sector y Bloque</strong></h3>
+<ul>
+<li>
+<p><strong>Sector</strong>: Es la unidad mínima de almacenamiento en un disco, generalmente de 512 bytes. Los sectores son las divisiones físicas más pequeñas en las que se puede escribir o leer datos en un disco. Cada sector tiene una dirección única que permite al sistema operativo localizar y acceder a los datos almacenados en él. En discos más modernos, los sectores pueden ser de 4096 bytes (4 KB), conocidos como sectores avanzados.</p>
+</li>
+<li>
+<p><strong>Bloque</strong>: Es una agrupación de sectores y es la unidad mínima de lectura/escritura en los sistemas de ficheros. Típicamente, un bloque tiene un tamaño de 4 KB, aunque este tamaño puede variar dependiendo del sistema de ficheros utilizado. Los bloques permiten una gestión más eficiente del espacio en disco, ya que agrupan varios sectores en una unidad más grande, reduciendo la sobrecarga de gestión y mejorando el rendimiento de lectura/escritura.</p>
+</li>
+</ul>
+<h3 id="fragmentacion"><strong>Fragmentación</strong></h3>
+<ul>
+<li><strong>Fragmentación Interna</strong>: Ocurre cuando los archivos ocupan más espacio del necesario dentro de un bloque, dejando espacio no utilizado.</li>
+<li><strong>Fragmentación Externa</strong>: Sucede cuando los archivos se dividen en múltiples bloques no contiguos, lo que puede ralentizar el acceso a los datos.</li>
+</ul>
+<hr />
+<h2 id="comandos-involucrados"><strong>Comandos involucrados</strong></h2>
+<h3 id="comando-fdisk-l"><strong>Comando <code>fdisk -l</code></strong></h3>
+<p>El comando <code>fdisk -l</code> se utiliza para listar las tablas de particiones de todos los discos disponibles en el sistema. Al ejecutarlo, se muestra información detallada sobre cada disco y sus particiones, incluyendo:</p>
+<ul>
+<li>El nombre del dispositivo (por ejemplo, /dev/sda)</li>
+<li>El tamaño total del disco</li>
+<li>El tipo de partición (MBR o GPT)</li>
+<li>El tamaño y el tipo de cada partición</li>
+<li>El sistema de archivos utilizado en cada partición</li>
+</ul>
+<p>Este comando es útil para obtener una visión general de la estructura de particiones de los discos en un sistema Linux y para diagnosticar problemas relacionados con las particiones.</p>
+<pre><code class="language-sh">sudo fdisk -l
+</code></pre>
+<p><img alt="fdisk -l" src="../imagenes/ficheros_particiones/ficheros_particiones1.png" /></p>
+<hr />
+<h3 id="comando-tune2fs-l"><strong>Comando <code>tune2fs -l</code></strong></h3>
+<p>El comando <code>tune2fs -l</code> se utiliza para listar la información de superbloque y los ajustes de una partición específica en sistemas de archivos ext2/ext3/ext4. Al ejecutarlo, se muestra información detallada sobre la partición, incluyendo:</p>
+<ul>
+<li>El número de inodos y bloques</li>
+<li>El tamaño del bloque</li>
+<li>El estado del sistema de archivos</li>
+<li>La última fecha de montaje y verificación</li>
+<li>El número máximo de montajes antes de una verificación forzada</li>
+<li>La UUID del sistema de archivos</li>
+</ul>
+<p>Este comando es útil para obtener una visión detallada de la configuración y el estado de una partición específica, lo que puede ayudar en tareas de administración y diagnóstico.</p>
+<pre><code class="language-sh">sudo tune2fs -l /dev/sda1
+</code></pre>
+<p><img alt="tune2fs -l" src="../imagenes/ficheros_particiones/ficheros_particiones2.png" /></p>
+<hr />
+<h3 id="comando-df-t"><strong>Comando <code>df -T</code></strong></h3>
+<p>El comando <code>df -T</code> se utiliza para mostrar información sobre el uso del espacio en disco y el tipo de sistema de archivos de cada partición montada en el sistema. Al ejecutarlo, se muestra una tabla con información detallada, incluyendo:</p>
+<ul>
+<li>El nombre del sistema de archivos</li>
+<li>El tipo de sistema de archivos (por ejemplo, ext4, xfs, etc.)</li>
+<li>El tamaño total del sistema de archivos</li>
+<li>El espacio utilizado y disponible</li>
+<li>El porcentaje de uso</li>
+<li>El punto de montaje</li>
+</ul>
+<p>Este comando es útil para monitorear el uso del espacio en disco y para identificar el tipo de sistema de archivos utilizado en cada partición montada.</p>
+<pre><code class="language-sh">df -T
+</code></pre>
+<p><img alt="df -T" src="../imagenes/ficheros_particiones/ficheros_particiones3.png" /></p>
+<hr />
+<h3 id="comando-du-sh"><strong>Comando <code>du -sh</code></strong></h3>
+<p>El comando <code>du -sh (nombre archivo)</code> se utiliza para mostrar el tamaño de un archivo o directorio específico en un formato legible. 
+Al ejecutarlo, se muestra el tamaño total del archivo o directorio especificado, incluyendo todos sus subdirectorios y archivos contenidos. 
+La opción <code>-s</code> resume el tamaño total en lugar de mostrar el tamaño de cada archivo individual, y la opción <code>-h</code> convierte el tamaño en un formato legible para humanos (por ejemplo, KB, MB, GB).</p>
+<p>Este comando es útil para obtener una visión rápida del tamaño de un archivo o directorio específico, lo que puede ayudar en la gestión del espacio en disco.</p>
+<pre><code class="language-sh">du -sh /ruta/al/archivo_o_directorio
+</code></pre>
+<p><img alt="du -sh" src="../imagenes/ficheros_particiones/ficheros_particiones4.png" /></p>
+<hr />
+<h3 id="comando-e4defrag-c-y-e4defrag"><strong>Comando <code>e4defrag -c</code> y <code>e4defrag</code></strong></h3>
+<p>El comando <code>e4defrag -c</code> se utiliza para comprobar el nivel de fragmentación de un archivo, directorio o sistema de archivos completo en sistemas de archivos ext4. Al ejecutarlo, se muestra un informe detallado del estado de fragmentación, incluyendo:</p>
+<ul>
+<li>El número de archivos fragmentados</li>
+<li>El número total de fragmentos</li>
+<li>El porcentaje de fragmentación</li>
+</ul>
+<p>Este comando es útil para evaluar si es necesario realizar una desfragmentación en el sistema de archivos.</p>
+<pre><code class="language-sh">sudo e4defrag -c /ruta/al/archivo_o_directorio
+</code></pre>
+<p><img alt="e4defrag -c" src="../imagenes/ficheros_particiones/ficheros_particiones5.png" /></p>
+<p>El comando <code>e4defrag</code> se utiliza para desfragmentar archivos, directorios o el sistema de archivos completo en sistemas de archivos ext4. Al ejecutarlo, se reorganizan los fragmentos de los archivos para que ocupen bloques contiguos, mejorando así el rendimiento de lectura/escritura.</p>
+<pre><code class="language-sh">sudo e4defrag /ruta/al/archivo_o_directorio
+</code></pre>
+<p><img alt="e4defrag" src="../imagenes/ficheros_particiones/ficheros_particiones6.png" /></p>
+<hr />
+<h2 id="que-es-una-particion-y-por-que-hay-que-montarla-en-ubuntu-linux"><strong>¿Qué es una partición y por qué hay que montarla en Ubuntu Linux?</strong></h2>
+<p>Una partición es una división lógica de un disco duro que permite al sistema operativo gestionar y organizar los datos de manera más eficiente. Cada partición puede contener un sistema de archivos diferente y puede ser utilizada para distintos propósitos, como almacenar el sistema operativo, datos personales, o archivos de intercambio.</p>
+<p>Montar una partición en Ubuntu Linux significa asignarle un punto de montaje en el sistema de archivos, lo que permite al sistema operativo y a los usuarios acceder a los datos almacenados en esa partición. Sin montar una partición, los datos en ella no serían accesibles para el sistema operativo.</p>
+<hr />
+<h3 id="particionar-un-disco"><strong>Particionar un Disco</strong></h3>
+<p>Voy a añadir un disco virtual a Ubuntu para crear particions en el.</p>
+<p><img alt="Disco Virtual" src="../imagenes/ficheros_particiones/ficheros_particiones7.png" /></p>
+<hr />
+<p>Utilizamos el comando <code>fdisk -l</code> para localizar el disco que hemos añadido.</p>
+<p><img alt="fdisk -l" src="../imagenes/ficheros_particiones/ficheros_particiones8.png" /></p>
+<hr />
+<p>El mismo comando <code>fdisk</code> es el que utilizaremos para crear la partición.</p>
+<p><img alt="fdisk" src="../imagenes/ficheros_particiones/ficheros_particiones9.png" /></p>
+<hr />
+<p>Ahora nos pide que entremos una orden, podemos introducir <code>m</code> para que nos muestre todo lo que podemos hacer con fdisk. </p>
+<p>Utilizaré <code>n</code> para crear una nueva
+nueva partición.</p>
+<p>Ahora hay que seguir estos pasos:</p>
+<ol>
+<li>
+<p>Selecciona el tipo de partición:</p>
+<ul>
+<li><code>p</code> para una partición primaria.</li>
+<li><code>e</code> para una partición extendida.</li>
+</ul>
+</li>
+<li>
+<p>Especifica el número de la partición (por ejemplo, 2).</p>
+</li>
+<li>
+<p>Define el primer sector (puedes presionar Enter para aceptar el valor predeterminado).</p>
+</li>
+<li>
+<p>Define el último sector o el tamaño de la partición (por ejemplo, <code>+5G</code> para una partición de 5 GB). Si no introducimos ningún valor, utilizará el total disponible.</p>
+</li>
+<li>
+<p>Finalmente, escribe los cambios en el disco introduciendo <code>w</code>.</p>
+</li>
+</ol>
+<p>Esto creará una nueva partición en el disco especificado.</p>
+<p><img alt="Partición" src="../imagenes/ficheros_particiones/ficheros_particiones10.png" /></p>
+<hr />
+<p>Lo podemos comprobar con <code>fdisk -l</code>:</p>
+<p><img alt="Comprobación" src="../imagenes/ficheros_particiones/ficheros_particiones11.png" /></p>
+<hr />
+<h3 id="montar-una-particion"><strong>Montar una Partición</strong></h3>
+<p>Para montar particiones en Ubuntu Linux, puedes hacerlo de manera temporal o definitiva. A continuación se explica cómo realizar ambos tipos de montajes:</p>
+<h4 id="montaje-temporal-de-una-particion"><strong>Montaje Temporal de una Partición</strong></h4>
+<p>El montaje temporal de una partición se realiza utilizando el comando <code>mount</code>. Este tipo de montaje se perderá después de reiniciar el sistema.</p>
+<ol>
+<li>
+<p>Crea un punto de montaje (directorio) donde se montará la partición:
+    <code>sh
+    sudo mkdir /mnt/practica_particion</code></p>
+<p><img alt="Creación Carpeta" src="../imagenes/ficheros_particiones/ficheros_particiones12.png" /></p>
+</li>
+<li>
+<p>Monta la partición en el punto de montaje:
+    <code>sh
+    sudo mount -t ext4 /dev/sdb2 /mnt/practica_particion</code></p>
+<p><img alt="mount -t" src="../imagenes/ficheros_particiones/ficheros_particiones13.png" /></p>
+</li>
+<li>
+<p>Verifica que la partición se ha montado correctamente:
+    <code>sh
+    df -h</code></p>
+<p><img alt="df -h" src="../imagenes/ficheros_particiones/ficheros_particiones14.png" /></p>
+</li>
+</ol>
+<hr />
+<h4 id="montaje-definitivo-de-una-particion"><strong>Montaje Definitivo de una Partición</strong></h4>
+<p>Para montar una partición de manera definitiva, es necesario editar el archivo <code>/etc/fstab</code>. Esto asegura que la partición se monte automáticamente en cada reinicio del sistema.</p>
+<ol>
+<li>
+<p>Crea un punto de montaje (directorio) donde se montará la partición:
+    <code>sh
+    sudo mkdir /mnt/practica_particion</code></p>
+<p><img alt="Creación Carpeta" src="../imagenes/ficheros_particiones/ficheros_particiones12.png" /></p>
+</li>
+<li>
+<p>Abre el archivo <code>/etc/fstab</code> con un editor de texto:
+    <code>sh
+    sudo nano /etc/fstab</code></p>
+<p><img alt="/etc/fstab" src="../imagenes/ficheros_particiones/ficheros_particiones15.png" /></p>
+</li>
+<li>
+<p>Añade una línea al final del archivo con la información de la partición y el punto de montaje. Por ejemplo:
+    <code>sh
+    /dev/sdb2 /mnt/practica_particion ext4 defaults 0 2</code></p>
+<ul>
+<li><code>/dev/sdb2</code>: La partición que deseas montar.</li>
+<li><code>/mnt/practica_particion</code>: El punto de montaje.</li>
+<li><code>ext4</code>: El tipo de sistema de archivos.</li>
+<li><code>defaults</code>: Opciones de montaje.</li>
+<li><code>0</code>: Si se debe hacer un dump del sistema de archivos.</li>
+<li><code>2</code>: El orden en que se debe verificar el sistema de archivos.</li>
+</ul>
+<p><img alt="/etc/fstab" src="../imagenes/ficheros_particiones/ficheros_particiones16.png" /></p>
+</li>
+<li>
+<p>Guarda los cambios y cierra el editor.</p>
+</li>
+<li>
+<p>Monta todas las particiones especificadas en <code>/etc/fstab</code> sin reiniciar:
+    <code>sh
+    sudo mount -a</code></p>
+<p><img alt="mount -a" src="../imagenes/ficheros_particiones/ficheros_particiones17.png" /></p>
+</li>
+<li>
+<p>Verifica que la partición se ha montado correctamente:
+    <code>sh
+    df -h</code>
+    <img alt="df -h" src="../imagenes/ficheros_particiones/ficheros_particiones18.png" /></p>
+</li>
+</ol>
+<p>Con estos pasos, habrás montado una partición de manera temporal y definitiva en Ubuntu Linux.</p>
+<hr />
+<h2 id="tipos-de-formateos-en-linux"><strong>Tipos de Formateos en Linux</strong></h2>
+<p>En Linux, existen tres tipos principales de formateos que se pueden realizar en un disco o partición:</p>
+<ol>
+<li>
+<p><strong>Formateo Rápido</strong>:</p>
+<p>Este tipo de formateo elimina la tabla de particiones y el sistema de archivos, pero no borra los datos físicamente del disco. Es un proceso rápido y se utiliza cuando se necesita preparar un disco para un nuevo sistema de archivos sin preocuparse por la recuperación de datos antiguos.</p>
+<ul>
+<li>Comando: <code>mkfs -t ext4 /dev/sdb2</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Formateo Completo</strong>:</p>
+<p>El formateo completo no solo elimina la tabla de particiones y el sistema de archivos, sino que también sobrescribe todos los datos en el disco con ceros o un patrón específico. Esto asegura que los datos antiguos no puedan ser recuperados. Es un proceso más lento que el formateo rápido.</p>
+<ul>
+<li>Comando: <code>dd if=/dev/zero of=/dev/sdb bs=1M</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Formateo de Bajo Nivel</strong>:</p>
+<p>Este tipo de formateo es más profundo y se realiza a nivel de hardware. Restaura el disco a su estado original de fábrica, eliminando todos los datos y configuraciones. Es raramente necesario y generalmente se realiza con herramientas específicas del fabricante del disco.</p>
+</li>
+</ol>
+<p>Estos formateos se utilizan en diferentes situaciones dependiendo de las necesidades de seguridad y preparación del disco para su uso.</p>
 
 
 
