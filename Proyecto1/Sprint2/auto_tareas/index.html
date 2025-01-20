@@ -12,13 +12,11 @@
         <meta name="author" content="Dariel Piñón">
       
       
-        <link rel="canonical" href="https://daarieel.github.io/0369/Proyecto1/Sprint2/copies_seguretat_auto/">
+        <link rel="canonical" href="https://daarieel.github.io/0369/Proyecto1/Sprint2/auto_tareas/">
       
       
-        <link rel="prev" href="../gest_procesos/">
+        <link rel="prev" href="../copies_seguretat_auto/">
       
-      
-        <link rel="next" href="../auto_tareas/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -26,7 +24,7 @@
     
     
       
-        <title>Copias de Seguridad - Dariel Piñón 0369</title>
+        <title>Automatización de Tareas - Dariel Piñón 0369</title>
       
     
     
@@ -83,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#copias-de-seguridad-en-linux" class="md-skip">
+        <a href="#automatizacion-de-tareas-con-cron-y-anacron" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -119,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Copias de Seguridad
+              Automatización de Tareas
             
           </span>
         </div>
@@ -631,6 +629,26 @@
                 
   
   
+  
+    <li class="md-nav__item">
+      <a href="../copies_seguretat_auto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Copias de Seguridad
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -646,7 +664,7 @@
           
   
   <span class="md-ellipsis">
-    Copias de Seguridad
+    Automatización de Tareas
   </span>
   
 
@@ -657,7 +675,7 @@
         
   
   <span class="md-ellipsis">
-    Copias de Seguridad
+    Automatización de Tareas
   </span>
   
 
@@ -679,44 +697,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#que-es-una-copia-de-seguridad" class="md-nav__link">
-    ¿Qué es una copia de seguridad?
+  <a href="#que-es-cron" class="md-nav__link">
+    ¿Qué es Cron?
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tipos-de-copias-de-seguridad" class="md-nav__link">
-    Tipos de copias de seguridad
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#el-comando-cp-en-linux" class="md-nav__link">
-    El comando cp en Linux
-  </a>
-  
-    <nav class="md-nav" aria-label="El comando cp en Linux">
+    <nav class="md-nav" aria-label="¿Qué es Cron?">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#sintaxis-basica" class="md-nav__link">
-    Sintaxis básica
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parametros-comunes" class="md-nav__link">
-    Parámetros comunes
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ejemplo-practico" class="md-nav__link">
-    Ejemplo Práctico
+  <a href="#archivos-relacionados-con-cron" class="md-nav__link">
+    Archivos relacionados con Cron
   </a>
   
 </li>
@@ -727,30 +717,16 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#el-comando-rsync-en-linux" class="md-nav__link">
-    El comando rsync en Linux
+  <a href="#que-es-anacron" class="md-nav__link">
+    ¿Qué es Anacron?
   </a>
   
-    <nav class="md-nav" aria-label="El comando rsync en Linux">
+    <nav class="md-nav" aria-label="¿Qué es Anacron?">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#sintaxis-basica_1" class="md-nav__link">
-    Sintaxis básica
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parametros-comunes_1" class="md-nav__link">
-    Parámetros comunes
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ejemplo-practico_1" class="md-nav__link">
-    Ejemplo Práctico
+  <a href="#archivos-relacionados-con-anacron" class="md-nav__link">
+    Archivos relacionados con Anacron
   </a>
   
 </li>
@@ -761,43 +737,23 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#el-comando-dd-en-linux" class="md-nav__link">
-    El comando dd en Linux
-  </a>
-  
-    <nav class="md-nav" aria-label="El comando dd en Linux">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#sintaxis-basica_2" class="md-nav__link">
-    Sintaxis básica
+  <a href="#diferencias-entre-cron-y-anacron" class="md-nav__link">
+    Diferencias entre Cron y Anacron
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#parametros-comunes_2" class="md-nav__link">
-    Parámetros comunes
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-practico-crontab" class="md-nav__link">
+    Ejemplo Práctico CRONTAB
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#ejemplo-practico_2" class="md-nav__link">
-    Ejemplo Práctico
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-practico-cron" class="md-nav__link">
+    Ejemplo Práctico CRON
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#verificacion-de-la-copia-con-md5sum" class="md-nav__link">
-    Verificación de la copia con md5sum
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -805,26 +761,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../auto_tareas/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Automatización de Tareas
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -872,44 +808,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#que-es-una-copia-de-seguridad" class="md-nav__link">
-    ¿Qué es una copia de seguridad?
+  <a href="#que-es-cron" class="md-nav__link">
+    ¿Qué es Cron?
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tipos-de-copias-de-seguridad" class="md-nav__link">
-    Tipos de copias de seguridad
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#el-comando-cp-en-linux" class="md-nav__link">
-    El comando cp en Linux
-  </a>
-  
-    <nav class="md-nav" aria-label="El comando cp en Linux">
+    <nav class="md-nav" aria-label="¿Qué es Cron?">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#sintaxis-basica" class="md-nav__link">
-    Sintaxis básica
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parametros-comunes" class="md-nav__link">
-    Parámetros comunes
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ejemplo-practico" class="md-nav__link">
-    Ejemplo Práctico
+  <a href="#archivos-relacionados-con-cron" class="md-nav__link">
+    Archivos relacionados con Cron
   </a>
   
 </li>
@@ -920,30 +828,16 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#el-comando-rsync-en-linux" class="md-nav__link">
-    El comando rsync en Linux
+  <a href="#que-es-anacron" class="md-nav__link">
+    ¿Qué es Anacron?
   </a>
   
-    <nav class="md-nav" aria-label="El comando rsync en Linux">
+    <nav class="md-nav" aria-label="¿Qué es Anacron?">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#sintaxis-basica_1" class="md-nav__link">
-    Sintaxis básica
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parametros-comunes_1" class="md-nav__link">
-    Parámetros comunes
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ejemplo-practico_1" class="md-nav__link">
-    Ejemplo Práctico
+  <a href="#archivos-relacionados-con-anacron" class="md-nav__link">
+    Archivos relacionados con Anacron
   </a>
   
 </li>
@@ -954,43 +848,23 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#el-comando-dd-en-linux" class="md-nav__link">
-    El comando dd en Linux
-  </a>
-  
-    <nav class="md-nav" aria-label="El comando dd en Linux">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#sintaxis-basica_2" class="md-nav__link">
-    Sintaxis básica
+  <a href="#diferencias-entre-cron-y-anacron" class="md-nav__link">
+    Diferencias entre Cron y Anacron
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#parametros-comunes_2" class="md-nav__link">
-    Parámetros comunes
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-practico-crontab" class="md-nav__link">
+    Ejemplo Práctico CRONTAB
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#ejemplo-practico_2" class="md-nav__link">
-    Ejemplo Práctico
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-practico-cron" class="md-nav__link">
+    Ejemplo Práctico CRON
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#verificacion-de-la-copia-con-md5sum" class="md-nav__link">
-    Verificación de la copia con md5sum
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1009,95 +883,75 @@
                   
 
 
-<h1 id="copias-de-seguridad-en-linux"><strong>Copias de Seguridad en Linux</strong></h1>
-<h2 id="que-es-una-copia-de-seguridad"><strong>¿Qué es una copia de seguridad?</strong></h2>
-<p>Una copia de seguridad es una duplicación de datos importantes que se almacena en un lugar seguro para poder recuperarlos en caso de pérdida, daño o corrupción de los datos originales. Las copias de seguridad son esenciales para proteger la información y garantizar la continuidad del trabajo.</p>
-<h2 id="tipos-de-copias-de-seguridad"><strong>Tipos de copias de seguridad</strong></h2>
+<h1 id="automatizacion-de-tareas-con-cron-y-anacron"><strong>Automatización de tareas con Cron y Anacron</strong></h1>
+<h2 id="que-es-cron">¿Qué es Cron?</h2>
+<p>Cron es una utilidad de software en sistemas Unix-like que permite programar la ejecución de comandos o scripts en intervalos de tiempo específicos. Es ideal para tareas repetitivas que necesitan ejecutarse a intervalos regulares, como respaldos, actualizaciones de sistemas, y mantenimiento.</p>
+<h3 id="archivos-relacionados-con-cron">Archivos relacionados con Cron</h3>
+<ul>
+<li><code>/etc/crontab</code>: Archivo de configuración principal de Cron.</li>
+<li><code>/var/spool/cron/crontabs</code>: Directorio donde se almacenan los archivos crontab de los usuarios.</li>
+<li><code>crontab -e</code>: Comando para editar el archivo crontab del usuario actual.</li>
+<li><code>/etc/cron.d</code>: Directorio donde se pueden colocar archivos crontab adicionales.</li>
+<li><code>/etc/cron.daily</code>: Directorio para tareas que se ejecutan diariamente.</li>
+<li><code>/etc/cron.hourly</code>: Directorio para tareas que se ejecutan cada hora.</li>
+<li><code>/etc/cron.monthly</code>: Directorio para tareas que se ejecutan mensualmente.</li>
+<li><code>/etc/cron.weekly</code>: Directorio para tareas que se ejecutan semanalmente.</li>
+</ul>
+<h2 id="que-es-anacron">¿Qué es Anacron?</h2>
+<p>Anacron es una utilidad similar a Cron, pero está diseñada para sistemas que no están encendidos todo el tiempo. Anacron garantiza que las tareas programadas se ejecuten al menos una vez, incluso si el sistema estuvo apagado durante el tiempo programado. Es útil para computadoras portátiles y otros dispositivos que no están siempre en funcionamiento.</p>
+<h3 id="archivos-relacionados-con-anacron">Archivos relacionados con Anacron</h3>
+<ul>
+<li><code>/etc/anacrontab</code>: Archivo de configuración principal de Anacron.</li>
+<li><code>/var/spool/anacron</code>: Directorio donde Anacron guarda los registros de las tareas ejecutadas.</li>
+</ul>
+<h2 id="diferencias-entre-cron-y-anacron">Diferencias entre Cron y Anacron</h2>
+<ul>
+<li><strong>Frecuencia de Ejecución</strong>: Cron puede ejecutar tareas en intervalos de tiempo muy cortos (por ejemplo, cada minuto), mientras que Anacron está diseñado para ejecutar tareas al menos una vez al día.</li>
+<li><strong>Disponibilidad del Sistema</strong>: Cron asume que el sistema está siempre encendido, mientras que Anacron está diseñado para sistemas que pueden estar apagados durante largos períodos.</li>
+<li><strong>Configuración</strong>: Los trabajos de Cron se configuran en el archivo <code>crontab</code>, mientras que los trabajos de Anacron se configuran en el archivo <code>/etc/anacrontab</code>.</li>
+</ul>
+<p>Ambas herramientas son complementarias y pueden ser utilizadas juntas para asegurar que las tareas críticas se ejecuten de manera oportuna, independientemente de la disponibilidad del sistema.</p>
+<h2 id="ejemplo-practico-crontab"><strong>Ejemplo Práctico CRONTAB</strong></h2>
+<p>Aprovechando el apartado anterior de cópias de seguridad, automatizaré las copias de seguridad que estaba realizando manualmente en dicho apartado.</p>
 <ol>
 <li>
-<p><strong>Copia de seguridad completa</strong>: Es una copia exacta de todos los datos seleccionados. Aunque es la más segura, también es la que más espacio y tiempo requiere. </p>
-<ul>
-<li><strong>Recomendación</strong>: Realizar una copia de seguridad completa semanalmente o mensualmente, dependiendo del volumen de datos y la criticidad de la información.</li>
-</ul>
+<p><strong>Creación del Script</strong>
+    <img alt="SCRIPT" src="../imagenes/auto_tareas/auto_tareas1.png" />
+    Al script hay que darle permisos de ejecucion, se puede utilizar el comando <code>sudo chmod +x copias-sh</code></p>
 </li>
 <li>
-<p><strong>Copia de seguridad incremental</strong>: Solo copia los datos que han cambiado desde la última copia de seguridad (completa o incremental). Es más rápida y ocupa menos espacio, pero la restauración puede ser más compleja.</p>
-<ul>
-<li><strong>Recomendación</strong>: Realizar copias de seguridad incrementales diariamente para minimizar el tiempo y espacio de almacenamiento.</li>
-</ul>
+<p><strong>Editar fichero CRONTAB</strong>
+    Ahora vamos a indicarle a crontab la frecuencia con la que tiene que ejecutar el script y obviamente le vamos a indicar donde está el scriot que tiene que ejecutar.
+    <img alt="SCRIPT" src="../imagenes/auto_tareas/auto_tareas2.png" />
+    El script se ejecutará todos los días, a las 13:42.</p>
 </li>
 <li>
-<p><strong>Copia de seguridad diferencial</strong>: Similar a la incremental, pero copia todos los datos que han cambiado desde la última copia de seguridad completa. Es un equilibrio entre la copia completa y la incremental.</p>
-<ul>
-<li><strong>Recomendación</strong>: Realizar copias de seguridad diferenciales cada pocos días (por ejemplo, cada 3 días) para mantener un equilibrio entre tiempo de copia y facilidad de restauración.</li>
-</ul>
+<p><strong>Comprobación</strong>
+    Esperamos a la hora indicada y revisamos la carpeta /var/copias a ver si se genera el fichero .tar.
+    <img alt="SCRIPT" src="../imagenes/auto_tareas/auto_tareas3.png" /></p>
 </li>
 </ol>
-<h2 id="el-comando-cp-en-linux"><strong>El comando <code>cp</code> en Linux</strong></h2>
-<p>El comando <code>cp</code> en Linux se utiliza para copiar archivos y directorios de un lugar a otro. Es una herramienta fundamental para la gestión de archivos en sistemas Unix y Linux.</p>
-<h3 id="sintaxis-basica"><strong>Sintaxis básica</strong></h3>
-<pre><code class="language-bash">cp [opciones] origen destino
-</code></pre>
-<h3 id="parametros-comunes"><strong>Parámetros comunes</strong></h3>
-<ul>
-<li><code>-r</code> o <code>--recursive</code>: Copia directorios de forma recursiva, incluyendo todos los archivos y subdirectorios.</li>
-<li><code>-i</code> o <code>--interactive</code>: Pide confirmación antes de sobrescribir archivos existentes en el destino.</li>
-<li><code>-u</code> o <code>--update</code>: Copia solo los archivos que son más nuevos que los existentes en el destino o que no existen en el destino.</li>
-<li><code>-v</code> o <code>--verbose</code>: Muestra información detallada de los archivos que se están copiando.</li>
-<li><code>-a</code> o <code>--archive</code>: Preserva la estructura de directorios, atributos de archivo y enlaces simbólicos. Es equivalente a usar <code>-dR --preserve=all</code>.</li>
-</ul>
-<p>El comando <code>cp</code> es una herramienta poderosa y flexible para la gestión de archivos en Linux, permitiendo realizar copias de seguridad y transferencias de archivos de manera eficiente.</p>
-<h3 id="ejemplo-practico"><strong>Ejemplo Práctico</strong></h3>
-<p>En este ejemplo páctico de <code>cp</code>, voy a copiar lo que se encuentre dentro del directorio <code>/home/&lt;usuario&gt;/Documentos</code> en <code>/var/copias</code>.</p>
-<p><img alt="Ejemplo_CP" src="../imagenes/copies_seguretat_auto/copies_seguretat_auto1.png" /></p>
-<p>Ejecución del comando <code>cp -R /home/&lt;usuario&gt;/Documents/* /var/copies</code> y verificación de la cópia:</p>
-<p><img alt="Ejemplo_CP" src="../imagenes/copies_seguretat_auto/copies_seguretat_auto2.png" /></p>
-<h2 id="el-comando-rsync-en-linux"><strong>El comando <code>rsync</code> en Linux</strong></h2>
-<p>El comando <code>rsync</code> es una herramienta avanzada para copiar y sincronizar archivos y directorios de manera eficiente entre diferentes ubicaciones. A diferencia de <code>cp</code>, <code>rsync</code> solo transfiere las diferencias entre el origen y el destino, lo que lo hace ideal para realizar copias de seguridad incrementales y diferenciales.</p>
-<h3 id="sintaxis-basica_1"><strong>Sintaxis básica</strong></h3>
-<pre><code class="language-bash">rsync [opciones] origen destino
-</code></pre>
-<h3 id="parametros-comunes_1"><strong>Parámetros comunes</strong></h3>
-<ul>
-<li><code>-a</code> o <code>--archive</code>: Modo de archivo, que preserva permisos, tiempos de modificación, y otros atributos.</li>
-<li><code>-v</code> o <code>--verbose</code>: Muestra información detallada de los archivos que se están sincronizando.</li>
-<li><code>-z</code> o <code>--compress</code>: Comprime los datos durante la transferencia para ahorrar ancho de banda.</li>
-<li><code>-P</code>: Muestra el progreso de la transferencia y permite reanudar transferencias interrumpidas.</li>
-<li><code>--delete</code>: Elimina archivos en el destino que ya no existen en el origen.</li>
-</ul>
-<h3 id="ejemplo-practico_1"><strong>Ejemplo Práctico</strong></h3>
-<p>En este ejemplo práctico de <code>rsync</code>, voy a sincronizar el contenido del directorio <code>/home/&lt;usuario&gt;/Documentos</code> con <code>/var/copias</code>.</p>
-<pre><code class="language-bash">rsync -avz /home/&lt;usuario&gt;/Documentos/ /var/copias/
-</code></pre>
-<p>Este comando sincroniza los archivos y directorios, mostrando detalles de la transferencia y comprimiendo los datos durante el proceso.</p>
-<p><img alt="Ejemplo_RSYNC" src="../imagenes/copies_seguretat_auto/copies_seguretat_auto3.png" /></p>
-<p>El comando <code>rsync</code> es una herramienta poderosa y eficiente para realizar copias de seguridad y sincronizaciones en sistemas Linux.</p>
-<h2 id="el-comando-dd-en-linux"><strong>El comando <code>dd</code> en Linux</strong></h2>
-<p>El comando <code>dd</code> en Linux se utiliza para copiar y convertir archivos de una manera más flexible y potente. Es especialmente útil para crear copias de seguridad de discos completos, particiones y dispositivos de almacenamiento.</p>
-<h3 id="sintaxis-basica_2"><strong>Sintaxis básica</strong></h3>
-<pre><code class="language-bash">dd if=origen of=destino [opciones]
-</code></pre>
-<h3 id="parametros-comunes_2"><strong>Parámetros comunes</strong></h3>
-<ul>
-<li><code>if</code>: Especifica el archivo de entrada (origen).</li>
-<li><code>of</code>: Especifica el archivo de salida (destino).</li>
-<li><code>bs</code>: Tamaño del bloque de datos que se copiará a la vez (por ejemplo, <code>bs=4M</code> para bloques de 4 megabytes).</li>
-<li><code>count</code>: Número de bloques que se copiarán.</li>
-<li><code>status=progress</code>: Muestra el progreso de la copia.</li>
-</ul>
-<h3 id="ejemplo-practico_2"><strong>Ejemplo Práctico</strong></h3>
-<p>En este ejemplo práctico de <code>dd</code>, voy a copiar el contenido del disco entero <code>/dev/sda</code> a otro disco <code>/dev/sdb</code>.</p>
-<pre><code class="language-bash">dd if=/dev/sda of=/dev/sdb bs=4M status=progress
-</code></pre>
-<p>Este comando copia el disco entero <code>/dev/sda</code> al disco <code>/dev/sdb</code> en bloques de 4 megabytes y muestra el progreso de la copia.</p>
-<p><img alt="Ejemplo_DD" src="../imagenes/copies_seguretat_auto/copies_seguretat_auto4.png" /></p>
-<p>El comando <code>dd</code> es una herramienta poderosa para la creación de copias de seguridad de bajo nivel y la clonación de discos en sistemas Linux.</p>
-<h3 id="verificacion-de-la-copia-con-md5sum"><strong>Verificación de la copia con <code>md5sum</code></strong></h3>
-<p>El comando <code>md5sum</code> en Linux se utiliza para calcular y verificar sumas de comprobación MD5, que son valores hash únicos generados a partir del contenido de un archivo. Esto permite verificar la integridad de los archivos copiados, asegurándose de que no se hayan producido errores durante la copia.</p>
-<p><strong>Sintaxis</strong></p>
-<pre><code class="language-bash">md5sum /dev/sda /dev/sdb
-</code></pre>
-<p>La salida de los dos discos debe ser la misma, eso indica que se ha copiado correctamente.</p>
+<h2 id="ejemplo-practico-cron"><strong>Ejemplo Práctico CRON</strong></h2>
+<p><strong>!!IMPORTANTE!!</strong>
+Para que funcione un script en las carpetas de cron como cron.daily, hay que eliminar la extencion del script.
+<img alt="SCRIPT" src="../imagenes/auto_tareas/auto_tareas4.png" /></p>
+<ol>
+<li>
+<p><strong>Creación del Script</strong>
+    En este caso utilizaremos el mismo que antes, pero lo vamos a mover a <code>/etc/cron.daily</code>, ya que quiero que se ejecute diariamente.
+    <img alt="SCRIPT" src="../imagenes/auto_tareas/auto_tareas5.png" /></p>
+</li>
+<li>
+<p><strong>Modificación del archivo /etc/anacrontab</strong>
+    Por defecto, los scripts diarios se ejecutan a los 5 minutos de que el PC esté encendido, voy a cambiar ese valor a 1.
+    <img alt="SCRIPT" src="../imagenes/auto_tareas/auto_tareas6.png" /></p>
+</li>
+<li>
+<p><strong>Comprobación</strong>
+    Como el PC ya lleva encendido mas de 5 minutos, los scripts diarios ya se han ejecutado, voy a mostrar como resetear esto y comprobar que funciona.
+    <img alt="SCRIPT" src="../imagenes/auto_tareas/auto_tareas7.png" /></p>
+</li>
+</ol>
 
 
 
