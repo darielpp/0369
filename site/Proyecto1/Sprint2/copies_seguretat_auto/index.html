@@ -18,6 +18,8 @@
         <link rel="prev" href="../gest_procesos/">
       
       
+        <link rel="next" href="../auto_tareas/">
+      
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.0">
@@ -808,6 +810,26 @@
 
               
             
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../auto_tareas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Automatización de Tareas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1027,9 +1049,9 @@
 <p>El comando <code>cp</code> es una herramienta poderosa y flexible para la gestión de archivos en Linux, permitiendo realizar copias de seguridad y transferencias de archivos de manera eficiente.</p>
 <h3 id="ejemplo-practico"><strong>Ejemplo Práctico</strong></h3>
 <p>En este ejemplo páctico de <code>cp</code>, voy a copiar lo que se encuentre dentro del directorio <code>/home/&lt;usuario&gt;/Documentos</code> en <code>/var/copias</code>.</p>
-<p><img alt="Ejemplo_CP" src="./imagenes/copies_seguretat_auto/copies_seguretat_auto1.png" /></p>
+<p><img alt="Ejemplo_CP" src="../imagenes/copies_seguretat_auto/copies_seguretat_auto1.png" /></p>
 <p>Ejecución del comando <code>cp -R /home/&lt;usuario&gt;/Documents/* /var/copies</code> y verificación de la cópia:</p>
-<p><img alt="Ejemplo_CP" src="./imagenes/copies_seguretat_auto/copies_seguretat_auto2.png" /></p>
+<p><img alt="Ejemplo_CP" src="../imagenes/copies_seguretat_auto/copies_seguretat_auto2.png" /></p>
 <h2 id="el-comando-rsync-en-linux"><strong>El comando <code>rsync</code> en Linux</strong></h2>
 <p>El comando <code>rsync</code> es una herramienta avanzada para copiar y sincronizar archivos y directorios de manera eficiente entre diferentes ubicaciones. A diferencia de <code>cp</code>, <code>rsync</code> solo transfiere las diferencias entre el origen y el destino, lo que lo hace ideal para realizar copias de seguridad incrementales y diferenciales.</p>
 <h3 id="sintaxis-basica_1"><strong>Sintaxis básica</strong></h3>
@@ -1048,7 +1070,7 @@
 <pre><code class="language-bash">rsync -avz /home/&lt;usuario&gt;/Documentos/ /var/copias/
 </code></pre>
 <p>Este comando sincroniza los archivos y directorios, mostrando detalles de la transferencia y comprimiendo los datos durante el proceso.</p>
-<p><img alt="Ejemplo_RSYNC" src="./imagenes/copies_seguretat_auto/copies_seguretat_auto3.png" /></p>
+<p><img alt="Ejemplo_RSYNC" src="../imagenes/copies_seguretat_auto/copies_seguretat_auto3.png" /></p>
 <p>El comando <code>rsync</code> es una herramienta poderosa y eficiente para realizar copias de seguridad y sincronizaciones en sistemas Linux.</p>
 <h2 id="el-comando-dd-en-linux"><strong>El comando <code>dd</code> en Linux</strong></h2>
 <p>El comando <code>dd</code> en Linux se utiliza para copiar y convertir archivos de una manera más flexible y potente. Es especialmente útil para crear copias de seguridad de discos completos, particiones y dispositivos de almacenamiento.</p>
@@ -1068,7 +1090,7 @@
 <pre><code class="language-bash">dd if=/dev/sda of=/dev/sdb bs=4M status=progress
 </code></pre>
 <p>Este comando copia el disco entero <code>/dev/sda</code> al disco <code>/dev/sdb</code> en bloques de 4 megabytes y muestra el progreso de la copia.</p>
-<p><img alt="Ejemplo_DD" src="./imagenes/copies_seguretat_auto/copies_seguretat_auto4.png" /></p>
+<p><img alt="Ejemplo_DD" src="../imagenes/copies_seguretat_auto/copies_seguretat_auto4.png" /></p>
 <p>El comando <code>dd</code> es una herramienta poderosa para la creación de copias de seguridad de bajo nivel y la clonación de discos en sistemas Linux.</p>
 <h3 id="verificacion-de-la-copia-con-md5sum"><strong>Verificación de la copia con <code>md5sum</code></strong></h3>
 <p>El comando <code>md5sum</code> en Linux se utiliza para calcular y verificar sumas de comprobación MD5, que son valores hash únicos generados a partir del contenido de un archivo. Esto permite verificar la integridad de los archivos copiados, asegurándose de que no se hayan producido errores durante la copia.</p>

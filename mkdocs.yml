@@ -27,6 +27,11 @@ nav:
           - Gestión de Procesos: Proyecto1/Sprint2/gest_procesos.md
           - Copias de Seguridad: Proyecto1/Sprint2/copies_seguretat_auto.md
           - Automatización de Tareas: Proyecto1/Sprint2/auto_tareas.md
+      - Sprint 3:
+          - Dominios y LDAP: Proyecto1/Sprint3/dom_ldap.md
+          - Unir Clientes al Dominio: Proyecto1/Sprint3/unir_cli.md
+          - Gestión del Dominio: Proyecto1/Sprint3/gest_dom.md
+          - NFS: Proyecto1/Sprint3/nfs.md
 theme:
   name: "material"
   language: es
