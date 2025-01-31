@@ -94,7 +94,7 @@ La modificación se aplicará a este usuario específico.
         roomNumber: 205
     Establece el nuevo valor 205 para el atributo roomNumber.
 
-### __Borrar Datos_
+### __Borrar Datos__
 
 Como siempre, es más fácil destruir que construir. Para borrar datos solo tnemeos que cambiar el changetyoe de nuestro archivo .ldif a delete.
 
