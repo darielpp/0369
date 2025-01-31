@@ -77,21 +77,22 @@ El archivo modificar_room.ldif debe ser asi:
 ![slapcat](./imagenes/gest_dom/gest_dom6.png)
 
 Explicación línea por línea:
+
 1. `dn: uid=wlutz,ou=People,dc=asix,dc=cat`
-+ En este caso, hace referencia al usuario con:
+- En este caso, hace referencia al usuario con:
     uid=wlutz: Identificador único del usuario.
     ou=People: Unidad organizativa "People".
     dc=asix,dc=cat: Dominio del directorio LDAP asix.cat.
 La modificación se aplicará a este usuario específico.
 2. `changetype: modify`
-+ Especifica que se va a modificar un atributo existente en LDAP.
-Otros posibles valores son:
-changetype: add: Para agregar una nueva entrada en LDAP.
-changetype: delete: Para eliminar una entrada.
+- Especifica que se va a modificar un atributo existente en LDAP.
+    Otros posibles valores son:
+        changetype: add: Para agregar una nueva entrada en LDAP.
+        changetype: delete: Para eliminar una entrada.
 3. `replace: roomNumber`
-+ replace indica que se va a reemplazar el valor del atributo.
-roomNumber: 205
-Establece el nuevo valor 205 para el atributo roomNumber.
+    - replace indica que se va a reemplazar el valor del atributo.
+        roomNumber: 205
+    Establece el nuevo valor 205 para el atributo roomNumber.
 
 ### __Borrar Datos_
 
