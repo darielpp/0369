@@ -1036,22 +1036,26 @@ mail: john.doe@example.com
 <p><img alt="slapcat" src="../imagenes/gest_dom/gest_dom5.png" /></p>
 <p>El archivo modificar_room.ldif debe ser asi:</p>
 <p><img alt="slapcat" src="../imagenes/gest_dom/gest_dom6.png" /></p>
-<p>Explicación línea por línea:
-1. <code>dn: uid=wlutz,ou=People,dc=asix,dc=cat</code>
-+ En este caso, hace referencia al usuario con:
+<p>Explicación línea por línea:</p>
+<ol>
+<li><code>dn: uid=wlutz,ou=People,dc=asix,dc=cat</code></li>
+<li>En este caso, hace referencia al usuario con:
     uid=wlutz: Identificador único del usuario.
     ou=People: Unidad organizativa "People".
     dc=asix,dc=cat: Dominio del directorio LDAP asix.cat.
-La modificación se aplicará a este usuario específico.
-2. <code>changetype: modify</code>
-+ Especifica que se va a modificar un atributo existente en LDAP.
-Otros posibles valores son:
-changetype: add: Para agregar una nueva entrada en LDAP.
-changetype: delete: Para eliminar una entrada.
-3. <code>replace: roomNumber</code>
-+ replace indica que se va a reemplazar el valor del atributo.
-roomNumber: 205
-Establece el nuevo valor 205 para el atributo roomNumber.</p>
+La modificación se aplicará a este usuario específico.</li>
+<li><code>changetype: modify</code></li>
+<li>Especifica que se va a modificar un atributo existente en LDAP.
+    Otros posibles valores son:
+        changetype: add: Para agregar una nueva entrada en LDAP.
+        changetype: delete: Para eliminar una entrada.</li>
+<li><code>replace: roomNumber</code><ul>
+<li>replace indica que se va a reemplazar el valor del atributo.
+    roomNumber: 205
+Establece el nuevo valor 205 para el atributo roomNumber.</li>
+</ul>
+</li>
+</ol>
 <h3 id="__borrar-datos_">__Borrar Datos_</h3>
 <p>Como siempre, es más fácil destruir que construir. Para borrar datos solo tnemeos que cambiar el changetyoe de nuestro archivo .ldif a delete.</p>
 <p><img alt="slapcat" src="../imagenes/gest_dom/gest_dom7.png" /></p>
