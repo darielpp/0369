@@ -1,0 +1,1569 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Instalaciones y gestión de Ubuntu y Windows.">
+      
+      
+        <meta name="author" content="Dariel Piñón">
+      
+      
+        <link rel="canonical" href="https://daarieel.github.io/0369/Proyecto1/Sprint4/raid/">
+      
+      
+        <link rel="prev" href="../../Sprint3/samba/">
+      
+      
+        <link rel="next" href="../../Sprint5/monitorizacion/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.0">
+    
+    
+      
+        <title>RAIDS - Dariel Piñón 0369</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.9f615399.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.649f08f9.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#raids" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../.." title="Dariel Piñón 0369" class="md-header__button md-logo" aria-label="Dariel Piñón 0369" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Dariel Piñón 0369
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              RAIDS
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Dariel Piñón 0369" class="md-nav__button md-logo" aria-label="Dariel Piñón 0369" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Dariel Piñón 0369
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Proyecto 1; Sistema Ubuntu Linux
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Proyecto 1; Sistema Ubuntu Linux
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduccion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sprint 1
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Sprint 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sprint1/instalacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Instalación Máquina Virtual y Ubuntu
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sprint1/conf_red/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuración Básica de Red
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sprint1/inst_programas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Instalación de Programas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sprint1/puntos_restauracion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Puntos de Restauración
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sprint1/gestores_arranque/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gestores de Arranque
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sprint1/rec_gest_arranque/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Recuperación del Gestor de Arranque
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sprint1/licencias/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Licencias
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sprint 2
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Sprint 2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sprint2/gest_usu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gestión de Usuarios y Grupos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sprint2/gest_permisos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gestión de Permisos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sprint2/sis_ficheros_particiones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sistema de Ficheros y Particiones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sprint2/comp_red/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compartir Ficheros en Red
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sprint2/disco/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cuotas de Disco
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sprint2/gest_procesos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gestión de Procesos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sprint2/copies_seguretat_auto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Copias de Seguridad
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sprint2/auto_tareas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Automatización de Tareas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sprint 3
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Sprint 3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sprint3/dom_ldap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dominios y LDAP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sprint3/unir_cli/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unir Clientes al Dominio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sprint3/ldap_gra/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LDAP con Interfaz Gráfica
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sprint3/gest_dom/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gestión del Dominio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sprint3/nfs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NFS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sprint3/samba/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SAMBA
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked>
+        
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sprint 4
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Sprint 4
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    RAIDS
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    RAIDS
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#como-funciona-un-disco-duro" class="md-nav__link">
+    Cómo funciona un disco duro
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-son-los-volumenes" class="md-nav__link">
+    Que són los volúmenes
+  </a>
+  
+    <nav class="md-nav" aria-label="Que són los volúmenes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-volumenes-principales" class="md-nav__link">
+    Tipos de volúmenes principales
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipos-de-raid" class="md-nav__link">
+    Tipos de RAID
+  </a>
+  
+    <nav class="md-nav" aria-label="Tipos de RAID">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#raids-anidados" class="md-nav__link">
+    RAIDS Anidados
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-practico-creando-un-raid5" class="md-nav__link">
+    EJEMPLO PRÁCTICO CREANDO UN RAID5
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolucion-de-fallos-del-raid" class="md-nav__link">
+    RESOLUCIÓN DE FALLOS DEL RAID
+  </a>
+  
+    <nav class="md-nav" aria-label="RESOLUCIÓN DE FALLOS DEL RAID">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#un-disco-falla" class="md-nav__link">
+    Un disco falla
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reemplazar-un-disco-roto" class="md-nav__link">
+    Reemplazar un disco roto
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-pasas-si-fallan-dos-discos" class="md-nav__link">
+    Que pasas si fallan dos discos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#borrar-un-raid" class="md-nav__link">
+    Borrar un RAID
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sprint 5
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            Sprint 5
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sprint5/monitorizacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Monitorización
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#como-funciona-un-disco-duro" class="md-nav__link">
+    Cómo funciona un disco duro
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-son-los-volumenes" class="md-nav__link">
+    Que són los volúmenes
+  </a>
+  
+    <nav class="md-nav" aria-label="Que són los volúmenes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-volumenes-principales" class="md-nav__link">
+    Tipos de volúmenes principales
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipos-de-raid" class="md-nav__link">
+    Tipos de RAID
+  </a>
+  
+    <nav class="md-nav" aria-label="Tipos de RAID">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#raids-anidados" class="md-nav__link">
+    RAIDS Anidados
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-practico-creando-un-raid5" class="md-nav__link">
+    EJEMPLO PRÁCTICO CREANDO UN RAID5
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolucion-de-fallos-del-raid" class="md-nav__link">
+    RESOLUCIÓN DE FALLOS DEL RAID
+  </a>
+  
+    <nav class="md-nav" aria-label="RESOLUCIÓN DE FALLOS DEL RAID">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#un-disco-falla" class="md-nav__link">
+    Un disco falla
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reemplazar-un-disco-roto" class="md-nav__link">
+    Reemplazar un disco roto
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-pasas-si-fallan-dos-discos" class="md-nav__link">
+    Que pasas si fallan dos discos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#borrar-un-raid" class="md-nav__link">
+    Borrar un RAID
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="raids"><strong>RAIDS</strong></h1>
+<p>Antes de empezar con los RAIDS, hay que hablar un poco sobre discos duros.</p>
+<h2 id="como-funciona-un-disco-duro"><strong>Cómo funciona un disco duro</strong></h2>
+<p>Imagina que un disco duro es como una gran biblioteca donde se almacenan libros (datos). Cuando necesitas buscar información, el bibliotecario encuentra el libro y te lo entrega.</p>
+<p>Piensa en un <strong>HDD</strong> como una biblioteca con libros físicos.</p>
+<p><strong>Partes del HDD y su función:</strong></p>
+<ol>
+<li>Platos giratorios: Son como los estantes de libros. Aquí se almacena toda la información.</li>
+<li>Cabezal de lectura/escritura: Es como un bibliotecario con una lupa, que busca el libro correcto en los estantes.</li>
+<li>Motor: Hace que los estantes giren muy rápido para que el bibliotecario pueda acceder a cualquier libro rápidamente.</li>
+</ol>
+<p><strong>Cómo guarda y recupera datos:</strong></p>
+<p>Cuando guardas un archivo, el bibliotecario (cabezal) busca un espacio libre en los estantes (platos) y coloca ahí la información.
+Cuando abres un archivo, el bibliotecario tiene que encontrarlo físicamente en el estante, lo que toma algo de tiempo.
+Si el bibliotecario tiene que buscar en diferentes estantes, tarda más (por eso los discos duros pueden ser lentos).</p>
+<p><strong>Cómo funciona un SSD:</strong>
+Un SSD es como una biblioteca digital con ebooks en vez de libros físicos.</p>
+<p><strong>Partes del SSD y su función:</strong></p>
+<ol>
+<li>Memoria Flash: Es como una gran base de datos digital, donde los libros (datos) están organizados electrónicamente.</li>
+<li>Controlador SSD: Es el que organiza todo y permite buscar información de manera instantánea.</li>
+<li>Celdas de memoria: Son pequeños compartimentos donde se almacenan los datos.</li>
+</ol>
+<p><strong>Cómo guarda y recupera datos:</strong>
+Cuando guardas un archivo, este se almacena en chips de memoria en lugar de en platos giratorios.
+Cuando abres un archivo, el SSD lee los datos electrónicamente, sin mover partes mecánicas.
+Como todo es digital, es mucho más rápido encontrar la información (casi instantáneo).</p>
+<p><strong>Cómo encaja esto con los RAID</strong>
+Ahora que sabes que un disco duro almacena y recupera datos, imagina que en lugar de un solo disco, tienes varios trabajando juntos. Ahí es donde entran los RAID, que básicamente agrupan discos para mejorar velocidad, seguridad o ambas.</p>
+<p><strong>Ejemplo con libros en una biblioteca:</strong></p>
+<p>Si solo tienes un bibliotecario (<strong>un solo disco</strong>), tarda más en buscar cada libro.
+Pero si tienes varios bibliotecarios trabajando juntos (<strong>RAID 0</strong>), pueden buscar libros al mismo tiempo, aumentando la velocidad.
+Si además hacen copias de cada libro (<strong>RAID 1</strong>), aunque se pierda uno, aún tienes la copia de seguridad.</p>
+<h2 id="que-son-los-volumenes"><strong>Que són los volúmenes</strong></h2>
+<p>Un volumen es un espacio lógico de almacenamiento que el sistema operativo usa como si fuera un solo disco, aunque en realidad puede estar en uno o varios discos físicos.</p>
+<h3 id="tipos-de-volumenes-principales"><strong>Tipos de volúmenes principales</strong></h3>
+<p><strong>Volumen simple</strong></p>
+<ul>
+<li>Usa un solo disco.</li>
+<li>Si el disco falla, los datos se pierden.</li>
+</ul>
+<p>Ejemplo: Un disco de 1 TB con una sola partición.</p>
+<p><strong>Volumen distribuido</strong></p>
+<ul>
+<li>Junta el espacio de varios discos en uno solo.</li>
+<li>No tiene protección contra fallos.</li>
+</ul>
+<p>Ejemplo: Dos discos de 500 GB aparecen como un único volumen de 1 TB.</p>
+<p><strong>Volumen reflejado (RAID 1)</strong></p>
+<ul>
+<li>Crea una copia exacta en otro disco (seguridad).</li>
+<li>Se pierde la mitad del espacio.</li>
+</ul>
+<p>Ejemplo: Dos discos de 1 TB forman un volumen de 1 TB con datos duplicados.</p>
+<p><strong>Volumen con paridad (RAID 5)</strong></p>
+<ul>
+<li>Usa varios discos y guarda paridad para recuperar datos si uno falla.</li>
+<li>Se necesita al menos 3 discos.</li>
+</ul>
+<p>Ejemplo: Tres discos de 1 TB crean un volumen de 2 TB con paridad para seguridad.</p>
+<h2 id="tipos-de-raid"><strong>Tipos de RAID</strong></h2>
+<p>RAID (Redundant Array of Independent Disks) es una tecnología de almacenamiento que combina múltiples discos duros en una sola unidad lógica para mejorar el rendimiento y/o la redundancia de los datos. La redundancia en RAID significa que los datos se duplican en varios discos para protegerse contra la pérdida de datos en caso de fallo de uno de los discos.</p>
+<p><strong>RAID 0</strong></p>
+<ul>
+<li><strong>Descripción</strong>: Divide los datos en bloques y los distribuye entre varios discos.</li>
+<li><strong>Ventajas</strong>: Mejora el rendimiento.</li>
+<li><strong>Desventajas</strong>: No ofrece redundancia. Si un disco falla, se pierde toda la información.</li>
+</ul>
+<p><strong>RAID 1</strong></p>
+<ul>
+<li><strong>Descripción</strong>: Duplica los datos en dos discos.</li>
+<li><strong>Ventajas</strong>: Alta redundancia. Si un disco falla, los datos están disponibles en el otro disco.</li>
+<li><strong>Desventajas</strong>: No mejora el rendimiento y requiere el doble de espacio de almacenamiento.</li>
+</ul>
+<p><strong>RAID 2</strong></p>
+<ul>
+<li><strong>Descripción</strong>: Utiliza la codificación Hamming para la corrección de errores y distribuye los datos a nivel de bits.</li>
+<li><strong>Ventajas</strong>: Alta corrección de errores.</li>
+<li><strong>Desventajas</strong>: No es comúnmente utilizado debido a su complejidad y costo.</li>
+</ul>
+<p><strong>RAID 3</strong></p>
+<ul>
+<li><strong>Descripción</strong>: Distribuye los datos a nivel de bytes con un disco dedicado para la paridad.</li>
+<li><strong>Ventajas</strong>: Buena velocidad de lectura y escritura.</li>
+<li><strong>Desventajas</strong>: Si el disco de paridad falla, se pierde la capacidad de recuperación de datos.</li>
+</ul>
+<p><strong>RAID 4</strong></p>
+<ul>
+<li><strong>Descripción</strong>: Similar a RAID 3, pero distribuye los datos a nivel de bloques con un disco dedicado para la paridad.</li>
+<li><strong>Ventajas</strong>: Buen rendimiento en lectura.</li>
+<li><strong>Desventajas</strong>: El disco de paridad puede convertirse en un cuello de botella.</li>
+</ul>
+<p><strong>RAID 5</strong></p>
+<ul>
+<li><strong>Descripción</strong>: Distribuye los datos y la paridad entre todos los discos.</li>
+<li><strong>Ventajas</strong>: Buena combinación de rendimiento, capacidad y redundancia. Puede tolerar la falla de un disco.</li>
+<li><strong>Desventajas</strong>: La reconstrucción de datos puede ser lenta en caso de fallo de un disco.</li>
+</ul>
+<p><strong>RAID 6</strong></p>
+<ul>
+<li><strong>Descripción</strong>: Similar a RAID 5, pero con dos discos de paridad.</li>
+<li><strong>Ventajas</strong>: Mayor redundancia, puede tolerar la falla de dos discos.</li>
+<li><strong>Desventajas</strong>: Menor rendimiento de escritura y mayor complejidad en la reconstrucción de datos.</li>
+</ul>
+<p><img alt="RAIDS" src="../imagenes/raid/raid1.png" /></p>
+<hr />
+<h3 id="raids-anidados"><strong>RAIDS Anidados</strong></h3>
+<p>Cuando combinas diferentes tipos de RAID dentro de un mismo sistema, estás creando un RAID anidado o RAID jerárquico. Es como hacer un RAID "dentro de otro RAID", con el objetivo de aprovechar lo mejor de cada nivel y minimizar sus desventajas.</p>
+<p>Como he expicado anteriormente, cada RAID tiene sus puntos débiles y sus puntos fuertes. Un RAID 0 es rápido, pero sin redundancia mientras que un RAID 1, tiene alta disponibilidad pero desaprovecha la mitad del espacio. Si combinamos ambos RAIDS, obtenemos un equilibrio entre rendimiento, seguridad y capacidad.</p>
+<p><strong>Ejemplo práctico: RAID 10 (RAID 1+0)</strong>
+Uno de los RAIDs anidados más comunes es RAID 10, que combina RAID 1 (espejado) con RAID 0 (striping).</p>
+<ol>
+<li>Primero, se agrupan los discos en pares y cada par se configura en RAID 1 (cada disco tiene una copia exacta en otro).</li>
+<li>Luego, esos pares se agrupan en un RAID 0, lo que significa que los datos se reparten entre todos los pares para aumentar la velocidad.</li>
+</ol>
+<p><strong>Ventaja</strong>: Si un disco falla, la copia del RAID 1 sigue funcionando. Además, la velocidad de lectura es alta porque se pueden leer datos de varios discos a la vez.</p>
+<p><strong>Desventaja</strong>: Se pierde el 50% del almacenamiento, porque cada disco tiene un "gemelo" que solo almacena la copia.</p>
+<p><img alt="RAID10" src="../imagenes/raid/raid2.png" /></p>
+<hr />
+<p><strong>Otro ejemplo: RAID 50 (5+0)</strong>
+Este combina RAID 5 (paridad) con RAID 0.</p>
+<p>Se crean varios grupos de RAID 5, donde los datos y la información de paridad se distribuyen entre los discos.
+Luego, estos grupos se organizan en un RAID 0 para mejorar la velocidad.</p>
+<p><strong>Ventaja</strong>: Buen equilibrio entre redundancia y rendimiento. Si un disco falla, los datos se pueden reconstruir gracias a la paridad.</p>
+<p><strong>Desventaja</strong>: Se necesitan al menos 6 discos, lo que puede ser caro.</p>
+<p><img alt="RAID50" src="../imagenes/raid/raid3.png" /></p>
+<hr />
+<h2 id="ejemplo-practico-creando-un-raid5"><strong>EJEMPLO PRÁCTICO CREANDO UN RAID5</strong></h2>
+<p>Para esta práctica necesito 4 discos que voy a añadir a una máquina virtual.</p>
+<p><img alt="Discos_Máquina_Virtual" src="../imagenes/raid/raid4.png" />
+<img alt="Discos_Máquina_Virtual" src="../imagenes/raid/raid5.png" /></p>
+<hr />
+<p>Para la gestión de RAIDS en Linux, voy a descargar <code>mdadm</code>:</p>
+<p><img alt="mdadm" src="../imagenes/raid/raid6.png" /></p>
+<hr />
+<p>Una vez instalado, particionamos los discos que hemos localizado antes:<code>sdc</code>,<code>sdd</code>, <code>sde</code> y <code>sdf</code>.</p>
+<p>Con el comando <code>fdisk /dev/sdc</code> entraremos en el particionador de discos. El orden de opciones es el siguiente: </p>
+<p><strong>N, INTRO, INTRO, INTRO, INTRO, T, FD, W para salir</strong></p>
+<p><img alt="fdisk" src="../imagenes/raid/raid7.png" /></p>
+<p>Repetimos lo mismo con <code>sdd</code>, <code>sde</code> y <code>sdf</code>.</p>
+<hr />
+<p>Comprobamos que se han particionado correctamente con un <code>fdisk -l</code>, nos deben salir así las particiones:</p>
+<p><img alt="fdisk" src="../imagenes/raid/raid8.png" /></p>
+<hr />
+<p>El siguiente paso es crear la carpeta donde se montará el RAID.</p>
+<p><img alt="mkdir" src="../imagenes/raid/raid9.png" /></p>
+<hr />
+<p>Ahora ya vamos a crear el RAID5, para ello utilizo este comando:</p>
+<p><img alt="mdadm" src="../imagenes/raid/raid10.png" /></p>
+<hr />
+<p>Ya tenemos el RAID creado pero no está formatado, como estamos trabajando en Linux, le vamos a dar formato ext4.</p>
+<p><img alt="mkfs.ext4" src="../imagenes/raid/raid11.png" /></p>
+<hr />
+<p>Para comprobar el estado del RAID y que todo esta correcto utilizo el comando <code>mdadm --detail /dev/md0</code>, al final de toda la información que nos da este comando podemos ver el estado de los discos.</p>
+<p><img alt="mdadm --detail" src="../imagenes/raid/raid12.png" /></p>
+<hr />
+<p>En este momento, si reiniciarmos el equipo, el RAID desaparecería ya que no está montado permantentemente. Para ello, seguimos estos pasos:</p>
+<ol>
+<li>Enviar los detalles del raid y un scan al fichero mdadm.conf</li>
+<li>
+<p>Editamos el fichero mdadm.conf con <code>nano</code>.
+<img alt="mdadm --detail" src="../imagenes/raid/raid13.png" /></p>
+</li>
+<li>
+<p>Añadimos esta línea:
+<img alt="mdadm.conf" src="../imagenes/raid/raid14.png" /></p>
+</li>
+</ol>
+<p>Cerramos y guardamos.</p>
+<hr />
+<p>Por úlitmo hacemos el montaje del RAID en la carpeta que hemos creado anteriormente.
+Para ello:</p>
+<ol>
+<li>
+<p>Editamos el fichero <code>/etc/fstab</code>y añadimos la siguiente línea.
+<img alt="/etc/fstab" src="../imagenes/raid/raid15.png" /></p>
+</li>
+<li>
+<p>Guardamos y cerramos. Ahora ejecutamos el comando <code>mount -a</code>.
+<img alt="mount -a" src="../imagenes/raid/raid16.png" /></p>
+</li>
+<li>
+<p>Ahora para que esto se aplique, ejecutamos estos dos comandos:
+<img alt="reiniciar servicios" src="../imagenes/raid/raid17.png" /></p>
+</li>
+</ol>
+<hr />
+<p>Ahora, para comprobar que todo se ha hecho correctamente, reinicio el equipo y el RAID debería seguir montado sin fallos.</p>
+<p><img alt="Comprobacion" src="../imagenes/raid/raid18.png" /></p>
+<hr />
+<h2 id="resolucion-de-fallos-del-raid"><strong>RESOLUCIÓN DE FALLOS DEL RAID</strong></h2>
+<p>En este apartado voy a simular posibles fallos que pudieramos tener con nuestro RAID y explicar su posible solución.</p>
+<p>Antes de empezar voy guardar contenido en el RAID.</p>
+<p><img alt="fallo_disco" src="../imagenes/raid/raid19.png" /></p>
+<h3 id="un-disco-falla"><strong>Un disco falla</strong></h3>
+<p>Simulación del fallo:</p>
+<p><img alt="fallo_disco" src="../imagenes/raid/raid20.png" />
+<img alt="fallo_disco" src="../imagenes/raid/raid21.png" /></p>
+<p>Cuando ejecutas el comando <code>mdadm /dev/(nombre_RAID) -f /dev/(nombre_disco)</code>, estás forzando un fallo en el disco especificado dentro del conjunto RAID. Esto simula un fallo del disco, lo que permite probar la capacidad del RAID para manejar fallos y activar los mecanismos de recuperación de datos.</p>
+<p>Por ejemplo, si tienes un RAID 5 configurado y ejecutas <code>mdadm /dev/md0 -f /dev/sdf</code>, el disco <code>/dev/sdf</code> será marcado como fallido. <strong>El RAID continuará funcionando en modo degradado</strong>, utilizando los discos restantes y la información de paridad para mantener la integridad de los datos. <strong>Es importante reemplazar el disco fallido lo antes posible</strong> y reconstruir el RAID para restaurar la redundancia y proteger los datos contra futuros fallos de disco.</p>
+<p>Verifico que los archivos y carpetas que habían en <code>/mnt/RAID5</code> siguen estando y que puedo seguir trabajando en el RAID. </p>
+<p><img alt="fallo_disco" src="../imagenes/raid/raid22.png" /></p>
+<hr />
+<p>Voy a volver a activar el disco, para ello utilizo el comando <code>mdadm /dev/(nombre_RAID) -r /dev/(nombre_disco)</code>.</p>
+<p><img alt="fallo_disco" src="../imagenes/raid/raid23.png" /></p>
+<hr />
+<p>Lo verifico con <code>mdadm --detail /dev/md0</code>.</p>
+<p><img alt="fallo_disco" src="../imagenes/raid/raid18.png" /></p>
+<hr />
+<h3 id="reemplazar-un-disco-roto"><strong>Reemplazar un disco roto</strong></h3>
+<p>Un disco se nos ha roto y lo queremos reemplazar, en mi caso al ser máquinas virtuales, dentro de los Parametros de VirtualBox he eliminado la adjunción de uno de los discos. Voy a iniciar la máquina virtual para revisar si puedo seguir trabajando con el RAID 5 aunque tenga solo 3 discos.</p>
+<p>Primero verifico los discos en el sistema con <code>fdisk -l</code>:</p>
+<p><img alt="fdisk -l" src="../imagenes/raid/raid24.png" /></p>
+<p>El disco <code>/dev/sdf</code> ya no está.</p>
+<hr />
+<p>Ahora para poder seguir trabajando en el RAID con 3 discos ejecutamos esta serie de comandos:</p>
+<p><img alt="RAID_3_discos" src="../imagenes/raid/raid25.png" /></p>
+<hr />
+<p>Si hacemos <code>mdadm --detail /dev/md0</code> nos aparecra el raid con solo 3 discos y sigue en estado <code>degraded</code>. Aún asi podemos seguir trabajando con el.</p>
+<p><img alt="RAID_3_discos" src="../imagenes/raid/raid26.png" /></p>
+<p><img alt="RAID_3_discos" src="../imagenes/raid/raid27.png" /></p>
+<hr />
+<p>Ahora apagamos el equipo y ponemos el disco nuevo, el cual hay que particionar y añadir al RAID.</p>
+<p>Lo primero que hacemos es localizar el disco, en mi caso, el nombre del disco es el mismo que el disco que he elimado, lo que me facilita mucho el trabajo. No tengo que modificar el archivo <code>mdadm.conf</code>, si el nombre fuera distinto tendria que modificar este archivo eliminado el nombre del disco antiguo por el nombre del nuevo.</p>
+<p><img alt="RAID_3_discos" src="../imagenes/raid/raid32.png" /></p>
+<hr />
+<p>Particiono el disco igual que hice con los otros:</p>
+<p><img alt="fdisk" src="../imagenes/raid/raid7.png" /></p>
+<p>Como el disco se llama igual no tengo que hacer estos pasos, pero si tu disco se llama de forma distinta debes añadir el nombre del disco al archivo que he mencionado anteriormente y despues hacer este comando para añadirlo:</p>
+<pre><code class="language-bash">mdadm /dev/md0 -a /dev/sd*
+</code></pre>
+<p><strong>* = letra del disco nuevo</strong></p>
+<hr />
+<p>Para terminar debemos hacer un reboot del sistema, una vez hecho podemos verificar que nuestro RAID vuelve a tener los 4 discos activos con <code>mdadm --detail /dev/md0</code>:</p>
+<p><img alt="fallo_disco" src="../imagenes/raid/raid18.png" /></p>
+<hr />
+<h3 id="que-pasas-si-fallan-dos-discos"><strong>Que pasas si fallan dos discos</strong></h3>
+<p>Si fallan dos discos en un RAID 5, el sistema no podrá recuperar los datos. RAID 5 puede tolerar la falla de un solo disco gracias a la paridad distribuida, pero si se pierden dos discos, la información de paridad no es suficiente para reconstruir los datos perdidos. En este caso, se produce una pérdida total de datos y el RAID entra en un estado irrecuperable. Es crucial realizar copias de seguridad regulares para evitar la pérdida de datos en situaciones como esta.</p>
+<p>Para forzar este fallo, he eliminado un disco desde los paramatros de VirtualBox.</p>
+<p><img alt="RAID_fallo_total" src="../imagenes/raid/raid28.png" /></p>
+<hr />
+<h3 id="borrar-un-raid"><strong>Borrar un RAID</strong></h3>
+<p>Para borrar un RAID en Linux, sigue estos pasos:</p>
+<ol>
+<li>
+<p><strong>Desmontar el RAID</strong>:
+    Primero, desmonta el RAID si está montado. Usa el comando <code>umount</code> seguido del punto de montaje.</p>
+<p><code>bash
+sudo umount /mnt/RAID5</code></p>
+</li>
+<li>
+<p><strong>Detener el RAID</strong>:
+    Detén el RAID usando el comando <code>mdadm --stop</code>.</p>
+<p><code>bash
+sudo mdadm --stop /dev/md0</code></p>
+</li>
+<li>
+<p><strong>Borrar la configuración del RAID</strong>:
+    Borra la superblock de cada disco que formaba parte del RAID.</p>
+<p><code>bash
+sudo mdadm --zero-superblock /dev/sdX</code>
+Repite este comando para cada disco (<code>/dev/sdX</code>) que formaba parte del RAID.</p>
+</li>
+<li>
+<p><strong>Eliminar entradas en <code>mdadm.conf</code></strong>:
+    Si tienes configuraciones persistentes en <code>/etc/mdadm/mdadm.conf</code>, edita el archivo y elimina las entradas correspondientes al RAID que has borrado.</p>
+</li>
+<li>
+<p><strong>Actualizar el initramfs</strong>:
+    Actualiza el initramfs para asegurarte de que los cambios se reflejen en el arranque.</p>
+<p><code>bash
+sudo update-initramfs -u</code></p>
+</li>
+</ol>
+<p><img alt="Borrar_Raid" src="../imagenes/raid/raid29.png" />
+<img alt="Borrar_Raid" src="../imagenes/raid/raid30.png" /></p>
+<hr />
+<p>Con estos pasos, habrás borrado completamente el RAID de tu sistema.</p>
+<p><img alt="Borrar_Raid" src="../imagenes/raid/raid31.png" /></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://daarieel.github.io/0369">MkDocs 0369</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/daarieel">Dariel Piñón</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-flex;"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""></a></p>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.4e0fa4ba.min.js"></script>
+      
+    
+  </body>
+</html>
