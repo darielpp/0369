@@ -18,6 +18,8 @@
         <link rel="prev" href="../gest_dom/">
       
       
+        <link rel="next" href="../samba/">
+      
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.0">
@@ -79,6 +81,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#servidor-nfs" class="md-skip">
+          Saltar a contenido
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -748,6 +755,26 @@
   
   
     <li class="md-nav__item">
+      <a href="../ldap_gra/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LDAP con Interfaz Gráfica
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../gest_dom/" class="md-nav__link">
         
   
@@ -774,6 +801,19 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    NFS
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -785,6 +825,113 @@
 
       </a>
       
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#diferencias-entre-nfs-y-samba" class="md-nav__link">
+    Diferencias entre NFS y SAMBA
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uso-de-nfs-con-ldap" class="md-nav__link">
+    Uso de NFS con LDAP
+  </a>
+  
+    <nav class="md-nav" aria-label="Uso de NFS con LDAP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ventajas-de-usar-nfs-con-ldap" class="md-nav__link">
+    Ventajas de usar NFS con LDAP:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instalar-nfs-en-el-servidor-y-clientes" class="md-nav__link">
+    Instalar NFS en el servidor y clientes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compartir-carpetas" class="md-nav__link">
+    Compartir Carpetas
+  </a>
+  
+    <nav class="md-nav" aria-label="Compartir Carpetas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unir-cliente-windows" class="md-nav__link">
+    Unir Cliente Windows
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unir-cliente-ubuntu" class="md-nav__link">
+    Unir Cliente Ubuntu
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#perfiles-moviles-ubuntu-ldap" class="md-nav__link">
+    Perfiles Móviles (UBUNTU LDAP)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../samba/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SAMBA
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -822,6 +969,84 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#diferencias-entre-nfs-y-samba" class="md-nav__link">
+    Diferencias entre NFS y SAMBA
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uso-de-nfs-con-ldap" class="md-nav__link">
+    Uso de NFS con LDAP
+  </a>
+  
+    <nav class="md-nav" aria-label="Uso de NFS con LDAP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ventajas-de-usar-nfs-con-ldap" class="md-nav__link">
+    Ventajas de usar NFS con LDAP:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instalar-nfs-en-el-servidor-y-clientes" class="md-nav__link">
+    Instalar NFS en el servidor y clientes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compartir-carpetas" class="md-nav__link">
+    Compartir Carpetas
+  </a>
+  
+    <nav class="md-nav" aria-label="Compartir Carpetas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unir-cliente-windows" class="md-nav__link">
+    Unir Cliente Windows
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unir-cliente-ubuntu" class="md-nav__link">
+    Unir Cliente Ubuntu
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#perfiles-moviles-ubuntu-ldap" class="md-nav__link">
+    Perfiles Móviles (UBUNTU LDAP)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -836,9 +1061,104 @@
                   
 
 
-  <h1>NFS</h1>
-
-
+<h1 id="servidor-nfs"><strong>Servidor NFS</strong></h1>
+<p>Un servidor NFS (Network File System) es un protocolo de sistema de archivos distribuido que permite a los usuarios acceder a archivos y directorios en una red como si estuvieran en su propia máquina local. NFS fue desarrollado por Sun Microsystems en 1984 y se ha convertido en un estándar para compartir archivos en sistemas Unix y Linux.</p>
+<h2 id="diferencias-entre-nfs-y-samba"><strong>Diferencias entre NFS y SAMBA</strong></h2>
+<ul>
+<li>
+<p><strong>NFS (Network File System)</strong>:</p>
+<ul>
+<li>Diseñado principalmente para sistemas Unix y Linux.</li>
+<li>Utiliza el protocolo RPC (Remote Procedure Call) para la comunicación.</li>
+<li>Permite compartir archivos y directorios en una red local.</li>
+<li>No es compatible de forma nativa con sistemas Windows.</li>
+</ul>
+</li>
+<li>
+<p><strong>SAMBA</strong>:</p>
+<ul>
+<li>Implementa el protocolo SMB/CIFS (Server Message Block/Common Internet File System).</li>
+<li>Compatible con sistemas Windows, Unix y Linux.</li>
+<li>Permite compartir archivos, directorios e impresoras en una red.</li>
+<li>Ofrece integración con dominios de Windows y Active Directory.</li>
+</ul>
+</li>
+</ul>
+<h2 id="uso-de-nfs-con-ldap"><strong>Uso de NFS con LDAP</strong></h2>
+<p>LDAP (Lightweight Directory Access Protocol) es un protocolo para acceder y mantener servicios de directorio distribuidos. Integrar NFS con LDAP puede proporcionar una gestión centralizada de usuarios y permisos, lo que simplifica la administración y mejora la seguridad.</p>
+<h3 id="ventajas-de-usar-nfs-con-ldap"><strong>Ventajas de usar NFS con LDAP:</strong></h3>
+<ul>
+<li><strong>Gestión centralizada</strong>: Permite administrar usuarios y permisos desde un único punto.</li>
+<li><strong>Consistencia</strong>: Asegura que los mismos usuarios y permisos se apliquen en todos los servidores NFS.</li>
+<li><strong>Escalabilidad</strong>: Facilita la adición de nuevos usuarios y servidores sin necesidad de configuraciones manuales en cada uno.</li>
+<li><strong>Seguridad</strong>: Mejora la seguridad al centralizar la autenticación y autorización.</li>
+</ul>
+<p>Para configurar NFS con LDAP, se deben seguir estos pasos generales:
+1. Configurar un servidor LDAP y añadir los usuarios y grupos necesarios.
+2. Configurar los clientes LDAP en los servidores NFS para que utilicen el servidor LDAP para la autenticación.
+3. Configurar los permisos de los directorios compartidos en el servidor NFS utilizando los usuarios y grupos definidos en LDAP.</p>
+<p>Esta integración permite una administración más eficiente y segura de los recursos compartidos en una red.</p>
+<h2 id="instalar-nfs-en-el-servidor-y-clientes"><strong>Instalar NFS en el servidor y clientes</strong></h2>
+<p>Descargamos:</p>
+<p><img alt="nfs" src="../imagenes/nfs/nfs1.png" /></p>
+<hr />
+<p>Comprobamos que se haya instalado correctamente:</p>
+<p><img alt="nfs" src="../imagenes/nfs/nfs2.png" /></p>
+<hr />
+<p>Instalación para cliente Ubuntu:</p>
+<p><img alt="nfs" src="../imagenes/nfs/nfs3.png" /></p>
+<hr />
+<p>Instalación para Cliente Windows:</p>
+<p><img alt="nfs" src="../imagenes/nfs/nfs4.png" />
+<img alt="nfs" src="../imagenes/nfs/nfs5.png" /></p>
+<h2 id="compartir-carpetas"><strong>Compartir Carpetas</strong></h2>
+<p>Una vez tenemos listos nuestro servidor y tenemos los clientes preparados comenzamos con la creación del recurso compartido:</p>
+<p><img alt="nfs" src="../imagenes/nfs/nfs6.png" /></p>
+<hr />
+<p>Añadimos la ruta de la carpeta al archivo <code>/etc/exports</code>:</p>
+<p><img alt="nfs" src="../imagenes/nfs/nfs7.png" /></p>
+<hr />
+<p>Cada vez que se modifican archivos de nfs hay que reiniciar el servicio:</p>
+<p><img alt="nfs" src="../imagenes/nfs/nfs8.png" /></p>
+<hr />
+<p>Voy a crear un archivo dentro de la carpeta que hemos creado para comprobar que funciona correctamente y puedo verla desde los clientes:</p>
+<p><img alt="nfs" src="../imagenes/nfs/nfs9.png" /></p>
+<hr />
+<h3 id="unir-cliente-windows"><strong>Unir Cliente Windows</strong></h3>
+<p>En el navegador de archivos, en el apartado de “RED” clickamos en el navegador introducimos la IP del servidor:</p>
+<p><img alt="nfs" src="../imagenes/nfs/nfs10.png" /></p>
+<hr />
+<p>Entramos en la carpeta compartida para comprobar si el fichero que hemos creado se encuentra:</p>
+<p><img alt="nfs" src="../imagenes/nfs/nfs11.png" /></p>
+<hr />
+<p>Ahora creamos un fichero desde el cliente y verificamos si nos aparece también desde el servidor.</p>
+<p><img alt="nfs" src="../imagenes/nfs/nfs12.png" />
+<img alt="nfs" src="../imagenes/nfs/nfs13.png" /></p>
+<hr />
+<h3 id="unir-cliente-ubuntu"><strong>Unir Cliente Ubuntu</strong></h3>
+<p>Dentro del cliente ubuntu, creamos una carpeta en el directorio /mnt y le damos permisos 777. Una vez tenemos la carpeta creamos un punto de montaje con la carpeta compartida y verificamos que se ha creado:</p>
+<p><img alt="nfs" src="../imagenes/nfs/nfs14.png" />
+<strong>IMPORTANTE:</strong> mount solo monta temporalmente, mas adelante se hace el montaje fijo.</p>
+<hr />
+<h3 id="perfiles-moviles-ubuntu-ldap"><strong>Perfiles Móviles (UBUNTU LDAP)</strong></h3>
+<p>En el servidor, voy a crear otra carpeta:</p>
+<p><img alt="nfs" src="../imagenes/nfs/nfs15.png" /></p>
+<hr />
+<p>Modificación del archivo etc/exports:
+<img alt="nfs" src="../imagenes/nfs/nfs16.png" /></p>
+<hr />
+<p>Reinicio el sistema:
+<img alt="nfs" src="../imagenes/nfs/nfs17.png" /></p>
+<hr />
+<p>Modificación del archivo “usu.ldif”, para añadir un nuevo usuario con el perfil móvil.</p>
+<p><img alt="nfs" src="../imagenes/nfs/nfs18.png" /></p>
+<hr />
+<p>Lanzar el fichero con el nuevo usuario:
+<img alt="nfs" src="../imagenes/nfs/nfs19.png" /></p>
+<hr />
+<p>Ahora en el cliente UBUNTU, hacemos el montaje fijo.</p>
+<p><strong>IMPORTANTE:</strong> Se debe crear la carpeta en la raiz del sistema antes de crear el montaje fijo del perfil movil.</p>
+<p><img alt="nfs" src="../imagenes/nfs/nfs20.png" /></p>
 
 
 

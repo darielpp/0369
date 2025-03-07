@@ -34,6 +34,10 @@ nav:
           - Gestión del Dominio: Proyecto1/Sprint3/gest_dom.md
           - NFS: Proyecto1/Sprint3/nfs.md
           - SAMBA: Proyecto1/Sprint3/samba.md
+      - Sprint 4:
+          - RAIDS: Proyecto1/Sprint4/raid.md
+      - Sprint 5:
+          - Monitorización: Proyecto1/Sprint5/monitorizacion.md
 theme:
   name: "material"
   language: es
