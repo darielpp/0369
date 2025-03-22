@@ -38,6 +38,8 @@ nav:
           - RAIDS: Proyecto1/Sprint4/raid.md
       - Sprint 5:
           - Monitorización: Proyecto1/Sprint5/monitorizacion.md
+          - Auditorías de Seguridad: Proyecto1/Sprint5/auditorias.md
+          - Servidor de Actualizaciones: Proyecto1/Sprint5/actualizaciones.md
 theme:
   name: "material"
   language: es
