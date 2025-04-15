@@ -40,6 +40,19 @@ nav:
           - Monitorización: Proyecto1/Sprint5/monitorizacion.md
           - Auditorías de Seguridad: Proyecto1/Sprint5/auditorias.md
           - Servidor de Actualizaciones: Proyecto1/Sprint5/actualizaciones.md
+  - Proyecto 2; Sistema Windows:
+      - Introducción: Proyecto2/introduccion.md
+      - Sprint 1:
+          - Licencias: Proyecto2/Sprint1/licencias.md
+          - Instalación Windows: Proyecto2/Sprint1/instalacion.md
+          - Configuración de Red y Programas Base: Proyecto2/Sprint1/red_programas.md
+          - Gestor de Arranque: Proyecto2/Sprint1/arranque.md
+      - Sprint 2:
+          - Quotas y Usuarios: Proyecto2/Sprint2/quotas.md
+          - Copias de Seguridad y Automatización: Proyecto2/Sprint2/backup.md
+          - Gestión de Procesos: Proyecto2/Sprint2/procesos.md
+          - Gestión de ACLs: Proyecto2/Sprint2/acl.md
+          
 theme:
   name: "material"
   language: es

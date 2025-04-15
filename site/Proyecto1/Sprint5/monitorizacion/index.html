@@ -18,6 +18,8 @@
         <link rel="prev" href="../../Sprint4/raid/">
       
       
+        <link rel="next" href="../auditorias/">
+      
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.0">
@@ -79,6 +81,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#monitorizacion" class="md-skip">
+          Saltar a contenido
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -938,6 +945,19 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Monitorización
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -949,6 +969,201 @@
 
       </a>
       
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-un-log" class="md-nav__link">
+    Que es un log
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#donde-se-almacenan-los-logs-en-ubuntu" class="md-nav__link">
+    Donde se almacenan los logs en Ubuntu
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestion-de-logs-con-logrotate" class="md-nav__link">
+    Gestión de logs con logrotate
+  </a>
+  
+    <nav class="md-nav" aria-label="Gestión de logs con logrotate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-de-logrotate" class="md-nav__link">
+    Configuración de logrotate
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-de-logs-en-etcrsyslogd50-defaultconf" class="md-nav__link">
+    Configuración de logs en /etc/rsyslog.d/50-default.conf
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pruebas-y-personalizacion" class="md-nav__link">
+    Pruebas y Personalización
+  </a>
+  
+    <nav class="md-nav" aria-label="Pruebas y Personalización">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#forzar-un-resgistro-de-log" class="md-nav__link">
+    Forzar un resgistro de log
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#personalizacion-de-logs" class="md-nav__link">
+    Personalización de logs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verificar-log-personalizado" class="md-nav__link">
+    Verificar log personalizado
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comando-journalctl" class="md-nav__link">
+    Comando JOURNALCTL
+  </a>
+  
+    <nav class="md-nav" aria-label="Comando JOURNALCTL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funcionalidades-principales" class="md-nav__link">
+    Funcionalidades principales:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos-de-uso" class="md-nav__link">
+    Ejemplos de uso:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monitorizacion-en-red-de-logs" class="md-nav__link">
+    Monitorización en Red de Logs
+  </a>
+  
+    <nav class="md-nav" aria-label="Monitorización en Red de Logs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ordenador-receptor-administrador" class="md-nav__link">
+    Ordenador receptor (administrador)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ordenador-emisor-usuario" class="md-nav__link">
+    Ordenador emisor (usuario)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verificacion-de-logs-en-red" class="md-nav__link">
+    Verificación de logs en red
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../auditorias/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Auditorías de Seguridad
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actualizaciones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Servidor de Actualizaciones
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -986,6 +1201,152 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-un-log" class="md-nav__link">
+    Que es un log
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#donde-se-almacenan-los-logs-en-ubuntu" class="md-nav__link">
+    Donde se almacenan los logs en Ubuntu
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestion-de-logs-con-logrotate" class="md-nav__link">
+    Gestión de logs con logrotate
+  </a>
+  
+    <nav class="md-nav" aria-label="Gestión de logs con logrotate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-de-logrotate" class="md-nav__link">
+    Configuración de logrotate
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-de-logs-en-etcrsyslogd50-defaultconf" class="md-nav__link">
+    Configuración de logs en /etc/rsyslog.d/50-default.conf
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pruebas-y-personalizacion" class="md-nav__link">
+    Pruebas y Personalización
+  </a>
+  
+    <nav class="md-nav" aria-label="Pruebas y Personalización">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#forzar-un-resgistro-de-log" class="md-nav__link">
+    Forzar un resgistro de log
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#personalizacion-de-logs" class="md-nav__link">
+    Personalización de logs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verificar-log-personalizado" class="md-nav__link">
+    Verificar log personalizado
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comando-journalctl" class="md-nav__link">
+    Comando JOURNALCTL
+  </a>
+  
+    <nav class="md-nav" aria-label="Comando JOURNALCTL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funcionalidades-principales" class="md-nav__link">
+    Funcionalidades principales:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos-de-uso" class="md-nav__link">
+    Ejemplos de uso:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monitorizacion-en-red-de-logs" class="md-nav__link">
+    Monitorización en Red de Logs
+  </a>
+  
+    <nav class="md-nav" aria-label="Monitorización en Red de Logs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ordenador-receptor-administrador" class="md-nav__link">
+    Ordenador receptor (administrador)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ordenador-emisor-usuario" class="md-nav__link">
+    Ordenador emisor (usuario)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verificacion-de-logs-en-red" class="md-nav__link">
+    Verificación de logs en red
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1000,9 +1361,155 @@
                   
 
 
-  <h1>Monitorización</h1>
-
-
+<h1 id="monitorizacion"><strong>MONITORIZACIÓN</strong></h1>
+<p>En este apartado voy a hablar sobre el monitoreo basado en logs del sistema o logs que queramos crear.</p>
+<hr />
+<h2 id="que-es-un-log"><strong>Que es un log</strong></h2>
+<p>Los logs son registros que documentan eventos que ocurren en un sistema informático. Estos registros pueden ser generados por el sistema operativo, aplicaciones, servicios o cualquier componente que desee realizar un seguimiento de sus actividades. Los logs son esenciales para la monitorización y el diagnóstico de problemas, ya que proporcionan información detallada sobre el comportamiento del sistema y los eventos que han ocurrido.</p>
+<p>Existen diferentes tipos de logs, como:</p>
+<ul>
+<li><strong>Logs del sistema</strong>: Registran eventos relacionados con el sistema operativo.</li>
+<li><strong>Logs de aplicaciones</strong>: Registran eventos específicos de aplicaciones.</li>
+<li><strong>Logs de seguridad</strong>: Registran eventos relacionados con la seguridad, como intentos de inicio de sesión fallidos.</li>
+</ul>
+<p>La monitorización basada en logs implica recopilar, analizar y visualizar estos registros para identificar patrones, detectar anomalías y solucionar problemas de manera proactiva.</p>
+<hr />
+<h2 id="donde-se-almacenan-los-logs-en-ubuntu"><strong>Donde se almacenan los logs en Ubuntu</strong></h2>
+<p>En Ubuntu, los logs del sistema se almacenan en el directorio <code>/var/log</code>. Este directorio contiene varios archivos de logs que registran diferentes tipos de eventos del sistema. 
+A continuación, describo tres archivos de logs comunes que se encuentran en esta ubicación:</p>
+<ul>
+<li>
+<p><strong>/var/log/syslog</strong>: Este archivo registra una variedad de mensajes del sistema, incluyendo mensajes del kernel, servicios y aplicaciones. Es útil para obtener una visión general del estado del sistema y para diagnosticar problemas generales.</p>
+</li>
+<li>
+<p><strong>/var/log/auth.log</strong>: Este archivo registra todos los eventos relacionados con la autenticación, como inicios de sesión exitosos y fallidos, cambios de usuario y otros eventos de seguridad. Es esencial para monitorear la seguridad del sistema.</p>
+</li>
+<li>
+<p><strong>/var/log/kern.log</strong>: Este archivo contiene mensajes específicos del kernel de Linux. Es útil para diagnosticar problemas relacionados con el hardware y el núcleo del sistema operativo.</p>
+</li>
+</ul>
+<p>Estos archivos de logs son fundamentales para la monitorización y el diagnóstico de problemas en sistemas Ubuntu.</p>
+<p><img alt="/var/log/" src="../imagenes/monitorizacion/monitorizacion1.png" /></p>
+<p>En <code>/var/log/</code> se encuentran muchos ficheros, entre ellos se encuentran <code>dmesg</code>, <code>dmesg.0</code>, <code>dmesg.1.gz</code>, <code>dmesg.2.gz</code>. </p>
+<p>Estos ficheros cumplen una función similar a kern.log:</p>
+<ul>
+<li><strong>dmesg</strong>: Este archivo contiene mensajes del anillo de mensajes del kernel. Es útil para diagnosticar problemas relacionados con el hardware y el arranque del sistema.</li>
+<li><strong>dmesg.0</strong>: Es una copia del archivo <code>dmesg</code> anterior, que se guarda cuando el sistema se reinicia.</li>
+<li><strong>dmesg.1.gz</strong>, <strong>dmesg.2.gz</strong>: Son versiones comprimidas de archivos <code>dmesg</code> más antiguos. Estos archivos se comprimen para ahorrar espacio y permiten mantener un historial de mensajes del kernel.</li>
+</ul>
+<p>Estos archivos son útiles para realizar un seguimiento de los eventos del kernel y diagnosticar problemas relacionados con el hardware y el arranque del sistema.</p>
+<hr />
+<h2 id="gestion-de-logs-con-logrotate"><strong>Gestión de logs con logrotate</strong></h2>
+<p>Para evitar que los archivos de logs crezcan indefinidamente y consuman todo el espacio en disco, se utiliza una herramienta llamada <code>logrotate</code>. Esta herramienta permite rotar, comprimir y eliminar archivos de logs de manera automática, según una configuración predefinida.</p>
+<hr />
+<h3 id="configuracion-de-logrotate"><strong>Configuración de logrotate</strong></h3>
+<p>La configuración principal de <code>logrotate</code> se encuentra en el archivo <code>/etc/logrotate.conf</code>. Este archivo contiene las directivas globales que afectan a todos los archivos de logs gestionados por <code>logrotate</code>. Algunas de las directivas comunes incluyen:</p>
+<ul>
+<li><code>weekly</code>: Especifica que los logs deben rotarse semanalmente.</li>
+<li><code>rotate 4</code>: Indica que se deben mantener cuatro archivos de logs antiguos antes de eliminar el más antiguo.</li>
+<li><code>compress</code>: Indica que los archivos de logs rotados deben ser comprimidos para ahorrar espacio en disco.</li>
+<li><code>create</code>: Especifica que se debe crear un nuevo archivo de log vacío después de rotar el archivo actual.</li>
+</ul>
+<p>Además del archivo de configuración principal, <code>logrotate</code> también utiliza el directorio <code>/etc/logrotate.d</code> para almacenar configuraciones específicas para diferentes servicios y aplicaciones. Cada archivo en este directorio contiene directivas de rotación de logs para un servicio o aplicación particular. Por ejemplo, puede haber un archivo <code>/etc/logrotate.d/apache2</code> que contenga la configuración de rotación de logs para el servidor web Apache.</p>
+<p><img alt="/var/log/" src="../imagenes/monitorizacion/monitorizacion2.png" /></p>
+<hr />
+<h2 id="configuracion-de-logs-en-etcrsyslogd50-defaultconf"><strong>Configuración de logs en /etc/rsyslog.d/50-default.conf</strong></h2>
+<p>El archivo <code>/etc/rsyslog.d/50-default.conf</code> es parte de la configuración del sistema de registro de mensajes <code>rsyslog</code> en Ubuntu. Este archivo define qué mensajes de log se envían a qué archivos de log específicos. A continuación, describo algunas de las configuraciones comunes que se pueden encontrar en este archivo:</p>
+<ul>
+<li><code>auth,authpriv.*</code>: Los mensajes relacionados con la autenticación y la privacidad se registran en <code>/var/log/auth.log</code>.</li>
+<li><code>*.*;auth,authpriv.none</code>: Todos los mensajes, excepto los relacionados con la autenticación y la privacidad, se registran en <code>/var/log/syslog</code>.</li>
+<li><code>daemon.*</code>: Los mensajes del daemon se registran en <code>/var/log/daemon.log</code>.</li>
+<li><code>kern.*</code>: Los mensajes del kernel se registran en <code>/var/log/kern.log</code>.</li>
+<li><code>mail.*</code>: Los mensajes relacionados con el correo se registran en <code>/var/log/mail.log</code>.</li>
+<li><code>user.*</code>: Los mensajes del usuario se registran en <code>/var/log/user.log</code>.</li>
+</ul>
+<p>Estas configuraciones permiten que <code>rsyslog</code> dirija los mensajes de log a los archivos adecuados, facilitando la monitorización y el diagnóstico de problemas específicos del sistema. Es posible personalizar este archivo para ajustar la configuración de los logs según las necesidades específicas del sistema o de las aplicaciones que se estén ejecutando.</p>
+<p><img alt="/var/log/" src="../imagenes/monitorizacion/monitorizacion3.png" /></p>
+<p>Siempre que se modifique este fichero, es necesario ejecutar los siguientes comandos para aplicar los cambios:</p>
+<pre><code class="language-bash">sudo systemctl restart rsyslog
+sudo systemctl daemon-reload
+</code></pre>
+<hr />
+<h2 id="pruebas-y-personalizacion"><strong>Pruebas y Personalización</strong></h2>
+<p>En este apartado voy a mostrar cómo personalizar los registros de logs, pero primero voy a hacer una prueba con logs del sistema.</p>
+<h3 id="forzar-un-resgistro-de-log"><strong>Forzar un resgistro de log</strong></h3>
+<p>Por ejemplo, voy a realizar una simulación de alerta en el log de correo:</p>
+<p>En un terminal, ejecuta el comando <code>tail -f /var/log/syslog</code> para registrar en tiempo real lo que va pasando en este fichero de logs.</p>
+<p>En otro terminal, ejecuta el comando <code>logger</code> para simular logs: <code>logger -i -s -p mail.alert "Descripción de la alerta"</code></p>
+<p><img alt="/var/log/" src="../imagenes/monitorizacion/monitorizacion5.png" /></p>
+<p><img alt="/var/log/" src="../imagenes/monitorizacion/monitorizacion6.png" /></p>
+<p>Tanto el fichero que he hecho el tail que es <code>/var/log/syslog</code> que registra todos los logs del sistema como <code>/var/log/mail.log</code> han registrado la simulación de log.</p>
+<hr />
+<h3 id="personalizacion-de-logs"><strong>Personalización de logs</strong></h3>
+<p>Modifico el fichero <code>/etc/rsyslog.d/50-default.conf</code> como ejemplo añado esta línea donde todos los servicios con prioridad <code>crit</code>, se almacenarán en <code>/var/log/dariel.log</code>.</p>
+<p><img alt="/var/log/" src="../imagenes/monitorizacion/monitorizacion7.png" /></p>
+<p>He añadido la línea que está subrallada, esta línea indica que:</p>
+<ul>
+<li><code>*</code>: Se aplica a todas las facilidades del sistema, como auth, kern, mail, etc.</li>
+<li><code>crit</code>: Especifica el nivel de severidad crítico. Solo se registran mensajes graves.</li>
+<li><code>/var/log/dariel.log</code>: Es el archivo donde se almacenarán esos logs críticos.</li>
+</ul>
+<p>La ruta personalizada se crea sola, no hace falta crear la carpeta préviamente.</p>
+<hr />
+<h3 id="verificar-log-personalizado"><strong>Verificar log personalizado</strong></h3>
+<p>Como verificación, vuelvo a hacer uso del comando <code>logger</code> para simular un log con prioridad <code>crit</code> y ver si se ha almacenado correctamente.</p>
+<p><img alt="/var/log/" src="../imagenes/monitorizacion/monitorizacion9.png" /></p>
+<hr />
+<h2 id="comando-journalctl"><strong>Comando JOURNALCTL</strong></h2>
+<p>El comando <code>journalctl</code> se utiliza para consultar y mostrar los registros del sistema almacenados por el servicio <code>systemd-journald</code>. Este comando permite a los administradores del sistema ver los mensajes de registro generados por el kernel, los servicios del sistema y otras aplicaciones que utilizan el sistema de registro de <code>systemd</code>.</p>
+<h3 id="funcionalidades-principales"><strong>Funcionalidades principales:</strong></h3>
+<ul>
+<li><strong>Visualización de registros</strong>: Permite ver los registros del sistema en tiempo real o históricos.</li>
+<li><strong>Filtrado de registros</strong>: Ofrece opciones para filtrar los registros por unidad de servicio, prioridad, fecha, etc.</li>
+<li><strong>Exportación de registros</strong>: Permite exportar los registros en diferentes formatos, como JSON.</li>
+</ul>
+<h3 id="ejemplos-de-uso"><strong>Ejemplos de uso:</strong></h3>
+<ul>
+<li><code>journalctl -p crit</code>: Muestra todos los logs con este estado</li>
+</ul>
+<p><img alt="/var/log/" src="../imagenes/monitorizacion/monitorizacion8.png" /></p>
+<hr />
+<ul>
+<li><code>journalctl _COMM=(comando)</code>: Filtra por comandos.</li>
+</ul>
+<p><img alt="/var/log/" src="../imagenes/monitorizacion/monitorizacion10.png" /></p>
+<hr />
+<ul>
+<li><code>journalctl -u systemd-logind</code>: Muestra los logs del servicio <code>systemd-logind</code>, que gestiona sesiones de usuario, inicios y cierres de sesión.</li>
+</ul>
+<p><img alt="/var/log/" src="../imagenes/monitorizacion/monitorizacion11.png" /></p>
+<hr />
+<p>Existen más opciones para <code>journalctl</code>, como por ejemplo buscar fallos de inicio de sesión por fallo de contraseña: <code>journalctl -u systemd-logind | grep "Failed password"</code></p>
+<p>También podemos filtrar por fechas, por ejemplo si quisieramos filtrar que nos muestre los inicios de sesión desde el 1 de febrero de 2025: <code>journalctl -u systemd-logind --since "2025-02-01"</code></p>
+<h2 id="monitorizacion-en-red-de-logs"><strong>Monitorización en Red de Logs</strong></h2>
+<p>Voy a explicar como podemos compartir los logs de un usuario a un administrador para que los gestione.</p>
+<h3 id="ordenador-receptor-administrador"><strong>Ordenador receptor (administrador)</strong></h3>
+<p>Primero habilitamos la recepción de logs en el fichero <code>/etc/rsyslog.conf</code>.</p>
+<p><img alt="/var/log/" src="../imagenes/monitorizacion/monitorizacion12.png" /></p>
+<p>Descomentamos estas líneas:</p>
+<p><img alt="/var/log/" src="../imagenes/monitorizacion/monitorizacion13.png" /></p>
+<hr />
+<p>Reiniciamos el servicio <code>rsyslog</code> para aplicar los cambios:</p>
+<pre><code class="language-bash">sudo systemctl restart rsyslog
+</code></pre>
+<p><img alt="/var/log/" src="../imagenes/monitorizacion/monitorizacion14.png" /></p>
+<hr />
+<h3 id="ordenador-emisor-usuario"><strong>Ordenador emisor (usuario)</strong></h3>
+<p>En el ordenador del usuario, configuramos el envío de logs al servidor del administrador. Editamos el archivo <code>/etc/rsyslog.d/50-default.conf</code> y añadimos la siguiente línea:</p>
+<pre><code class="language-bash">*.* @IP_DEL_SERVIDOR:514
+*.* @@IP_DEL_SERVIDOR:514
+</code></pre>
+<p><img alt="/var/log/" src="../imagenes/monitorizacion/monitorizacion15.png" /></p>
+<hr />
+<p>Reiniciamos el servicio <code>rsyslog</code> en el ordenador del usuario:</p>
+<pre><code class="language-bash">sudo systemctl restart rsyslog
+</code></pre>
+<h3 id="verificacion-de-logs-en-red"><strong>Verificación de logs en red</strong></h3>
+<p>Para verificar que los logs se están enviando correctamente, en el servidor del administrador podemos utilizar el comando <code>tail</code> para ver los logs en tiempo real:</p>
+<pre><code class="language-bash">sudo tail -f /var/log/syslog
+</code></pre>
+<p>De esta manera, los logs del usuario se enviarán al servidor del administrador, permitiendo una monitorización centralizada de los eventos del sistema.</p>
+<hr />
 
 
 
