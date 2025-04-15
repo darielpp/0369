@@ -12,26 +12,26 @@
         <meta name="author" content="Dariel Piñón">
       
       
-        <link rel="canonical" href="https://daarieel.github.io/0369/">
+        <link rel="canonical" href="https://daarieel.github.io/0369/Proyecto2/Sprint2/acl/">
+      
+      
+        <link rel="prev" href="../procesos/">
       
       
       
-        <link rel="next" href="Proyecto1/introduccion/">
-      
-      
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.0">
     
     
       
-        <title>Dariel Piñón 0369</title>
+        <title>Gestión de ACLs - Dariel Piñón 0369</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.9f615399.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.9f615399.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.649f08f9.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.649f08f9.min.css">
       
       
 
@@ -50,9 +50,9 @@
       
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#implantacion-de-sistemas-operativos" class="md-skip">
+        <a href="#gestion-de-permisos-acls" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -97,7 +97,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabecera">
-    <a href="." title="Dariel Piñón 0369" class="md-header__button md-logo" aria-label="Dariel Piñón 0369" data-md-component="logo">
+    <a href="../../.." title="Dariel Piñón 0369" class="md-header__button md-logo" aria-label="Dariel Piñón 0369" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -117,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Gestión de ACLs
             
           </span>
         </div>
@@ -201,7 +201,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Dariel Piñón 0369" class="md-nav__button md-logo" aria-label="Dariel Piñón 0369" data-md-component="logo">
+    <a href="../../.." title="Dariel Piñón 0369" class="md-nav__button md-logo" aria-label="Dariel Piñón 0369" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -216,29 +216,9 @@
       
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Home
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -247,53 +227,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#proyectos" class="md-nav__link">
-    Proyectos
-  </a>
-  
-    <nav class="md-nav" aria-label="Proyectos">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#proyecto-1-implementacion-y-gestion-de-un-sistema-ubuntu-linux-con-tecnologia-abp" class="md-nav__link">
-    Proyecto 1: Implementación y Gestión de un Sistema Ubuntu Linux con Tecnología ABP
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#proyecto-2-implementacion-y-gestion-de-un-sistema-windows-con-tecnologia-abp" class="md-nav__link">
-    Proyecto 2: Implementación y Gestión de un Sistema Windows con Tecnología ABP
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -338,7 +271,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Proyecto1/introduccion/" class="md-nav__link">
+      <a href="../../../Proyecto1/introduccion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -392,7 +325,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Proyecto1/Sprint1/instalacion/" class="md-nav__link">
+      <a href="../../../Proyecto1/Sprint1/instalacion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -412,7 +345,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Proyecto1/Sprint1/conf_red/" class="md-nav__link">
+      <a href="../../../Proyecto1/Sprint1/conf_red/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -432,7 +365,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Proyecto1/Sprint1/inst_programas/" class="md-nav__link">
+      <a href="../../../Proyecto1/Sprint1/inst_programas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -452,7 +385,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Proyecto1/Sprint1/puntos_restauracion/" class="md-nav__link">
+      <a href="../../../Proyecto1/Sprint1/puntos_restauracion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -472,7 +405,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Proyecto1/Sprint1/gestores_arranque/" class="md-nav__link">
+      <a href="../../../Proyecto1/Sprint1/gestores_arranque/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -492,7 +425,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Proyecto1/Sprint1/rec_gest_arranque/" class="md-nav__link">
+      <a href="../../../Proyecto1/Sprint1/rec_gest_arranque/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -512,7 +445,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Proyecto1/Sprint1/licencias/" class="md-nav__link">
+      <a href="../../../Proyecto1/Sprint1/licencias/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -574,7 +507,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Proyecto1/Sprint2/gest_usu/" class="md-nav__link">
+      <a href="../../../Proyecto1/Sprint2/gest_usu/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -594,7 +527,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Proyecto1/Sprint2/gest_permisos/" class="md-nav__link">
+      <a href="../../../Proyecto1/Sprint2/gest_permisos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -614,7 +547,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Proyecto1/Sprint2/sis_ficheros_particiones/" class="md-nav__link">
+      <a href="../../../Proyecto1/Sprint2/sis_ficheros_particiones/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -634,7 +567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Proyecto1/Sprint2/comp_red/" class="md-nav__link">
+      <a href="../../../Proyecto1/Sprint2/comp_red/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -654,7 +587,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Proyecto1/Sprint2/disco/" class="md-nav__link">
+      <a href="../../../Proyecto1/Sprint2/disco/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -674,7 +607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Proyecto1/Sprint2/gest_procesos/" class="md-nav__link">
+      <a href="../../../Proyecto1/Sprint2/gest_procesos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -694,7 +627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Proyecto1/Sprint2/copies_seguretat_auto/" class="md-nav__link">
+      <a href="../../../Proyecto1/Sprint2/copies_seguretat_auto/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -714,7 +647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Proyecto1/Sprint2/auto_tareas/" class="md-nav__link">
+      <a href="../../../Proyecto1/Sprint2/auto_tareas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -776,7 +709,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Proyecto1/Sprint3/dom_ldap/" class="md-nav__link">
+      <a href="../../../Proyecto1/Sprint3/dom_ldap/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -796,7 +729,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Proyecto1/Sprint3/unir_cli/" class="md-nav__link">
+      <a href="../../../Proyecto1/Sprint3/unir_cli/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -816,7 +749,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Proyecto1/Sprint3/ldap_gra/" class="md-nav__link">
+      <a href="../../../Proyecto1/Sprint3/ldap_gra/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -836,7 +769,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Proyecto1/Sprint3/gest_dom/" class="md-nav__link">
+      <a href="../../../Proyecto1/Sprint3/gest_dom/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -856,7 +789,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Proyecto1/Sprint3/nfs/" class="md-nav__link">
+      <a href="../../../Proyecto1/Sprint3/nfs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -876,7 +809,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Proyecto1/Sprint3/samba/" class="md-nav__link">
+      <a href="../../../Proyecto1/Sprint3/samba/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -938,7 +871,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Proyecto1/Sprint4/raid/" class="md-nav__link">
+      <a href="../../../Proyecto1/Sprint4/raid/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1000,7 +933,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Proyecto1/Sprint5/monitorizacion/" class="md-nav__link">
+      <a href="../../../Proyecto1/Sprint5/monitorizacion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1020,7 +953,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Proyecto1/Sprint5/auditorias/" class="md-nav__link">
+      <a href="../../../Proyecto1/Sprint5/auditorias/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1040,7 +973,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Proyecto1/Sprint5/actualizaciones/" class="md-nav__link">
+      <a href="../../../Proyecto1/Sprint5/actualizaciones/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1073,17 +1006,19 @@
       
   
   
+    
+  
   
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
@@ -1096,7 +1031,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Proyecto 2; Sistema Windows
@@ -1109,7 +1044,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Proyecto2/introduccion/" class="md-nav__link">
+      <a href="../../introduccion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1163,7 +1098,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Proyecto2/Sprint1/licencias/" class="md-nav__link">
+      <a href="../../Sprint1/licencias/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1183,7 +1118,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Proyecto2/Sprint1/instalacion/" class="md-nav__link">
+      <a href="../../Sprint1/instalacion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1203,7 +1138,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Proyecto2/Sprint1/red_programas/" class="md-nav__link">
+      <a href="../../Sprint1/red_programas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1223,7 +1158,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Proyecto2/Sprint1/arranque/" class="md-nav__link">
+      <a href="../../Sprint1/arranque/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1249,17 +1184,19 @@
                 
   
   
+    
+  
   
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
         
           <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
             
@@ -1272,7 +1209,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             Sprint 2
@@ -1285,7 +1222,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Proyecto2/Sprint2/quotas/" class="md-nav__link">
+      <a href="../quotas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1305,7 +1242,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Proyecto2/Sprint2/backup/" class="md-nav__link">
+      <a href="../backup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1325,7 +1262,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Proyecto2/Sprint2/procesos/" class="md-nav__link">
+      <a href="../procesos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1343,9 +1280,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="Proyecto2/Sprint2/acl/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Gestión de ACLs
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1354,6 +1311,88 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-son-las-acls" class="md-nav__link">
+    ¿Qué son las ACLs?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivo-de-este-apartado" class="md-nav__link">
+    Objetivo de este apartado
+  </a>
+  
+    <nav class="md-nav" aria-label="Objetivo de este apartado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crear-la-carpeta" class="md-nav__link">
+    Crear la carpeta
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#asignar-permisos-al-grupo" class="md-nav__link">
+    Asignar permisos al grupo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verificar-acceso-con-alumne1" class="md-nav__link">
+    Verificar acceso con alumne1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aplicar-una-excepcion-para-alumne2" class="md-nav__link">
+    Aplicar una excepción para alumne2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verificar-la-excepcion-con-alumne2" class="md-nav__link">
+    Verificar la excepción con alumne2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consultar-permisos-aplicados" class="md-nav__link">
+    Consultar permisos aplicados
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1401,23 +1440,58 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#proyectos" class="md-nav__link">
-    Proyectos
+  <a href="#que-son-las-acls" class="md-nav__link">
+    ¿Qué son las ACLs?
   </a>
   
-    <nav class="md-nav" aria-label="Proyectos">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivo-de-este-apartado" class="md-nav__link">
+    Objetivo de este apartado
+  </a>
+  
+    <nav class="md-nav" aria-label="Objetivo de este apartado">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#proyecto-1-implementacion-y-gestion-de-un-sistema-ubuntu-linux-con-tecnologia-abp" class="md-nav__link">
-    Proyecto 1: Implementación y Gestión de un Sistema Ubuntu Linux con Tecnología ABP
+  <a href="#crear-la-carpeta" class="md-nav__link">
+    Crear la carpeta
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#proyecto-2-implementacion-y-gestion-de-un-sistema-windows-con-tecnologia-abp" class="md-nav__link">
-    Proyecto 2: Implementación y Gestión de un Sistema Windows con Tecnología ABP
+  <a href="#asignar-permisos-al-grupo" class="md-nav__link">
+    Asignar permisos al grupo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verificar-acceso-con-alumne1" class="md-nav__link">
+    Verificar acceso con alumne1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aplicar-una-excepcion-para-alumne2" class="md-nav__link">
+    Aplicar una excepción para alumne2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verificar-la-excepcion-con-alumne2" class="md-nav__link">
+    Verificar la excepción con alumne2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consultar-permisos-aplicados" class="md-nav__link">
+    Consultar permisos aplicados
   </a>
   
 </li>
@@ -1442,73 +1516,80 @@
                   
 
 
-<h1 id="implantacion-de-sistemas-operativos">Implantación de Sistemas Operativos</h1>
-<p>Bienvenido a la documentación sobre la <strong>Implantación de Sistemas Operativos</strong>. En este proyecto, exploraremos la implementación y gestión de dos sistemas operativos: <strong>Ubuntu Linux</strong> y <strong>Windows</strong>. Cada sistema se abordará a través de una serie de sprints, permitiendo un aprendizaje progresivo y estructurado.</p>
-<div>
-    <img src="./fondo.webp" alt="Sistemas Operativos" width="300">
-</div>
-
-<h2 id="proyectos">Proyectos</h2>
-<h3 id="proyecto-1-implementacion-y-gestion-de-un-sistema-ubuntu-linux-con-tecnologia-abp">Proyecto 1: Implementación y Gestión de un Sistema Ubuntu Linux con Tecnología ABP</h3>
-<p>Este proyecto se divide en cinco sprints, cada uno enfocado en diferentes aspectos de la gestión del sistema:</p>
+<h1 id="gestion-de-permisos-acls"><strong>Gestión de permisos (ACLs)</strong></h1>
+<p>En esta última fase vamos a trabajar con las <strong>Listas de Control de Acceso (ACLs)</strong> de Windows para establecer permisos específicos sobre carpetas. El objetivo es restringir o permitir el acceso según el usuario o grupo.</p>
+<hr />
+<h2 id="que-son-las-acls"><strong>¿Qué son las ACLs?</strong></h2>
+<p>Las ACLs (Access Control Lists) permiten definir, con gran detalle, quién puede hacer qué con un archivo o carpeta. Cada entrada en una ACL se llama ACE (Access Control Entry) y especifica:</p>
 <ul>
-<li><strong>Sprint 1: Instalación, Configuración Inicial y Programari de Base</strong></li>
-<li>
-<p>Aprenderás a instalar Ubuntu y realizar su configuración inicial, además de instalar el software básico necesario.</p>
-</li>
-<li>
-<p><strong>Sprint 2: Instalación, Configuración de Programari de Base y Gestió de Fitxers</strong></p>
-</li>
-<li>
-<p>En este sprint, profundizarás en la configuración del software base y la gestión de archivos.</p>
-</li>
-<li>
-<p><strong>Sprint 3: Administració de Dominis i Seguretat</strong></p>
-</li>
-<li>
-<p>Este sprint se centra en la administración de dominios y las mejores prácticas de seguridad en Ubuntu.</p>
-</li>
-<li>
-<p><strong>Sprint 4: Configuració del Programari de Base i Sistemes d’Emmagatzematge en Ubuntu</strong></p>
-</li>
-<li>
-<p>Aprenderás sobre la configuración avanzada del software y los sistemas de almacenamiento.</p>
-</li>
-<li>
-<p><strong>Sprint 5: Monitoratge, Auditories i Programari Client/Servidor</strong></p>
-</li>
-<li>Este sprint te enseñará a realizar monitorización y auditorías, así como a gestionar software cliente/servidor.</li>
+<li>A qué usuario o grupo afecta.</li>
+<li>Qué permisos se conceden (lectura, escritura, modificación, etc.).</li>
 </ul>
-<h3 id="proyecto-2-implementacion-y-gestion-de-un-sistema-windows-con-tecnologia-abp">Proyecto 2: Implementación y Gestión de un Sistema Windows con Tecnología ABP</h3>
-<p>De manera similar, este proyecto también se divide en cinco sprints:</p>
+<p>Este sistema permite una gestión avanzada mucho más precisa que los permisos básicos de compartición.</p>
+<hr />
+<h2 id="objetivo-de-este-apartado"><strong>Objetivo de este apartado</strong></h2>
+<p>Queremos que la carpeta <code>D:\Projectes</code> tenga los siguientes permisos:</p>
 <ul>
-<li><strong>Sprint 1: Instalación, Configuración Inicial y Programari de Base</strong></li>
-<li>
-<p>Instalación y configuración inicial de Windows, junto con el software básico.</p>
-</li>
-<li>
-<p><strong>Sprint 2: Instalación, Configuración de Programari de Base i Gestió de Fitxers</strong></p>
-</li>
-<li>
-<p>Enfocado en la configuración del software base y la gestión de archivos en Windows.</p>
-</li>
-<li>
-<p><strong>Sprint 3: Administració de Dominis i Seguretat</strong></p>
-</li>
-<li>
-<p>Abordaremos la administración de dominios y la seguridad en entornos Windows.</p>
-</li>
-<li>
-<p><strong>Sprint 4: Configuració del Programari de Base i Sistemes d’Emmagatzematge en Windows</strong></p>
-</li>
-<li>
-<p>Aprenderás sobre la configuración del software y los sistemas de almacenamiento en Windows.</p>
-</li>
-<li>
-<p><strong>Sprint 5: Monitoratge, Auditories i Programari Client/Servidor</strong></p>
-</li>
-<li>Conocerás las técnicas de monitorización y auditoría, así como la gestión de software cliente/servidor en Windows.</li>
+<li>El grupo <code>Limitats</code> debe tener <strong>control total</strong>.</li>
+<li>El usuario <code>alumne2</code>, aunque pertenezca al grupo, solo podrá <strong>leer</strong>, pero no modificar.</li>
 </ul>
+<hr />
+<h3 id="crear-la-carpeta"><strong>Crear la carpeta</strong></h3>
+<ol>
+<li>Inicia sesión como administrador.</li>
+<li>Abre el explorador de archivos y accede a la partición <code>D:\</code>.</li>
+<li>Crea una carpeta llamada <code>Projectes</code>.</li>
+</ol>
+<hr />
+<h3 id="asignar-permisos-al-grupo"><strong>Asignar permisos al grupo</strong></h3>
+<ol>
+<li>Haz clic derecho sobre <code>D:\Projectes</code> &gt; <strong>Propiedades</strong>.</li>
+<li>Ve a la pestaña <strong>Seguridad</strong> &gt; <strong>Avanzado</strong>.</li>
+<li>Desactiva la <strong>herencia</strong> y conserva los permisos existentes.</li>
+<li>Elimina entradas como <code>Users</code> o <code>Everyone</code> si están presentes.</li>
+<li>Añade el grupo <code>Limitats</code> y asígnale <strong>control total</strong>.</li>
+<li>Aplica los cambios.</li>
+</ol>
+<hr />
+<h3 id="verificar-acceso-con-alumne1"><strong>Verificar acceso con <code>alumne1</code></strong></h3>
+<ol>
+<li>Inicia sesión como <code>alumne1</code>.</li>
+<li>Accede a <code>D:\Projectes</code>.</li>
+<li>Crea un archivo de prueba, edítalo y elimínalo.</li>
+<li>Todo debería funcionar correctamente (hereda permisos de <code>Limitats</code>).</li>
+</ol>
+<hr />
+<h3 id="aplicar-una-excepcion-para-alumne2"><strong>Aplicar una excepción para <code>alumne2</code></strong></h3>
+<ol>
+<li>Vuelve a iniciar sesión como administrador.</li>
+<li>Abre CMD y ejecuta:</li>
+</ol>
+<p><code>cmd
+   icacls "D:\Projectes" /grant:r alumne2:(R)</code></p>
+<p>Esto revoca cualquier otro permiso anterior para <code>alumne2</code> y le asigna solo permiso de lectura.</p>
+<hr />
+<h3 id="verificar-la-excepcion-con-alumne2"><strong>Verificar la excepción con <code>alumne2</code></strong></h3>
+<ol>
+<li>Inicia sesión como <code>alumne2</code>.</li>
+<li>Accede a <code>D:\Projectes</code> y abre un archivo existente.</li>
+<li>Intenta modificarlo o crear uno nuevo: deberías recibir un mensaje de acceso denegado.</li>
+</ol>
+<hr />
+<h3 id="consultar-permisos-aplicados"><strong>Consultar permisos aplicados</strong></h3>
+<ol>
+<li>Desde la cuenta de administrador, abre una consola CMD.</li>
+<li>Ejecuta:</li>
+</ol>
+<p><code>cmd
+   icacls "D:\Projectes"</code></p>
+<ol>
+<li>Deberías ver una salida similar a:</li>
+</ol>
+<p><code>D:\Projectes Limitats:(OI)(CI)(F)
+                alumne2:(R)</code></p>
+<p>Esto confirma que el grupo tiene control total y <code>alumne2</code> tiene solo lectura.</p>
+<hr />
+<p>Con esto concluye la configuración de permisos específicos mediante ACLs, asegurando un control preciso sobre los accesos a recursos compartidos.</p>
 
 
 
@@ -1550,10 +1631,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
     
     
-      <script src="assets/javascripts/bundle.4e0fa4ba.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.4e0fa4ba.min.js"></script>
       
     
   </body>
