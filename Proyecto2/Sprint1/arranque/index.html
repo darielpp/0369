@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://daarieel.github.io/0369/Proyecto2/Sprint1/arranque/">
       
       
-        <link rel="prev" href="../red_programas/">
+        <link rel="prev" href="../restauracion/">
       
       
         <link rel="next" href="../../Sprint2/quotas/">
@@ -1160,6 +1160,26 @@
                 
   
   
+  
+    <li class="md-nav__item">
+      <a href="../restauracion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Puntos de Restauración
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -1238,6 +1258,13 @@
         <li class="md-nav__item">
   <a href="#reiniciar-y-comprobar-que-todo-funciona" class="md-nav__link">
     Reiniciar y comprobar que todo funciona
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    
   </a>
   
 </li>
@@ -1381,6 +1408,68 @@
 
               
             
+              
+                
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sprint 3
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Sprint 3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sprint3/ad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dominios y Active Directory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1449,6 +1538,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1478,6 +1574,7 @@
 <li>Luego en <strong>Opciones avanzadas</strong>.</li>
 </ul>
 <p>Desde aquí podremos acceder a las herramientas que nos ayudarán a reparar el arranque.</p>
+<p><img alt="Arranque" src="../img/arranque/arranque1.png" /></p>
 <hr />
 <h2 id="reparacion-automatica-con-la-herramienta-de-inicio"><strong>Reparación automática con la herramienta de inicio</strong></h2>
 <p>La forma más sencilla de intentar reparar el problema es con la opción <strong>Reparación de inicio</strong>.</p>
@@ -1488,19 +1585,22 @@
 <li>El sistema intentará detectar y arreglar los errores automáticamente.</li>
 </ol>
 <p>Si todo va bien, tras un reinicio el sistema debería arrancar con normalidad. Si no funciona, pasamos al plan B: la reparación manual.</p>
+<p><img alt="Arranque" src="../img/arranque/arranque2.png" />
+<img alt="Arranque" src="../img/arranque/arranque3.png" />
+<img alt="Arranque" src="../img/arranque/arranque4.png" /></p>
 <hr />
 <h2 id="reparacion-manual-con-comandos"><strong>Reparación manual con comandos</strong></h2>
 <p>Desde el menú anterior, seleccionamos <strong>Símbolo del sistema</strong>.</p>
+<p><img alt="Arranque" src="../img/arranque/arranque5.png" /></p>
 <p>Aquí escribimos uno a uno los siguientes comandos:</p>
 <pre><code class="language-cmd">bootrec /fixmbr
-bootrec /fixboot
 bootrec /scanos
 bootrec /rebuildbcd
 </code></pre>
+<p><img alt="Arranque" src="../img/arranque/arranque6.png" /></p>
 <p>¿Qué hacen?</p>
 <ul>
 <li><code>fixmbr</code> repara el registro de arranque maestro.</li>
-<li><code>fixboot</code> escribe un nuevo sector de arranque.</li>
 <li><code>scanos</code> busca instalaciones de Windows no registradas.</li>
 <li><code>rebuildbcd</code> reconstruye la configuración de arranque.</li>
 </ul>
@@ -1513,7 +1613,7 @@ bootrec /rebuildbcd
 <li>Volvemos al menú de recuperación y elegimos <strong>Continuar con Windows 10</strong>.</li>
 </ol>
 <p>Si todo ha ido bien, el sistema debería arrancar normalmente.</p>
-<hr />
+<h2 id="_1"><img alt="Instalacion" src="../img/instalacion/instalacion19.png" /></h2>
 
 
 
