@@ -10,14 +10,17 @@ En esta fase vamos a trabajar con los procesos activos del sistema. Identificare
 2. Abre una ventana de comandos (`CMD`) como usuario.
 3. Ejecuta el siguiente comando:
 
-   ```cmd
+   ```
    tasklist > C:\Users\%USERNAME%\processos_inici.txt
    ```
 
 4. Este archivo contendrá una lista completa de procesos activos al inicio de sesión.
 
----
+![procesos](./img/procesos/procesos1.png)
 
+![procesos](./img/procesos/procesos2.png)
+
+---
 ## __Identificar procesos prescindibles__
 
 Revisa el archivo generado y localiza procesos que no son estrictamente necesarios para el funcionamiento básico del sistema. Algunos ejemplos comunes:
@@ -36,26 +39,29 @@ Revisa el archivo generado y localiza procesos que no son estrictamente necesari
 
 1. Desde el CMD (modo usuario o administrador), ejecuta:
 
-   ```cmd
+   ```
    taskkill /IM OneDrive.exe /F
    ```
 
 2. Vuelve a ejecutar `tasklist` para comprobar si el proceso ha desaparecido.
 
-   ```cmd
+   ```
    tasklist
    ```
 
 3. Puedes capturar pantalla antes y después para documentar la diferencia.
 
----
+![procesos](./img/procesos/procesos3.png)
 
+![procesos](./img/procesos/procesos4.png)
+
+---
 ## __Automatizar cierre de procesos__
 
 1. Edita el archivo `copia_perfil.bat` que ya usamos anteriormente.
 2. Añade al final del script las siguientes líneas:
 
-   ```bat
+   ```
    taskkill /IM OneDrive.exe /F
    taskkill /IM Teams.exe /F
    ```
@@ -63,5 +69,9 @@ Revisa el archivo generado y localiza procesos que no son estrictamente necesari
 3. Guarda los cambios y cierra el editor.
 
 4. Inicia sesión como `alumne2` y comprueba que los procesos se cierran automáticamente al iniciar sesión (puedes verificarlo con `tasklist`).
+
+![procesos](./img/procesos/procesos5.png)
+
+![procesos](./img/procesos/procesos6.png)
 
 ---

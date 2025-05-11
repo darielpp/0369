@@ -21,6 +21,8 @@ Una vez dentro de **WinRE**, veremos varias opciones. Vamos a:
 
 Desde aquí podremos acceder a las herramientas que nos ayudarán a reparar el arranque.
 
+![Arranque](./img/arranque/arranque1.png)
+
 ---
 
 ## __Reparación automática con la herramienta de inicio__
@@ -35,25 +37,31 @@ Pasos:
 
 Si todo va bien, tras un reinicio el sistema debería arrancar con normalidad. Si no funciona, pasamos al plan B: la reparación manual.
 
+![Arranque](./img/arranque/arranque2.png)
+![Arranque](./img/arranque/arranque3.png)
+![Arranque](./img/arranque/arranque4.png)
+
 ---
 
 ## __Reparación manual con comandos__
 
 Desde el menú anterior, seleccionamos **Símbolo del sistema**.
 
+![Arranque](./img/arranque/arranque5.png)
+
 Aquí escribimos uno a uno los siguientes comandos:
 
 ```cmd
 bootrec /fixmbr
-bootrec /fixboot
 bootrec /scanos
 bootrec /rebuildbcd
 ```
 
+![Arranque](./img/arranque/arranque6.png)
+
 ¿Qué hacen?
 
 - `fixmbr` repara el registro de arranque maestro.
-- `fixboot` escribe un nuevo sector de arranque.
 - `scanos` busca instalaciones de Windows no registradas.
 - `rebuildbcd` reconstruye la configuración de arranque.
 
@@ -70,4 +78,5 @@ Una vez hechos los pasos anteriores:
 
 Si todo ha ido bien, el sistema debería arrancar normalmente.
 
+![Instalacion](./img/instalacion/instalacion19.png)
 ---

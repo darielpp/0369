@@ -46,12 +46,15 @@ nav:
           - Licencias: Proyecto2/Sprint1/licencias.md
           - Instalación Windows: Proyecto2/Sprint1/instalacion.md
           - Configuración de Red y Programas Base: Proyecto2/Sprint1/red_programas.md
+          - Puntos de Restauración: Proyecto2/Sprint1/restauracion.md
           - Gestor de Arranque: Proyecto2/Sprint1/arranque.md
       - Sprint 2:
           - Quotas y Usuarios: Proyecto2/Sprint2/quotas.md
           - Copias de Seguridad y Automatización: Proyecto2/Sprint2/backup.md
           - Gestión de Procesos: Proyecto2/Sprint2/procesos.md
           - Gestión de ACLs: Proyecto2/Sprint2/acl.md
+      - Sprint 3:
+          - Dominios y Active Directory: Proyecto2/Sprint3/ad.md 
           
 theme:
   name: "material"

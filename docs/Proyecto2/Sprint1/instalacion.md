@@ -12,6 +12,8 @@ En este documento se detalla paso a paso el proceso de instalación y configurac
 - Software de virtualización: **VirtualBox 7.0.16**
 - Imagen ISO de **Windows 10 Enterprise** (x64)
 
+
+
 ---
 
 ### __Crear nueva máquina virtual__
@@ -24,6 +26,8 @@ En este documento se detalla paso a paso el proceso de instalación y configurac
    - **Versión**: `Windows 10 (64-bit)`
 4. Pulsamos **Siguiente**.
 
+![Instalacion](./img/instalacion/instalacion1.png)
+
 ---
 
 ### __Configurar memoria y disco duro__
@@ -34,6 +38,9 @@ En este documento se detalla paso a paso el proceso de instalación y configurac
    - Tamaño: **50 GB**
 3. Finalizamos la creación.
 
+![Instalacion](./img/instalacion/instalacion2.png)
+![Instalacion](./img/instalacion/instalacion3.png)
+
 ---
 
 ### __Insertar la ISO de Windows__
@@ -43,6 +50,9 @@ En este documento se detalla paso a paso el proceso de instalación y configurac
 3. En el controlador IDE, seleccionamos el icono de disco y pulsamos **Elegir un archivo de disco**.
 4. Seleccionamos la ISO de Windows 10 Enterprise.
 5. Confirmamos con **Aceptar**.
+
+![Instalacion](./img/instalacion/instalacion4.png)
+![Instalacion](./img/instalacion/instalacion5.png)
 
 ---
 
@@ -70,6 +80,8 @@ En este documento se detalla paso a paso el proceso de instalación y configurac
 1. Elegimos idioma, formato de hora y teclado.
 2. Pulsamos **Siguiente** y luego **Instalar ahora**.
 
+![Instalacion](./img/instalacion/instalacion6.png)
+
 ---
 
 ### __Introducción de clave de producto__
@@ -84,11 +96,15 @@ En este documento se detalla paso a paso el proceso de instalación y configurac
 1. Elegimos **Windows 10 Enterprise**.
 2. Aceptamos los términos de licencia.
 
+![Instalacion](./img/instalacion/instalacion7.png)
+
 ---
 
 ### __Tipo de instalación__
 
 Seleccionamos **Personalizada: instalar solo Windows (avanzado)**.
+
+![Instalacion](./img/instalacion/instalacion8.png)
 
 ---
 
@@ -98,6 +114,10 @@ Seleccionamos **Personalizada: instalar solo Windows (avanzado)**.
 2. Pulsamos **Nuevo** para crear la partición.
 3. Pulsamos **Siguiente**.
 
+![Instalacion](./img/instalacion/instalacion9.png)
+![Instalacion](./img/instalacion/instalacion10.png)
+![Instalacion](./img/instalacion/instalacion11.png)
+
 ---
 
 ### __Instalación del sistema__
@@ -105,13 +125,21 @@ Seleccionamos **Personalizada: instalar solo Windows (avanzado)**.
 1. Se copian los archivos y se reinicia automáticamente.
 2. Esperamos a que se complete la instalación.
 
+![Instalacion](./img/instalacion/instalacion12.png)
+
 ---
 
 ## __Configuración inicial de Windows__
+Para este paso, hay que suprimir la ISO anteriormente añadida.
+
+![Instalacion](./img/instalacion/instalacion13.png)
 
 ### __Configurar región y distribución de teclado__
 
 1. Seleccionamos país y tipo de teclado.
+
+![Instalacion](./img/instalacion/instalacion14.png)
+![Instalacion](./img/instalacion/instalacion15.png)
 
 ---
 
@@ -120,6 +148,9 @@ Seleccionamos **Personalizada: instalar solo Windows (avanzado)**.
 1. Seleccionamos **Configuración para uso personal**.
 2. Creamos un usuario local y contraseña.
 
+![Instalacion](./img/instalacion/instalacion16.png)
+![Instalacion](./img/instalacion/instalacion17.png)
+
 ---
 
 ### __Opciones de privacidad__
@@ -127,11 +158,14 @@ Seleccionamos **Personalizada: instalar solo Windows (avanzado)**.
 1. Desactivamos todas las opciones no necesarias.
 2. Pulsamos **Aceptar**.
 
+![Instalacion](./img/instalacion/instalacion18.png)
+
 ---
 
 ### __Finalización__
 
 1. El sistema se inicia y muestra el escritorio de Windows 10 Enterprise.
-2. Finaliza la instalación básica.
+
+![Instalacion](./img/instalacion/instalacion19.png)
 
 ---
