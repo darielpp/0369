@@ -1709,6 +1709,67 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#gpo-1-ocultar-el-panel-de-control" class="md-nav__link">
+    GPO 1 – Ocultar el Panel de control
+  </a>
+  
+    <nav class="md-nav" aria-label="GPO 1 – Ocultar el Panel de control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuracion" class="md-nav__link">
+    Configuración:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gpo-2-bloquear-win-r-y-ctrl-alt-supr" class="md-nav__link">
+    GPO 2 – Bloquear WIN + R y CTRL + ALT + SUPR
+  </a>
+  
+    <nav class="md-nav" aria-label="GPO 2 – Bloquear WIN + R y CTRL + ALT + SUPR">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuracion_1" class="md-nav__link">
+    Configuración:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bloquear-win-r" class="md-nav__link">
+    Bloquear WIN + R
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bloquear-ctrl-alt-supr" class="md-nav__link">
+    Bloquear CTRL + ALT + SUPR
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aplicacion-y-prueba" class="md-nav__link">
+    Aplicación y prueba
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2050,6 +2111,67 @@
           <li class="md-nav__item">
   <a href="#reforzar-la-complejidad-de-contrasenas-opcional" class="md-nav__link">
     Reforzar la complejidad de contraseñas (opcional)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gpo-1-ocultar-el-panel-de-control" class="md-nav__link">
+    GPO 1 – Ocultar el Panel de control
+  </a>
+  
+    <nav class="md-nav" aria-label="GPO 1 – Ocultar el Panel de control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuracion" class="md-nav__link">
+    Configuración:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gpo-2-bloquear-win-r-y-ctrl-alt-supr" class="md-nav__link">
+    GPO 2 – Bloquear WIN + R y CTRL + ALT + SUPR
+  </a>
+  
+    <nav class="md-nav" aria-label="GPO 2 – Bloquear WIN + R y CTRL + ALT + SUPR">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuracion_1" class="md-nav__link">
+    Configuración:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bloquear-win-r" class="md-nav__link">
+    Bloquear WIN + R
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bloquear-ctrl-alt-supr" class="md-nav__link">
+    Bloquear CTRL + ALT + SUPR
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aplicacion-y-prueba" class="md-nav__link">
+    Aplicación y prueba
   </a>
   
 </li>
@@ -2469,6 +2591,83 @@
 - <strong>Debe cumplir con los requisitos de complejidad</strong>: Activado
 - <strong>Historial de contraseñas</strong>: recordar al menos 5</p>
 <p>Estas políticas contribuyen a proteger el dominio de intentos de acceso no autorizados y garantizan una mejor higiene de seguridad en la red.</p>
+<hr />
+<h2 id="gpo-1-ocultar-el-panel-de-control"><strong>GPO 1 – Ocultar el Panel de control</strong></h2>
+<p><strong>Objetivo:</strong> evitar que los usuarios accedan a configuraciones del sistema desde el Panel de control.</p>
+<h3 id="configuracion"><strong>Configuración:</strong></h3>
+<ol>
+<li>Abrir <code>gpmc.msc</code> en <code>SERVERDP</code>.</li>
+<li>Clic derecho sobre la OU <code>Alumnat</code> &gt; <strong>Crear un GPO y vincularlo aquí</strong>.</li>
+<li>Nombre: <code>OcultarPanelControl</code>.</li>
+<li>Clic derecho sobre la GPO &gt; <strong>Editar</strong>.</li>
+<li>Ir a:</li>
+</ol>
+<p><code>Configuración de usuario &gt; Plantillas administrativas &gt; Panel de control</code></p>
+<ol>
+<li>
+<p>Activar la directiva:<br />
+<strong>"Prohibir el acceso al Panel de control y a la configuración del PC"</strong> → Habilitada.</p>
+</li>
+<li>
+<p>Cerrar el editor.</p>
+</li>
+</ol>
+<p><img alt="ad" src="../img/ad/ad64.png" /></p>
+<p><img alt="ad" src="../img/ad/ad65.png" /></p>
+<p><img alt="ad" src="../img/ad/ad66.png" /></p>
+<p><img alt="ad" src="../img/ad/ad67.png" /></p>
+<p><img alt="ad" src="../img/ad/ad68.png" /></p>
+<p><img alt="ad" src="../img/ad/ad69.png" /></p>
+<hr />
+<h2 id="gpo-2-bloquear-win-r-y-ctrl-alt-supr"><strong>GPO 2 – Bloquear WIN + R y CTRL + ALT + SUPR</strong></h2>
+<p><strong>Objetivo:</strong> impedir que los usuarios ejecuten comandos o accedan a funciones sensibles del sistema.</p>
+<h3 id="configuracion_1"><strong>Configuración:</strong></h3>
+<ol>
+<li>En <code>gpmc.msc</code>, crear otra GPO vinculada a la OU <code>Alumnes</code>, con nombre: <code>BloquejarTeclesSistema</code>.</li>
+<li>Editar la GPO y configurar las siguientes directivas:</li>
+</ol>
+<p><img alt="ad" src="../img/ad/ad70.png" /></p>
+<h3 id="bloquear-win-r"><strong>Bloquear WIN + R</strong></h3>
+<ol>
+<li>Ir a:</li>
+</ol>
+<p><code>Configuración de usuario &gt; Plantillas administrativas &gt; Menú inicio y barra de tareas</code></p>
+<ol>
+<li>Activar la directiva:<br />
+<strong>"Quitar el acceso al comando Ejecutar"</strong> → Habilitada.</li>
+</ol>
+<p><img alt="ad" src="../img/ad/ad70.png" /></p>
+<p><img alt="ad" src="../img/ad/ad71.png" /></p>
+<p><img alt="ad" src="../img/ad/ad72.png" /></p>
+<h3 id="bloquear-ctrl-alt-supr"><strong>Bloquear CTRL + ALT + SUPR</strong></h3>
+<ol>
+<li>Ir a:</li>
+</ol>
+<p><code>Configuración de usuario &gt; Plantillas administrativas &gt; Sistema &gt; Opciones de Ctrl+Alt+Supr</code></p>
+<ol>
+<li>Activar estas directivas:</li>
+<li><strong>"Quitar Administrador de tareas"</strong> → Habilitada.</li>
+</ol>
+<p><em>Nota:</em> No se puede bloquear completamente la combinación <code>CTRL + ALT + SUPR</code>, ya que es gestionada por el sistema, pero sí se puede desactivar lo que aparece al pulsarla.</p>
+<p><img alt="ad" src="../img/ad/ad73.png" /></p>
+<p><img alt="ad" src="../img/ad/ad74.png" /></p>
+<hr />
+<h3 id="aplicacion-y-prueba"><strong>Aplicación y prueba</strong></h3>
+<ol>
+<li>En un equipo cliente, iniciar sesión como <code>alumne1</code>.</li>
+<li>Ejecutar:</li>
+</ol>
+<p><code>cmd
+   gpupdate /force</code></p>
+<ol>
+<li>Verificar que:</li>
+<li>No se puede abrir el Panel de control.</li>
+<li>Al pulsar <code>WIN + R</code>, no sucede nada.</li>
+<li>Al pulsar <code>CTRL + ALT + SUPR</code>, la opcion de "Administrador de tareas" está deshabilitada.</li>
+</ol>
+<p><img alt="ad" src="../img/ad/ad75.png" /></p>
+<p><img alt="ad" src="../img/ad/ad76.png" /></p>
+<p><img alt="ad" src="../img/ad/ad77.png" /></p>
 <hr />
 
 
