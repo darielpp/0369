@@ -1160,6 +1160,26 @@
   
   
     <li class="md-nav__item">
+      <a href="../../Sprint1/restauracion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Puntos de Restauración
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../Sprint1/arranque/" class="md-nav__link">
         
   
@@ -1435,6 +1455,68 @@
 
               
             
+              
+                
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sprint 3
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Sprint 3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sprint3/ad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dominios y Active Directory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1585,6 +1667,7 @@
 <li>Crea un <strong>nuevo disco virtual</strong> de unos <strong>5-10 GB</strong>, en formato <strong>VDI</strong> y almacenamiento <strong>dinámico</strong>.</li>
 <li>Una vez añadido, inicia la máquina virtual.</li>
 </ol>
+<p><img alt="Añadir_Disco" src="../img/quotas/quotas1.png" /></p>
 <hr />
 <h3 id="iniciar-windows-y-abrir-la-gestion-de-discos"><strong>Iniciar Windows y abrir la gestión de discos</strong></h3>
 <ol>
@@ -1592,17 +1675,24 @@
 <li>Pulsa <code>Win + X</code> y selecciona <strong>Administración de discos</strong>.</li>
 <li>Verás un mensaje para <strong>inicializar el nuevo disco</strong>. Selecciona <strong>GPT</strong> y acepta.</li>
 </ol>
+<p><img alt="Añadir_Disco" src="../img/quotas/quotas2.png" /></p>
 <hr />
 <h3 id="crear-particiones-dades-y-portable"><strong>Crear particiones: Dades y Portable</strong></h3>
 <ol>
 <li>Sobre el espacio no asignado del nuevo disco, haz clic derecho y selecciona <strong>Nuevo volumen simple</strong>.</li>
-<li>Crea una primera partición de tipo <strong>NTFS</strong>, tamaño aproximado de 4-6 GB, y llámala <strong>Dades</strong>.</li>
+<li>Crea una primera partición de tipo <strong>NTFS</strong>, tamaño aproximado de 5 GB, y llámala <strong>Dades</strong>.</li>
 <li>Luego, con el espacio restante, crea otra partición en formato <strong>FAT32</strong> y nómbrala <strong>Portable</strong>.</li>
 </ol>
+<p><img alt="Añadir_Disco" src="../img/quotas/quotas3.png" /></p>
+<p><img alt="Añadir_Disco" src="../img/quotas/quotas4.png" /></p>
+<p><img alt="Añadir_Disco" src="../img/quotas/quotas5.png" /></p>
+<p><img alt="Añadir_Disco" src="../img/quotas/quotas6.png" /></p>
+<p><img alt="Añadir_Disco" src="../img/quotas/quotas7.png" /></p>
+<p><img alt="Añadir_Disco" src="../img/quotas/quotas8.png" /></p>
 <hr />
 <h3 id="asignar-letras-y-verificar-con-diskpart"><strong>Asignar letras y verificar con <code>diskpart</code></strong></h3>
 <ol>
-<li>Asegúrate de que ambas particiones tengan letras asignadas automáticamente (por ejemplo, D: y E:).</li>
+<li>Para asegurar que ambas particiones tengan letras asignadas automáticamente (por ejemplo, D: y E:).</li>
 <li>Abre una terminal como administrador (<code>CMD</code>) y escribe:</li>
 </ol>
 <p><code>cmd
@@ -1611,6 +1701,7 @@
 <ol>
 <li>Verifica que aparecen las dos nuevas particiones correctamente identificadas.</li>
 </ol>
+<p><img alt="Añadir_Disco" src="../img/quotas/quotas9.png" /></p>
 <hr />
 <h2 id="gestion-de-cuotas-y-usuarios"><strong>Gestión de cuotas y usuarios</strong></h2>
 <p>En esta fase vamos a configurar cuotas de disco para controlar el espacio asignado por usuario y a crear dos cuentas con permisos limitados para hacer pruebas.</p>
@@ -1620,8 +1711,11 @@
 <li>Ve a <strong>Este equipo</strong>, haz clic derecho sobre la unidad <strong>Dades (D:)</strong> y elige <strong>Propiedades</strong>.</li>
 <li>En la pestaña <strong>Cuota</strong>, haz clic en <strong>Mostrar configuración de cuotas</strong>.</li>
 <li>Marca la casilla <strong>Habilitar la administración de cuotas</strong>.</li>
-<li>Activa también <strong>Negar espacio en disco a los usuarios que superen el límite de cuota</strong>.</li>
+<li>Activa también <strong>Denegar espacio en disco a los usuarios que superen el límite de cuota</strong>.</li>
 </ol>
+<p><img alt="Añadir_Disco" src="../img/quotas/quotas10.png" /></p>
+<p><img alt="Añadir_Disco" src="../img/quotas/quotas11.png" /></p>
+<p><img alt="Añadir_Disco" src="../img/quotas/quotas12.png" /></p>
 <hr />
 <h3 id="establecer-limite-de-300-mb"><strong>Establecer límite de 300 MB</strong></h3>
 <ol>
@@ -1631,6 +1725,7 @@
 <li><strong>Nivel de advertencia</strong>: 250 MB</li>
 <li>Aplica los cambios.</li>
 </ol>
+<p><img alt="Añadir_Disco" src="../img/quotas/quotas13.png" /></p>
 <hr />
 <h3 id="crear-dos-usuarios-locales-alumne1-y-alumne2"><strong>Crear dos usuarios locales: alumne1 y alumne2</strong></h3>
 <ol>
@@ -1638,14 +1733,15 @@
 <li>Ejecuta estos comandos:</li>
 </ol>
 <p><code>cmd
-   net user alumne1 Alumne123! /add
-   net user alumne2 Alumne123! /add</code></p>
+   net user alumne1 alumne1 /add
+   net user alumne2 alumne2 /add</code></p>
 <hr />
 <h3 id="crear-grupo-limitats-y-anadir-usuarios"><strong>Crear grupo Limitats y añadir usuarios</strong></h3>
-<pre><code class="language-cmd">net localgroup Limitats /add
-net localgroup Limitats alumne1 /add
-net localgroup Limitats alumne2 /add
+<pre><code class="language-cmd">net localgroup limitats /add
+net localgroup limitats alumne1 /add
+net localgroup limitats alumne2 /add
 </code></pre>
+<p><img alt="Añadir_Disco" src="../img/quotas/quotas14.png" /></p>
 <hr />
 <h3 id="probar-limites-de-cuota"><strong>Probar límites de cuota</strong></h3>
 <ol>
@@ -1653,6 +1749,8 @@ net localgroup Limitats alumne2 /add
 <li>Intenta copiar varios archivos pesados (por ejemplo, vídeos o ISO pequeñas) dentro de la unidad <strong>Dades (D:)</strong>.</li>
 <li>Deberías recibir un aviso cuando se supere el umbral de advertencia y, eventualmente, un bloqueo al llegar a los 300 MB.</li>
 </ol>
+<p><img alt="Añadir_Disco" src="../img/quotas/quotas15.png" /></p>
+<p><img alt="Añadir_Disco" src="../img/quotas/quotas16.png" /></p>
 
 
 

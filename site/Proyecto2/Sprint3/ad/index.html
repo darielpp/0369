@@ -1,0 +1,2521 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Instalaciones y gestión de Ubuntu y Windows.">
+      
+      
+        <meta name="author" content="Dariel Piñón">
+      
+      
+        <link rel="canonical" href="https://daarieel.github.io/0369/Proyecto2/Sprint3/ad/">
+      
+      
+        <link rel="prev" href="../../Sprint2/acl/">
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.0">
+    
+    
+      
+        <title>Dominios y Active Directory - Dariel Piñón 0369</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.9f615399.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.649f08f9.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#implementacion-y-administracion-del-dominio" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../.." title="Dariel Piñón 0369" class="md-header__button md-logo" aria-label="Dariel Piñón 0369" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Dariel Piñón 0369
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Dominios y Active Directory
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Dariel Piñón 0369" class="md-nav__button md-logo" aria-label="Dariel Piñón 0369" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Dariel Piñón 0369
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Proyecto 1; Sistema Ubuntu Linux
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Proyecto 1; Sistema Ubuntu Linux
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Proyecto1/introduccion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sprint 1
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Sprint 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Proyecto1/Sprint1/instalacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Instalación Máquina Virtual y Ubuntu
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Proyecto1/Sprint1/conf_red/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuración Básica de Red
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Proyecto1/Sprint1/inst_programas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Instalación de Programas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Proyecto1/Sprint1/puntos_restauracion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Puntos de Restauración
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Proyecto1/Sprint1/gestores_arranque/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gestores de Arranque
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Proyecto1/Sprint1/rec_gest_arranque/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Recuperación del Gestor de Arranque
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Proyecto1/Sprint1/licencias/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Licencias
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sprint 2
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Sprint 2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Proyecto1/Sprint2/gest_usu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gestión de Usuarios y Grupos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Proyecto1/Sprint2/gest_permisos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gestión de Permisos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Proyecto1/Sprint2/sis_ficheros_particiones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sistema de Ficheros y Particiones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Proyecto1/Sprint2/comp_red/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compartir Ficheros en Red
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Proyecto1/Sprint2/disco/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cuotas de Disco
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Proyecto1/Sprint2/gest_procesos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gestión de Procesos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Proyecto1/Sprint2/copies_seguretat_auto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Copias de Seguridad
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Proyecto1/Sprint2/auto_tareas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Automatización de Tareas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sprint 3
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Sprint 3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Proyecto1/Sprint3/dom_ldap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dominios y LDAP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Proyecto1/Sprint3/unir_cli/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unir Clientes al Dominio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Proyecto1/Sprint3/ldap_gra/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LDAP con Interfaz Gráfica
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Proyecto1/Sprint3/gest_dom/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gestión del Dominio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Proyecto1/Sprint3/nfs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NFS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Proyecto1/Sprint3/samba/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SAMBA
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sprint 4
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Sprint 4
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Proyecto1/Sprint4/raid/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RAIDS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sprint 5
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            Sprint 5
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Proyecto1/Sprint5/monitorizacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Monitorización
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Proyecto1/Sprint5/auditorias/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Auditorías de Seguridad
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Proyecto1/Sprint5/actualizaciones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Servidor de Actualizaciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Proyecto 2; Sistema Windows
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Proyecto 2; Sistema Windows
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduccion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sprint 1
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Sprint 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sprint1/licencias/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Licencias
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sprint1/instalacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Instalación Windows
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sprint1/red_programas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuración de Red y Programas Base
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sprint1/restauracion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Puntos de Restauración
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sprint1/arranque/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gestor de Arranque
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sprint 2
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Sprint 2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sprint2/quotas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quotas y Usuarios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sprint2/backup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Copias de Seguridad y Automatización
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sprint2/procesos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gestión de Procesos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sprint2/acl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gestión de ACLs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" checked>
+        
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sprint 3
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Sprint 3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Dominios y Active Directory
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Dominios y Active Directory
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-implementar-el-dominio" class="md-nav__link">
+    1 Implementar el dominio
+  </a>
+  
+    <nav class="md-nav" aria-label="1 Implementar el dominio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#preparar-la-maquina-virtual" class="md-nav__link">
+    Preparar la máquina virtual
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-instalar-el-rol-de-active-directory" class="md-nav__link">
+    1.1 Instalar el rol de Active Directory
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1 Instalar el rol de Active Directory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#promocionar-el-servidor-a-controlador-de-dominio" class="md-nav__link">
+    Promocionar el servidor a controlador de dominio
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verificar-que-el-dominio-funciona-correctamente" class="md-nav__link">
+    Verificar que el dominio funciona correctamente
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-administrar-cuentas-de-usuario-y-cuentas-de-equipo" class="md-nav__link">
+    1.2 Administrar cuentas de usuario y cuentas de equipo
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2 Administrar cuentas de usuario y cuentas de equipo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crear-cuentas-de-usuario-en-el-dominio" class="md-nav__link">
+    Crear cuentas de usuario en el dominio
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crear-cuentas-de-equipo-opcional" class="md-nav__link">
+    Crear cuentas de equipo (opcional)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preparar-la-maquina-cliente" class="md-nav__link">
+    Preparar la máquina cliente
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unir-el-equipo-al-dominio" class="md-nav__link">
+    Unir el equipo al dominio
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comprobar-el-inicio-de-sesion-con-usuarios-del-dominio" class="md-nav__link">
+    Comprobar el inicio de sesión con usuarios del dominio
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-centralizar-la-informacion-personal-con-perfiles-moviles" class="md-nav__link">
+    1.3 Centralizar la información personal con perfiles móviles
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3 Centralizar la información personal con perfiles móviles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crear-una-carpeta-compartida-para-perfiles" class="md-nav__link">
+    Crear una carpeta compartida para perfiles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#asignar-ruta-de-perfil-movil-a-cada-usuario" class="md-nav__link">
+    Asignar ruta de perfil móvil a cada usuario
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#probar-el-funcionamiento" class="md-nav__link">
+    Probar el funcionamiento
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-crear-y-administrar-grupos-de-seguridad" class="md-nav__link">
+    1.4 Crear y administrar grupos de seguridad
+  </a>
+  
+    <nav class="md-nav" aria-label="1.4 Crear y administrar grupos de seguridad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crear-grupos-de-seguridad" class="md-nav__link">
+    Crear grupos de seguridad
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anadir-usuarios-a-los-grupos" class="md-nav__link">
+    Añadir usuarios a los grupos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crear-carpetas-o-recursos-asociados-a-cada-grupo" class="md-nav__link">
+    Crear carpetas o recursos asociados a cada grupo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#probar-el-acceso-segun-grupo" class="md-nav__link">
+    Probar el acceso según grupo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-crear-plantillas-de-usuario" class="md-nav__link">
+    1.5 Crear plantillas de usuario
+  </a>
+  
+    <nav class="md-nav" aria-label="1.5 Crear plantillas de usuario">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crear-un-usuario-plantilla" class="md-nav__link">
+    Crear un usuario plantilla
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurar-propiedades-comunes-en-la-plantilla" class="md-nav__link">
+    Configurar propiedades comunes en la plantilla
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crear-nuevos-usuarios-basados-en-la-plantilla" class="md-nav__link">
+    Crear nuevos usuarios basados en la plantilla
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comprobar-funcionamiento" class="md-nav__link">
+    Comprobar funcionamiento
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-organizar-los-objetos-del-dominio-mediante-unidades-organizativas-ous" class="md-nav__link">
+    1.6 Organizar los objetos del dominio mediante unidades organizativas (OUs)
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6 Organizar los objetos del dominio mediante unidades organizativas (OUs)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crear-las-ous" class="md-nav__link">
+    Crear las OUs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mover-objetos-a-sus-ous-correspondientes" class="md-nav__link">
+    Mover objetos a sus OUs correspondientes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beneficios-de-la-estructura-con-ous" class="md-nav__link">
+    Beneficios de la estructura con OUs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verificar-la-estructura" class="md-nav__link">
+    Verificar la estructura
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2configuracion-de-seguridad-gpo" class="md-nav__link">
+    2.Configuración de seguridad (GPO)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21-prevenir-bloqueos-de-acceso-no-autorizados-al-dominio" class="md-nav__link">
+    2.1 Prevenir bloqueos de acceso no autorizados al dominio
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 Prevenir bloqueos de acceso no autorizados al dominio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#acceder-a-las-directivas-de-seguridad-del-dominior" class="md-nav__link">
+    Acceder a las directivas de seguridad del dominior
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurar-directiva-de-bloqueo-de-cuenta" class="md-nav__link">
+    Configurar directiva de bloqueo de cuenta
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aplicar-y-probar-la-directiva" class="md-nav__link">
+    Aplicar y probar la directiva
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reforzar-la-complejidad-de-contrasenas-opcional" class="md-nav__link">
+    Reforzar la complejidad de contraseñas (opcional)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-implementar-el-dominio" class="md-nav__link">
+    1 Implementar el dominio
+  </a>
+  
+    <nav class="md-nav" aria-label="1 Implementar el dominio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#preparar-la-maquina-virtual" class="md-nav__link">
+    Preparar la máquina virtual
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-instalar-el-rol-de-active-directory" class="md-nav__link">
+    1.1 Instalar el rol de Active Directory
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1 Instalar el rol de Active Directory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#promocionar-el-servidor-a-controlador-de-dominio" class="md-nav__link">
+    Promocionar el servidor a controlador de dominio
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verificar-que-el-dominio-funciona-correctamente" class="md-nav__link">
+    Verificar que el dominio funciona correctamente
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-administrar-cuentas-de-usuario-y-cuentas-de-equipo" class="md-nav__link">
+    1.2 Administrar cuentas de usuario y cuentas de equipo
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2 Administrar cuentas de usuario y cuentas de equipo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crear-cuentas-de-usuario-en-el-dominio" class="md-nav__link">
+    Crear cuentas de usuario en el dominio
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crear-cuentas-de-equipo-opcional" class="md-nav__link">
+    Crear cuentas de equipo (opcional)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preparar-la-maquina-cliente" class="md-nav__link">
+    Preparar la máquina cliente
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unir-el-equipo-al-dominio" class="md-nav__link">
+    Unir el equipo al dominio
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comprobar-el-inicio-de-sesion-con-usuarios-del-dominio" class="md-nav__link">
+    Comprobar el inicio de sesión con usuarios del dominio
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-centralizar-la-informacion-personal-con-perfiles-moviles" class="md-nav__link">
+    1.3 Centralizar la información personal con perfiles móviles
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3 Centralizar la información personal con perfiles móviles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crear-una-carpeta-compartida-para-perfiles" class="md-nav__link">
+    Crear una carpeta compartida para perfiles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#asignar-ruta-de-perfil-movil-a-cada-usuario" class="md-nav__link">
+    Asignar ruta de perfil móvil a cada usuario
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#probar-el-funcionamiento" class="md-nav__link">
+    Probar el funcionamiento
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-crear-y-administrar-grupos-de-seguridad" class="md-nav__link">
+    1.4 Crear y administrar grupos de seguridad
+  </a>
+  
+    <nav class="md-nav" aria-label="1.4 Crear y administrar grupos de seguridad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crear-grupos-de-seguridad" class="md-nav__link">
+    Crear grupos de seguridad
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anadir-usuarios-a-los-grupos" class="md-nav__link">
+    Añadir usuarios a los grupos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crear-carpetas-o-recursos-asociados-a-cada-grupo" class="md-nav__link">
+    Crear carpetas o recursos asociados a cada grupo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#probar-el-acceso-segun-grupo" class="md-nav__link">
+    Probar el acceso según grupo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-crear-plantillas-de-usuario" class="md-nav__link">
+    1.5 Crear plantillas de usuario
+  </a>
+  
+    <nav class="md-nav" aria-label="1.5 Crear plantillas de usuario">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crear-un-usuario-plantilla" class="md-nav__link">
+    Crear un usuario plantilla
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurar-propiedades-comunes-en-la-plantilla" class="md-nav__link">
+    Configurar propiedades comunes en la plantilla
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crear-nuevos-usuarios-basados-en-la-plantilla" class="md-nav__link">
+    Crear nuevos usuarios basados en la plantilla
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comprobar-funcionamiento" class="md-nav__link">
+    Comprobar funcionamiento
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-organizar-los-objetos-del-dominio-mediante-unidades-organizativas-ous" class="md-nav__link">
+    1.6 Organizar los objetos del dominio mediante unidades organizativas (OUs)
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6 Organizar los objetos del dominio mediante unidades organizativas (OUs)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crear-las-ous" class="md-nav__link">
+    Crear las OUs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mover-objetos-a-sus-ous-correspondientes" class="md-nav__link">
+    Mover objetos a sus OUs correspondientes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beneficios-de-la-estructura-con-ous" class="md-nav__link">
+    Beneficios de la estructura con OUs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verificar-la-estructura" class="md-nav__link">
+    Verificar la estructura
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2configuracion-de-seguridad-gpo" class="md-nav__link">
+    2.Configuración de seguridad (GPO)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21-prevenir-bloqueos-de-acceso-no-autorizados-al-dominio" class="md-nav__link">
+    2.1 Prevenir bloqueos de acceso no autorizados al dominio
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 Prevenir bloqueos de acceso no autorizados al dominio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#acceder-a-las-directivas-de-seguridad-del-dominior" class="md-nav__link">
+    Acceder a las directivas de seguridad del dominior
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurar-directiva-de-bloqueo-de-cuenta" class="md-nav__link">
+    Configurar directiva de bloqueo de cuenta
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aplicar-y-probar-la-directiva" class="md-nav__link">
+    Aplicar y probar la directiva
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reforzar-la-complejidad-de-contrasenas-opcional" class="md-nav__link">
+    Reforzar la complejidad de contraseñas (opcional)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="implementacion-y-administracion-del-dominio"><strong>Implementación y administración del dominio</strong></h1>
+<h2 id="1-implementar-el-dominio"><strong>1 Implementar el dominio</strong></h2>
+<p>El primer paso para centralizar la gestión de usuarios y recursos es instalar y configurar un <strong>controlador de dominio</strong> en un servidor Windows. Esto se hace a través del rol de <strong>Servicios de dominio de Active Directory (AD DS)</strong>.</p>
+<hr />
+<h3 id="preparar-la-maquina-virtual"><strong>Preparar la máquina virtual</strong></h3>
+<ol>
+<li>Crear una máquina virtual con <strong>Windows Server 2019 o 2022</strong>.</li>
+<li>Asignar nombre al host.</li>
+<li>Configurar la IP de forma <strong>estática</strong> (no DHCP), por ejemplo: <code>10.0.2.20</code>.</li>
+<li>Establecer el nombre del equipo definitivo antes de unirlo al dominio.</li>
+<li>Desactivar el Firewall</li>
+</ol>
+<p><img alt="ad" src="../img/ad/ad1.png" /></p>
+<p><img alt="ad" src="../img/ad/ad2.png" /></p>
+<p><img alt="ad" src="../img/ad/ad3.png" /></p>
+<p><img alt="ad" src="../img/ad/ad4.png" /></p>
+<p><img alt="ad" src="../img/ad/ad5.png" /></p>
+<hr />
+<h2 id="11-instalar-el-rol-de-active-directory"><strong>1.1 Instalar el rol de Active Directory</strong></h2>
+<ol>
+<li>Abrir el <strong>Administrador del servidor</strong>.</li>
+<li>Hacer clic en <strong>Agregar roles y características</strong>.</li>
+<li>Seleccionar:<ul>
+<li><strong>Instalación basada en características o roles</strong>.</li>
+<li>El servidor local como destino.</li>
+</ul>
+</li>
+<li>En roles, marcar <strong>Servicios de dominio de Active Directory (AD DS)</strong>.</li>
+<li>Continuar hasta el final y hacer clic en <strong>Instalar</strong>.</li>
+</ol>
+<p><img alt="ad" src="../img/ad/ad6.png" /></p>
+<p><img alt="ad" src="../img/ad/ad7.png" /></p>
+<p><img alt="ad" src="../img/ad/ad8.png" /></p>
+<p><img alt="ad" src="../img/ad/ad9.png" /></p>
+<p><img alt="ad" src="../img/ad/ad10.png" /></p>
+<hr />
+<h3 id="promocionar-el-servidor-a-controlador-de-dominio"><strong>Promocionar el servidor a controlador de dominio</strong></h3>
+<ol>
+<li>Una vez instalado el rol, en el <strong>Administrador del servidor</strong>, aparecerá una advertencia para promocionar el servidor.</li>
+<li>Hacer clic en <strong>Promover este servidor a controlador de dominio</strong>.</li>
+<li>Seleccionar:<ul>
+<li><strong>Agregar un nuevo bosque</strong>.</li>
+<li>Nombre del dominio raíz: <code>dari.local</code> (puedes personalizarlo).</li>
+</ul>
+</li>
+<li>Establecer una <strong>contraseña del modo de restauración (DSRM)</strong>.</li>
+<li>Continuar con la configuración por defecto hasta el final.</li>
+<li>El sistema se reiniciará automáticamente al finalizar la promoción.</li>
+</ol>
+<p><img alt="ad" src="../img/ad/ad11.png" /></p>
+<p><img alt="ad" src="../img/ad/ad12.png" /></p>
+<p><img alt="ad" src="../img/ad/ad13.png" /></p>
+<p><img alt="ad" src="../img/ad/ad14.png" /></p>
+<hr />
+<h3 id="verificar-que-el-dominio-funciona-correctamente"><strong>Verificar que el dominio funciona correctamente</strong></h3>
+<ol>
+<li>Iniciar sesión como administrador del dominio (<code>DARI\Administrador</code>).</li>
+<li>Abrir la consola <strong>"Usuarios y equipos de Active Directory"</strong>.</li>
+<li>Verificar que el dominio <code>dari.local</code> aparece y que el servidor está en la OU <code>Domain Controllers</code>.</li>
+</ol>
+<p><img alt="ad" src="../img/ad/ad15.png" /></p>
+<p><img alt="ad" src="../img/ad/ad16.png" /></p>
+<hr />
+<p>Con esto, el controlador de dominio principal (DC1) queda configurado y listo para empezar a gestionar usuarios, grupos, equipos y políticas en red.</p>
+<hr />
+<h2 id="12-administrar-cuentas-de-usuario-y-cuentas-de-equipo"><strong>1.2 Administrar cuentas de usuario y cuentas de equipo</strong></h2>
+<p>Una vez configurado el dominio, el siguiente paso es crear usuarios y preparar los equipos cliente que se unirán al dominio.</p>
+<hr />
+<h3 id="crear-cuentas-de-usuario-en-el-dominio"><strong>Crear cuentas de usuario en el dominio</strong></h3>
+<ol>
+<li>Abrir la consola <strong>Usuarios y equipos de Active Directory</strong> (<code>dsa.msc</code>).</li>
+<li>Dentro del dominio (<code>dari.local</code>), clic derecho sobre <strong>Usuarios</strong> &gt; <strong>Nuevo &gt; Usuario</strong>.</li>
+<li>Crear, por ejemplo, los siguientes usuarios:<ul>
+<li><code>alumne1</code> – Nombre completo: Alumne 1</li>
+<li><code>alumne2</code> – Nombre completo: Alumne 2</li>
+</ul>
+</li>
+<li>Establecer una contraseña segura (ej. <code>Alumne123!</code>) y desactivar la opción “El usuario debe cambiar la contraseña en el siguiente inicio de sesión” si se desea facilitar las pruebas.</li>
+<li>Confirmar que los usuarios aparecen correctamente en el contenedor <code>Usuarios</code>.</li>
+</ol>
+<p><img alt="ad" src="../img/ad/ad17.png" /></p>
+<p><img alt="ad" src="../img/ad/ad18.png" /></p>
+<p><img alt="ad" src="../img/ad/ad19.png" /></p>
+<p><img alt="ad" src="../img/ad/ad20.png" /></p>
+<hr />
+<h3 id="crear-cuentas-de-equipo-opcional"><strong>Crear cuentas de equipo (opcional)</strong></h3>
+<p>Aunque las cuentas de equipo se crean automáticamente al unir un PC al dominio, también pueden precrearse:</p>
+<ol>
+<li>En la consola de AD, clic derecho en <strong>Computers</strong> &gt; <strong>Nuevo &gt; Equipo</strong>.</li>
+<li>Asignar un nombre como <code>CLIENTE-01</code>.</li>
+<li>(Opcional) Establecer qué usuario podrá unir ese equipo al dominio.</li>
+</ol>
+<p>Esto puede ser útil si se quiere restringir quién tiene permiso para unir equipos al dominio.</p>
+<hr />
+<h3 id="preparar-la-maquina-cliente"><strong>Preparar la máquina cliente</strong></h3>
+<ol>
+<li>Iniciar una máquina virtual con <strong>Windows 10 o 11 Pro</strong>.</li>
+<li>Cambiar el nombre del equipo a algo identificable (ej. <code>CLIENTE-01</code>).</li>
+<li>Establecer una IP en la misma red del servidor, con la <strong>IP del DC como servidor DNS principal</strong>.</li>
+</ol>
+<p>Ejemplo de configuración:</p>
+<pre><code>- IP: `10.0.2.21`
+- Máscara: `255.255.255.0`
+- Puerta de enlace: `10.0.2.1`
+- DNS: `10.0.2.20` (IP del controlador de dominio)
+</code></pre>
+<p><img alt="ad" src="../img/ad/ad21.png" /></p>
+<p><img alt="ad" src="../img/ad/ad22.png" /></p>
+<p><img alt="ad" src="../img/ad/ad23.png" /></p>
+<hr />
+<h3 id="unir-el-equipo-al-dominio"><strong>Unir el equipo al dominio</strong></h3>
+<ol>
+<li>Desde <strong>Este equipo &gt; Propiedades &gt; Cambiar configuración &gt; Cambiar...</strong></li>
+<li>Seleccionar "Miembro de dominio" e introducir: <code>dari.local</code></li>
+<li>Introducir las credenciales de un administrador del dominio.</li>
+<li>Reiniciar el sistema cuando lo pida.</li>
+</ol>
+<p><img alt="ad" src="../img/ad/ad24.png" /></p>
+<p><img alt="ad" src="../img/ad/ad25.png" /></p>
+<p><img alt="ad" src="../img/ad/ad26.png" /></p>
+<p><img alt="ad" src="../img/ad/ad27.png" /></p>
+<hr />
+<h3 id="comprobar-el-inicio-de-sesion-con-usuarios-del-dominio"><strong>Comprobar el inicio de sesión con usuarios del dominio</strong></h3>
+<ol>
+<li>En el cliente, después de reiniciar, seleccionar <strong>Otro usuario</strong>.</li>
+<li>Iniciar sesión como <code>dari\alumne1</code> con la contraseña correspondiente.</li>
+<li>Verificar que se crea un perfil nuevo y que el usuario accede al escritorio con sus permisos.</li>
+</ol>
+<p><img alt="ad" src="../img/ad/ad28.png" /></p>
+<p><img alt="ad" src="../img/ad/ad29.png" /></p>
+<hr />
+<h2 id="13-centralizar-la-informacion-personal-con-perfiles-moviles"><strong>1.3 Centralizar la información personal con perfiles móviles</strong></h2>
+<p>Un <strong>perfil móvil</strong> permite que los datos del usuario (escritorio, documentos, configuración del entorno) se almacenen en el servidor, no solo en el equipo local. Así, el usuario puede iniciar sesión en cualquier equipo del dominio y mantener su entorno.</p>
+<hr />
+<h3 id="crear-una-carpeta-compartida-para-perfiles"><strong>Crear una carpeta compartida para perfiles</strong></h3>
+<ol>
+<li>En el controlador de dominio (DC), crea una carpeta en <code>E:\</code> llamada <code>Perfils</code>.</li>
+<li>Clic derecho &gt; <strong>Propiedades &gt; Compartir &gt; Uso compartido avanzado</strong>.</li>
+<li>Marca <strong>Compartir esta carpeta</strong>, y como nombre de recurso compartido escribe: <code>perfils$</code> (el <code>$</code> lo hace oculto en la red).</li>
+<li>En <strong>Permisos</strong>, añade el grupo <code>Usuarios del dominio</code> y da <strong>control total</strong>.</li>
+<li>Aplica y cierra.</li>
+</ol>
+<p><img alt="ad" src="../img/ad/ad30.png" /></p>
+<p><img alt="ad" src="../img/ad/ad31.png" /></p>
+<p><img alt="ad" src="../img/ad/ad32.png" /></p>
+<p><img alt="ad" src="../img/ad/ad33.png" /></p>
+<hr />
+<h3 id="asignar-ruta-de-perfil-movil-a-cada-usuario"><strong>Asignar ruta de perfil móvil a cada usuario</strong></h3>
+<ol>
+<li>Abre la consola <strong>Usuarios y equipos de Active Directory</strong>.</li>
+<li>Doble clic sobre <code>alumne1</code> &gt; pestaña <strong>Perfil</strong>.</li>
+<li>
+<p>En el campo <strong>Ruta de perfil</strong>, introduce:</p>
+<p><code>\\SERVERDP\perfils$\alumne1</code></p>
+</li>
+</ol>
+<p><img alt="ad" src="../img/ad/ad34.png" /></p>
+<p><em>Importante: usa el nombre de red (hostname o IP del servidor), no una ruta local.</em></p>
+<hr />
+<h3 id="probar-el-funcionamiento"><strong>Probar el funcionamiento</strong></h3>
+<p>Se puede probar de varias formas, dependiende si existen mas máquinas "cliente".</p>
+<ol>
+<li>Desde un equipo cliente unido al dominio, inicia sesión con <code>alumne1</code>.</li>
+<li>Windows debería tardar un poco más en cargar la sesión, ya que está creando el perfil y sincronizándolo con el servidor.</li>
+<li>Crea un archivo en el escritorio o documentos.</li>
+<li>Cierra sesión y vuelve a iniciar en otro equipo del dominio (o reinicia el mismo).</li>
+<li>Verifica que el entorno del usuario y sus archivos se mantienen.</li>
+</ol>
+<p>En este caso como solo tengo una maquina cliente pruebo de cerrar y volver a iniciar sesión para comprobar que el archivo se mantiene.</p>
+<p><img alt="ad" src="../img/ad/ad35.png" /></p>
+<p>Tambien se puede verificar desde el servidor, donde se debe haber creado una copia de toda el perfil.</p>
+<p><img alt="ad" src="../img/ad/ad35.2.png" /></p>
+<hr />
+<h2 id="14-crear-y-administrar-grupos-de-seguridad"><strong>1.4 Crear y administrar grupos de seguridad</strong></h2>
+<p>Los <strong>grupos de seguridad</strong> permiten aplicar permisos o directivas a varios usuarios a la vez, lo que facilita enormemente la administración. En este punto crearé grupos según roles y necesidades del dominio <code>dari.local</code>.</p>
+<hr />
+<h3 id="crear-grupos-de-seguridad"><strong>Crear grupos de seguridad</strong></h3>
+<ol>
+<li>Abrir la consola <strong>Usuarios y equipos de Active Directory</strong> (<code>dsa.msc</code>).</li>
+<li>Dentro de la OU <code>Usuarios</code> o una unidad organizativa personalizada, hacer clic derecho &gt; <strong>Nuevo &gt; Grupo</strong>.</li>
+<li>Crear, por ejemplo, los siguientes grupos:</li>
+<li><code>Professors</code></li>
+<li><code>Alumnes</code></li>
+<li>Asegurarse de que el tipo sea <strong>Grupo de seguridad</strong> y el ámbito <strong>Global</strong>.</li>
+</ol>
+<p><img alt="ad" src="../img/ad/ad36.png" /></p>
+<p><img alt="ad" src="../img/ad/ad37.png" /></p>
+<hr />
+<h3 id="anadir-usuarios-a-los-grupos"><strong>Añadir usuarios a los grupos</strong></h3>
+<ol>
+<li>Hacer doble clic en <code>alumne1</code>, ir a la pestaña <strong>Miembro de</strong>.</li>
+<li>Pulsar <strong>Agregar</strong> y escribir <code>Alumnes</code>, luego aceptar.</li>
+<li>Crear usuarios para profesores o técnicos y asignarlos a los grupos correspondientes.</li>
+</ol>
+<p><img alt="ad" src="../img/ad/ad38.png" /></p>
+<p><img alt="ad" src="../img/ad/ad39.png" /></p>
+<hr />
+<h3 id="crear-carpetas-o-recursos-asociados-a-cada-grupo"><strong>Crear carpetas o recursos asociados a cada grupo</strong></h3>
+<ol>
+<li>En el servidor <code>SERVERDP</code>, crear en <code>E:\</code> una carpeta llamada <code>Departaments</code>.</li>
+<li>
+<p>Dentro de esa carpeta, crear subcarpetas como:</p>
+<ul>
+<li><code>Alumnes</code></li>
+<li><code>Professors</code></li>
+</ul>
+</li>
+<li>
+<p>Hacer clic derecho en cada una &gt; <strong>Propiedades &gt; Seguridad</strong>.</p>
+</li>
+<li>Eliminar entradas como <code>Everyone</code> o <code>Usuarios</code>.</li>
+<li>Añadir el grupo correspondiente (ej. <code>Alumnes</code>) y otorgarle los permisos adecuados, por ejemplo:</li>
+<li><strong>Lectura y escritura</strong></li>
+<li>O solo <strong>lectura</strong>, según el uso</li>
+</ol>
+<p><img alt="ad" src="../img/ad/ad40.png" /></p>
+<p><img alt="ad" src="../img/ad/ad41.png" /></p>
+<p><img alt="ad" src="../img/ad/ad42.png" /></p>
+<hr />
+<h3 id="probar-el-acceso-segun-grupo"><strong>Probar el acceso según grupo</strong></h3>
+<ol>
+<li>Inicia sesión en un equipo cliente como <code>prof1</code>.</li>
+<li>
+<p>Accede a la ruta compartida (por ejemplo):</p>
+<p><code>\\SERVERDP\Departaments\Professors</code></p>
+</li>
+<li>
+<p>Comprueba que no se puede acceder, modificar o visualizar los archivos según los permisos asignados al grupo y que no puede entrar en <strong>Alumnes</strong>.</p>
+</li>
+</ol>
+<p><img alt="ad" src="../img/ad/ad43.png" /></p>
+<p><img alt="ad" src="../img/ad/ad44.png" /></p>
+<p><img alt="ad" src="../img/ad/ad45.png" /></p>
+<p><img alt="ad" src="../img/ad/ad46.png" /></p>
+<hr />
+<h2 id="15-crear-plantillas-de-usuario"><strong>1.5 Crear plantillas de usuario</strong></h2>
+<p>Cuando se gestionan muchos usuarios con configuraciones similares (como alumnado de un centro), crear <strong>plantillas de usuario</strong> permite ahorrar tiempo y asegurar coherencia en la configuración.</p>
+<hr />
+<h3 id="crear-un-usuario-plantilla"><strong>Crear un usuario plantilla</strong></h3>
+<ol>
+<li>En la consola <strong>Usuarios y equipos de Active Directory</strong>, hacer clic derecho sobre la OU donde se crean los usuarios (por ejemplo, <code>Alumnes</code>) &gt; <strong>Nuevo &gt; Usuario</strong>.</li>
+<li>Introducir un nombre representativo como:<ul>
+<li>Nombre: <code>Plantilla</code></li>
+<li>Apellido: <code>Alumnes</code></li>
+<li>Nombre de inicio de sesión: <code>plantilla.alumnes</code></li>
+</ul>
+</li>
+<li>Establecer una contraseña segura, como <code>Plantilla123!</code>, y marcar:<ul>
+<li>El usuario no puede cambiar la contraseña</li>
+<li>La contraseña nunca expira</li>
+</ul>
+</li>
+<li>Finalizar la creación del usuario.</li>
+</ol>
+<p><img alt="ad" src="../img/ad/ad47.png" /></p>
+<p><img alt="ad" src="../img/ad/ad48.png" /></p>
+<hr />
+<h3 id="configurar-propiedades-comunes-en-la-plantilla"><strong>Configurar propiedades comunes en la plantilla</strong></h3>
+<p>Editar la cuenta <code>plantilla.alumnes</code> y establecer las opciones que se quieran copiar a nuevos usuarios:</p>
+<ul>
+<li>En la pestaña <strong>Miembro de</strong>, añadirla al grupo <code>Alumnat</code>.</li>
+<li>En la pestaña <strong>Perfil</strong>, establecer:<ul>
+<li>Ruta del perfil móvil:<br />
+<code>\\SERVERDP\perfils$\%username%</code></li>
+</ul>
+</li>
+<li>En la pestaña <strong>Cuenta</strong>, configurar opciones como:<ul>
+<li>Inicio de sesión permitido</li>
+<li>Horarios de acceso (si se desea restringir)</li>
+</ul>
+</li>
+</ul>
+<p><img alt="ad" src="../img/ad/ad49.png" /></p>
+<p><img alt="ad" src="../img/ad/ad50.png" /></p>
+<p><img alt="ad" src="../img/ad/ad51.png" /></p>
+<hr />
+<h3 id="crear-nuevos-usuarios-basados-en-la-plantilla"><strong>Crear nuevos usuarios basados en la plantilla</strong></h3>
+<ol>
+<li>Hacer clic derecho sobre el usuario <code>plantilla.alumnes</code> &gt; <strong>Copiar</strong>.</li>
+<li>
+<p>Se abrirá un asistente para crear un nuevo usuario con las mismas configuraciones:</p>
+<ul>
+<li>Introducir datos reales: nombre, apellido, usuario, contraseña.</li>
+<li>El nuevo usuario heredará:<ul>
+<li>Pertenencia a grupos</li>
+<li>Configuración de perfil</li>
+<li>Opciones de cuenta</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Repetir el proceso para cada nuevo usuario.</p>
+</li>
+</ol>
+<p><img alt="ad" src="../img/ad/ad52.png" /></p>
+<p><img alt="ad" src="../img/ad/ad53.png" /></p>
+<hr />
+<h3 id="comprobar-funcionamiento"><strong>Comprobar funcionamiento</strong></h3>
+<p>Verificar que:</p>
+<pre><code>- Se ha unido automáticamente al grupo `Alumnes`.
+- Tiene ruta de perfil móvil configurada.
+- Las restricciones establecidas se mantienen.
+</code></pre>
+<p><img alt="ad" src="../img/ad/ad54.png" /></p>
+<p><img alt="ad" src="../img/ad/ad55.png" /></p>
+<hr />
+<h2 id="16-organizar-los-objetos-del-dominio-mediante-unidades-organizativas-ous"><strong>1.6 Organizar los objetos del dominio mediante unidades organizativas (OUs)</strong></h2>
+<p>Las <strong>Unidades Organizativas (OUs)</strong> permiten estructurar los objetos del dominio (usuarios, grupos, equipos) en contenedores lógicos. Esto facilita su administración, delegación de permisos y aplicación de políticas de grupo (GPO) de forma segmentada.</p>
+<hr />
+<h3 id="crear-las-ous"><strong>Crear las OUs</strong></h3>
+<ol>
+<li>Abrir la consola <strong>Usuarios y equipos de Active Directory</strong>.</li>
+<li>Clic derecho sobre el dominio <code>dari.local</code> &gt; <strong>Nuevo &gt; Unidad organizativa</strong>.</li>
+<li>
+<p>Crear al menos las siguientes OUs:</p>
+<ul>
+<li><code>Alumnes</code></li>
+<li><code>Professors</code></li>
+</ul>
+</li>
+</ol>
+<p><img alt="ad" src="../img/ad/ad56.png" /></p>
+<p><img alt="ad" src="../img/ad/ad57.png" /></p>
+<p><em>Puedes crear sub-OUs si quieres agrupar por curso, departament, aula, etc.</em></p>
+<hr />
+<h3 id="mover-objetos-a-sus-ous-correspondientes"><strong>Mover objetos a sus OUs correspondientes</strong></h3>
+<ol>
+<li>Arrastrar o hacer clic derecho sobre cada objeto (usuario, grupo o equipo) &gt; <strong>Mover</strong>.</li>
+<li>Colocar:<ul>
+<li>Los usuarios <code>alumne1</code>, <code>alumne2</code> en la OU <code>Alumnes</code>.</li>
+<li>Los profesores (si existen) en la OU <code>Professors</code>.</li>
+</ul>
+</li>
+</ol>
+<p><img alt="ad" src="../img/ad/ad58.png" /></p>
+<p><img alt="ad" src="../img/ad/ad59.png" /></p>
+<hr />
+<h3 id="beneficios-de-la-estructura-con-ous"><strong>Beneficios de la estructura con OUs</strong></h3>
+<ul>
+<li>Permite aplicar <strong>GPO diferentes</strong> por tipo de usuario o equipo.</li>
+<li>Facilita el mantenimiento: todo está organizado y es localizable.</li>
+<li>Es posible <strong>delegar administración</strong> solo sobre una OU concreta (por ejemplo, permitir que un técnico solo gestione los <code>Alumnes</code>).</li>
+</ul>
+<hr />
+<h3 id="verificar-la-estructura"><strong>Verificar la estructura</strong></h3>
+<ol>
+<li>Revisa que en la consola <code>dsa.msc</code> se visualicen claramente las OUs con sus objetos bien distribuidos.</li>
+<li>Si se ha creado una jerarquía de OUs, comprobar que tiene sentido para la administración real del entorno.</li>
+</ol>
+<hr />
+<p>Organizar el dominio correctamente desde el principio es fundamental para evitar el caos en entornos reales. Una estructura bien pensada facilita enormemente la gestión a medio y largo plazo.</p>
+<h2 id="2configuracion-de-seguridad-gpo"><strong>2.Configuración de seguridad (GPO)</strong></h2>
+<h2 id="21-prevenir-bloqueos-de-acceso-no-autorizados-al-dominio"><strong>2.1 Prevenir bloqueos de acceso no autorizados al dominio</strong></h2>
+<p>Para evitar accesos indebidos o ataques de fuerza bruta en el entorno del dominio <code>dari.local</code>, es fundamental aplicar <strong>políticas de bloqueo de cuenta</strong> y otras configuraciones de seguridad que limiten los intentos fallidos de inicio de sesión.</p>
+<hr />
+<h3 id="acceder-a-las-directivas-de-seguridad-del-dominior"><strong>Acceder a las directivas de seguridad del dominior</strong></h3>
+<ol>
+<li>Desde el servidor <code>SERVERDP</code>, abrir la herramienta <strong>Group Policy Management</strong> (<code>gpmc.msc</code>).</li>
+<li>Expandir el dominio <code>dari.local</code>.</li>
+<li>Clic derecho en <strong>Default Domain Policy</strong> &gt; <strong>Editar</strong>.</li>
+</ol>
+<p><img alt="ad" src="../img/ad/ad60.png" /></p>
+<hr />
+<h3 id="configurar-directiva-de-bloqueo-de-cuenta"><strong>Configurar directiva de bloqueo de cuenta</strong></h3>
+<p>Dentro del editor de GPO, navegar hasta:</p>
+<pre><code>Configuración del equipo &gt; Configuración de Windows &gt; Configuración de seguridad &gt; Directivas de cuenta &gt; Directiva de bloqueo de cuenta
+</code></pre>
+<p>Modificar los siguientes parámetros:</p>
+<ul>
+<li><strong>Umbral de bloqueo de cuenta</strong>: 3 intentos fallidos</li>
+<li><strong>Duración del bloqueo de cuenta</strong>: 15 minutos</li>
+<li><strong>Restablecer el contador de bloqueos</strong>: 15 minutos</li>
+</ul>
+<p><em>Esto significa que si un usuario falla 3 veces al poner su contraseña, su cuenta quedará bloqueada durante 15 minutos.</em></p>
+<p><img alt="ad" src="../img/ad/ad61.png" /></p>
+<hr />
+<h3 id="aplicar-y-probar-la-directiva"><strong>Aplicar y probar la directiva</strong></h3>
+<ol>
+<li>Desde un equipo cliente, iniciar sesión con un usuario del dominio (<code>alumne1</code>) introduciendo mal la contraseña 3 veces.</li>
+<li>Verificar que el sistema muestra un mensaje de cuenta bloqueada.</li>
+<li>Esperar el tiempo configurado o desbloquear manualmente desde el servidor (en <code>dsa.msc</code> &gt; usuario &gt; propiedades &gt; desbloquear cuenta).</li>
+</ol>
+<p><img alt="ad" src="../img/ad/ad62.png" /></p>
+<p><img alt="ad" src="../img/ad/ad63.png" /></p>
+<hr />
+<h3 id="reforzar-la-complejidad-de-contrasenas-opcional"><strong>Reforzar la complejidad de contraseñas (opcional)</strong></h3>
+<p>Desde la misma GPO (o una nueva), se puede aplicar también:</p>
+<pre><code>Configuración del equipo &gt; Configuración de Windows &gt; Configuración de seguridad &gt; Directivas de cuenta &gt; Directiva de contraseñas
+</code></pre>
+<p>Recomendaciones:
+- <strong>Longitud mínima</strong>: 8 caracteres
+- <strong>Debe cumplir con los requisitos de complejidad</strong>: Activado
+- <strong>Historial de contraseñas</strong>: recordar al menos 5</p>
+<p>Estas políticas contribuyen a proteger el dominio de intentos de acceso no autorizados y garantizan una mejor higiene de seguridad en la red.</p>
+<hr />
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://daarieel.github.io/0369">MkDocs 0369</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/daarieel">Dariel Piñón</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-flex;"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""></a></p>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.4e0fa4ba.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -469,3 +469,104 @@ Recomendaciones:
 Estas políticas contribuyen a proteger el dominio de intentos de acceso no autorizados y garantizan una mejor higiene de seguridad en la red.
 
 ---
+## __GPO 1 – Ocultar el Panel de control__
+
+**Objetivo:** evitar que los usuarios accedan a configuraciones del sistema desde el Panel de control.
+
+### __Configuración:__
+
+1. Abrir `gpmc.msc` en `SERVERDP`.
+2. Clic derecho sobre la OU `Alumnat` > **Crear un GPO y vincularlo aquí**.
+3. Nombre: `OcultarPanelControl`.
+4. Clic derecho sobre la GPO > **Editar**.
+5. Ir a:
+
+   ```
+   Configuración de usuario > Plantillas administrativas > Panel de control
+   ```
+
+6. Activar la directiva:  
+   **"Prohibir el acceso al Panel de control y a la configuración del PC"** → Habilitada.
+
+7. Cerrar el editor.
+
+![ad](./img/ad/ad64.png)
+
+![ad](./img/ad/ad65.png)
+
+![ad](./img/ad/ad66.png)
+
+![ad](./img/ad/ad67.png)
+
+![ad](./img/ad/ad68.png)
+
+![ad](./img/ad/ad69.png)
+
+---
+## __GPO 2 – Bloquear WIN + R y CTRL + ALT + SUPR__
+
+**Objetivo:** impedir que los usuarios ejecuten comandos o accedan a funciones sensibles del sistema.
+
+### __Configuración:__
+
+1. En `gpmc.msc`, crear otra GPO vinculada a la OU `Alumnes`, con nombre: `BloquejarTeclesSistema`.
+2. Editar la GPO y configurar las siguientes directivas:
+
+![ad](./img/ad/ad70.png)
+
+### __Bloquear WIN + R__
+
+1. Ir a:
+
+   ```
+   Configuración de usuario > Plantillas administrativas > Menú inicio y barra de tareas
+   ```
+
+2. Activar la directiva:  
+   **"Quitar el acceso al comando Ejecutar"** → Habilitada.
+
+![ad](./img/ad/ad70.png)
+
+![ad](./img/ad/ad71.png)
+
+![ad](./img/ad/ad72.png)
+
+### __Bloquear CTRL + ALT + SUPR__
+
+1. Ir a:
+
+   ```
+   Configuración de usuario > Plantillas administrativas > Sistema > Opciones de Ctrl+Alt+Supr
+   ```
+
+2. Activar estas directivas:
+   - **"Quitar Administrador de tareas"** → Habilitada.
+
+*Nota:* No se puede bloquear completamente la combinación `CTRL + ALT + SUPR`, ya que es gestionada por el sistema, pero sí se puede desactivar lo que aparece al pulsarla.
+
+![ad](./img/ad/ad73.png)
+
+![ad](./img/ad/ad74.png)
+
+---
+### __Aplicación y prueba__
+
+1. En un equipo cliente, iniciar sesión como `alumne1`.
+2. Ejecutar:
+
+   ```cmd
+   gpupdate /force
+   ```
+
+3. Verificar que:
+   - No se puede abrir el Panel de control.
+   - Al pulsar `WIN + R`, no sucede nada.
+   - Al pulsar `CTRL + ALT + SUPR`, la opcion de "Administrador de tareas" está deshabilitada.
+
+![ad](./img/ad/ad75.png)
+
+![ad](./img/ad/ad76.png)
+
+![ad](./img/ad/ad77.png)
+
+---

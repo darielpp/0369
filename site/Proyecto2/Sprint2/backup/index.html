@@ -1160,6 +1160,26 @@
   
   
     <li class="md-nav__item">
+      <a href="../../Sprint1/restauracion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Puntos de Restauración
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../Sprint1/arranque/" class="md-nav__link">
         
   
@@ -1330,20 +1350,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#verificacion-y-documentacion" class="md-nav__link">
-    Verificación y documentación
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#revision-final" class="md-nav__link">
-    Revisión final
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1384,6 +1390,68 @@
   
   <span class="md-ellipsis">
     Gestión de ACLs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sprint 3
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Sprint 3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sprint3/ad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dominios y Active Directory
   </span>
   
 
@@ -1475,20 +1543,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#verificacion-y-documentacion" class="md-nav__link">
-    Verificación y documentación
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#revision-final" class="md-nav__link">
-    Revisión final
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1508,7 +1562,7 @@
 <p>En este apartado configuraremos un sistema de copias de seguridad automáticas del perfil del usuario, usando un script por lotes (.bat) que se ejecutará al iniciar sesión.</p>
 <hr />
 <h2 id="preparacion-previa"><strong>Preparación Prévia</strong></h2>
-<p>Para este apartado necesito un tercer disco, para ello:</p>
+<p>Para este apartado reutilazaré el disco del apartado anterior o se podría añadir uno nuevo, para ello:</p>
 <ol>
 <li>Apaga la máquina virtual.</li>
 <li>Desde <strong>VirtualBox &gt; Configuración &gt; Almacenamiento</strong>, añade un nuevo disco virtual.</li>
@@ -1517,12 +1571,14 @@
 <li>Entra en <strong>Administración de discos</strong> y formatea este disco como <strong>NTFS</strong>.</li>
 <li>Asígnale el nombre <strong>Backups</strong> y la letra <code>E:</code>.</li>
 </ol>
+<p><img alt="Particion" src="../img/backup/backup1.png" /></p>
 <hr />
 <h3 id="crear-carpeta-copiesusuaris"><strong>Crear carpeta CòpiesUsuaris</strong></h3>
 <ol>
 <li>Accede al nuevo disco <strong>E:</strong> desde el explorador de archivos.</li>
 <li>Crea una carpeta llamada <code>CòpiesUsuaris</code>.</li>
 </ol>
+<p><img alt="Particion" src="../img/backup/backup2.png" /></p>
 <hr />
 <h3 id="crear-script-de-copia"><strong>Crear script de copia</strong></h3>
 <ol>
@@ -1535,6 +1591,8 @@
 <ol>
 <li>Guarda el archivo como <code>copia_perfil.bat</code> en <code>C:\scripts</code> (crear la carpeta si no existe).</li>
 </ol>
+<p><img alt="Particion" src="../img/backup/backup3.png" /></p>
+<p><img alt="Particion" src="../img/backup/backup4.png" /></p>
 <hr />
 <h3 id="configurar-ejecucion-automatica-del-script"><strong>Configurar ejecución automática del script</strong></h3>
 <ol>
@@ -1543,31 +1601,20 @@
 <li>Haz doble clic en <strong>Inicio de sesión</strong> y pulsa <strong>Agregar</strong>.</li>
 <li>Selecciona el script <code>copia_perfil.bat</code> desde la ubicación donde lo guardaste.</li>
 </ol>
+<p><img alt="Particion" src="../img/backup/backup5.png" /></p>
+<p><img alt="Particion" src="../img/backup/backup6.png" /></p>
+<p><img alt="Particion" src="../img/backup/backup7.png" /></p>
 <hr />
 <h3 id="asignar-el-script-a-los-usuarios"><strong>Asignar el script a los usuarios</strong></h3>
 <ol>
 <li>Asegúrate de que tanto <code>alumne1</code> como <code>alumne2</code> tengan acceso a la carpeta <code>C:\scripts</code>.</li>
 <li>Inicia sesión con cada uno y verifica que al hacerlo se copia automáticamente su carpeta de usuario a <code>E:\CòpiesUsuaris\</code>.</li>
 </ol>
+<p><img alt="Particion" src="../img/backup/backup8.png" /></p>
+<p>Al iniciar sesión se debe abrir y cerrar rápidamente una pantalla de CMD, es buena señal, ya que se ha ejecutado el script de inicio de sesión.</p>
+<p><img alt="Particion" src="../img/backup/backup9.png" />
+Se ha copiado todo el contenido de la home del alumne1.</p>
 <hr />
-<h2 id="verificacion-y-documentacion"><strong>Verificación y documentación</strong></h2>
-<p>Una vez configurados los discos, usuarios, cuotas y scripts, toca comprobar que todo funcione correctamente, para ello:</p>
-<ol>
-<li>Inicia sesión con el usuario <code>alumne1</code>.</li>
-<li>Comprueba que se ha creado correctamente una copia de su carpeta de usuario dentro de <code>E:\CòpiesUsuaris\alumne1</code>.</li>
-<li>Intenta copiar archivos en la unidad <strong>Dades (D:)</strong> hasta superar los 300 MB.</li>
-<li>Confirma que el sistema muestra una advertencia y, posteriormente, deniega la operación.</li>
-</ol>
-<hr />
-<h2 id="revision-final"><strong>Revisión final</strong></h2>
-<p>Verifico que:</p>
-<ul>
-<li>Las tres particiones existen (C: principal, D: Dades, E: Backups).</li>
-<li>Las cuotas de disco están activas en D: con límite de 300 MB por usuario.</li>
-<li>Los usuarios <code>alumne1</code> y <code>alumne2</code> están creados y pertenecen al grupo <code>Limitats</code>.</li>
-<li>El script se ejecuta correctamente al iniciar sesión y hace la copia correspondiente.</li>
-<li>Las letras de unidad y nombres coinciden con los indicados.</li>
-</ul>
 
 
 
