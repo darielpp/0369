@@ -57,7 +57,8 @@ nav:
           - Dominios y Active Directory: Proyecto2/Sprint3/ad.md
       - Sprint 4:
           - RAIDS: Proyecto2/Sprint4/raid.md 
-          
+      - Sprint 5:
+          - Auditorías de Seguridad: Proyecto2/Sprint5/aud.md
 theme:
   name: "material"
   language: es
